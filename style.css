@@ -1,0 +1,60 @@
+*{
+	margin:0;
+	padding:0;
+	box-sizing: border-box;
+	font-family: "Nunito", sans-serif;
+}
+
+#master-container{
+	display:grid;
+	grid-template-columns: repeat(12, 1fr);
+	/*grid-auto-rows: 50px;*/
+	grid-template-rows: auto;
+	background-color:#f8da49;
+}
+
+#main{
+	grid-column: 4/9;
+	height:100vh;
+	display:flex;
+	flex-flow: column;
+	justify-content: center;
+	align-items: center;
+}
+
+#main h1{
+	font-size:3.5em;
+	color:#3f3f3f
+	/*#e84f3e 
+	#07adbd
+	#713c8d 
+	#f6b53d 
+	#f8da49*/
+	;
+
+}
+
+.links{
+	display:flex;
+	flex-flow: column;
+	justify-content: center;
+	grid-column: 9/11;
+}
+
+.links a{
+	text-transform: uppercase;
+	color:#07adbd;
+	font-weight: bold;
+	text-decoration: none;
+	transition: all .5s ease;
+	padding: 0 5px;
+}
+
+.links a:hover{
+	font-size: 1.2em;
+	color:#3f3f3f
+}
+
+.links li{
+	list-style: none;
+}
