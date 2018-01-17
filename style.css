@@ -47,7 +47,6 @@
 	font-weight: bold;
 	text-decoration: none;
 	transition: all .5s ease;
-	padding: 0 5px;
 }
 
 .links a:hover{
@@ -57,4 +56,5 @@
 
 .links li{
 	list-style: none;
+	padding: 5px 0;
 }
