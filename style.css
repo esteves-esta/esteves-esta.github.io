@@ -14,7 +14,7 @@
 }
 
 #main{
-	grid-column: 4/9;
+	grid-column: 2/9;
 	height:100vh;
 	display:flex;
 	flex-flow: column;
@@ -23,7 +23,7 @@
 }
 
 #main h1{
-	font-size:3.5em;
+	font-size:3.2em;
 	color:#3f3f3f
 	/*#e84f3e 
 	#07adbd
@@ -58,3 +58,38 @@
 	list-style: none;
 	padding: 5px 0;
 }
+
+
+@media only screen and (max-width: 768px) {
+/*CELULARES*/
+	#main h1{
+		font-size:2em;
+	}
+}
+
+@media only screen and (max-width: 500px) {
+/*CELULARES*/
+	#main h1{
+		font-size:1.2em;
+	}
+
+	.links a{
+		font-size: .8em;
+	}
+
+
+	#main{
+		grid-column: 3/9;
+	}
+
+	.links{
+		grid-column: 10/11;
+	  align-items: center;
+	}
+}
+
+/*
+@media only screen and (min-width: 500px) {
+/*TELAS GRANDES*/
+
+}*/
