@@ -207,15 +207,48 @@ p{
 	grid-area: 12/10/16/13;
 }
 
+
 /* RESPONSIVIDADE
 =================================== */
 
 @media only screen and (max-width: 768px) {
 /*CELULARES*/
-
+	h2{
+		font-size: 1.5em;
+	}
 }
 
 @media only screen and (max-width: 500px) {
 /*CELULARES*/
+
+	#main {
+    grid-area: 3 / 4 / 10 / 10;
+	}
+
+	.info{
+		grid-column: 4 / 11;
+    grid-row: 10 / 15;
+	}
+
+	.info article {
+    border-left: none;
+    padding-left: 0;
+	}
+
+	h2{
+		font-size: 1.5em;
+	}
+
+	.img1{
+		grid-area: 10/10/12/13;
+	}
+
+	.img2{
+		grid-area: 11/10/14/13;
+	}
+
+	.img3{
+		grid-area: 16/4/19/14;
+	}
 
 }
