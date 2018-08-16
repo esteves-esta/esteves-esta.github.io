@@ -3,7 +3,7 @@ $(document).ready(function() {
 //cores usadas alocadas em variaveis
 	var blue, yellow, green, grey;
 	blue = "#00B1BD";
-	yellow = "#ffd150";
+	yellow = "#ffb100";
 	green = "#8bc34a";
 	grey = "#444";
 
