@@ -89,13 +89,13 @@ footer {
 	z-index: -1;
 }
 
-/* -------------------------    */
+
 
 .proj{
 	grid-column: 1 / span 12;
-	grid-row: 27 / span 4;
+	grid-row: 31 / span 5;
 }
-
+/* -------------------------    */
 
 .logo {
 	width: 15%;
@@ -185,8 +185,12 @@ a:hover {
     height: 450px;
 }
 
-.projetos p {
-	width: 50%
+.projetos p{
+	width: 50%;
+}
+
+.projetos-design p {
+	width: 60%;
 }
 
 /* ------------------------------ */
