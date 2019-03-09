@@ -253,3 +253,69 @@ h3{
 .diferente svg{
     fill: var(--cinza);
 }
+
+
+@media only screen and (max-width: 900px) {
+  span {
+    display: none;
+  }
+
+  p, .colunas li{
+  	font-size: 1.2em;
+  }
+
+  .amarelo{
+  	grid-row: 19 / span 4;
+  }
+
+  .proj{
+  	grid-row: 32 / span 4;
+  }
+
+  h2 {
+      font-size: 1.8em;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+	.shape-separator {
+		display: none;
+	}
+
+	.projetos section, .projetos-design section {
+	 	margin-bottom: 50px;
+	    height: auto;
+	}
+
+	header {
+	    grid-row: 1 / span 3;
+	}
+
+	.head {
+	    grid-row: 1 / span 3;
+	}
+	
+	.educacao {
+	    grid-row: 4 / span 11;
+	}
+
+	.projetos {
+	    grid-row: 13 / span 14;
+	}
+
+	.amarelo{
+		grid-row: 15 / span 4;
+	}
+
+	.projetos-design {
+	    grid-row: 21 / span 18;
+	}
+
+	.proj{
+		grid-row: 25 / span 4;
+	}
+
+	footer {
+	    grid-row: 34 / span 3;
+	}
+}
