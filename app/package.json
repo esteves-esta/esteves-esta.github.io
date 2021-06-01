@@ -1,0 +1,47 @@
+{
+  "name": "esteves-esta",
+  "private": true,
+  "description": "Site portifólio pessoal",
+  "version": "0.1.0",
+  "author": "Fernanda <esteves-esta@outlook.com>",
+  "scripts": {
+    "deploy": "gatsby build --prefix-paths && gh-pages -d public",
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
+    "start": "npm run develop",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean",
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+  },
+  "dependencies": {
+    "babel-plugin-styled-components": "^1.12.0",
+    "gatsby": "^3.4.1",
+    "gatsby-plugin-feed": "^3.4.0",
+    "gatsby-plugin-image": "^1.4.0",
+    "gatsby-plugin-react-helmet": "^4.4.0",
+    "gatsby-plugin-sharp": "^3.4.1",
+    "gatsby-plugin-styled-components": "^4.6.0",
+    "gatsby-remark-copy-linked-files": "^3.2.0",
+    "gatsby-remark-images": "^4.2.0",
+    "gatsby-remark-prismjs": "^4.2.0",
+    "gatsby-remark-responsive-iframe": "^3.2.0",
+    "gatsby-remark-smartypants": "^3.2.0",
+    "gatsby-source-filesystem": "^3.4.0",
+    "gatsby-transformer-remark": "^3.2.0",
+    "gatsby-transformer-sharp": "^3.4.0",
+    "gh-pages": "^3.2.0",
+    "prismjs": "^1.23.0",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-helmet": "^6.1.0",
+    "styled-components": "^5.3.0",
+    "typeface-inter": "^3.18.1",
+    "typeface-merriweather": "0.0.72",
+    "typeface-montserrat": "0.0.75"
+  },
+  "devDependencies": {
+    "prettier": "2.2.1"
+  },
+  "license": "0BSD"
+}
