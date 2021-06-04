@@ -1,7 +1,8 @@
 import * as React from "react"
 import { PageProps, Link, graphql } from "gatsby"
-import Layout from "../components/layout"
+import Layout from "../components/layout/index"
 import Seo from "../components/seo"
+import { Divider, SectionTitle, SecundaryTitle } from "../styles/index"
 
 type DataProps = {
   site: {
@@ -33,46 +34,41 @@ const NotesIndex: React.FC<PageProps<DataProps>> = ({ data, location }) => {
       <Layout location={location} title={siteTitle}>
         <Seo title="All posts" />
 
-        <p>No blog posts found.</p>
+        <p>Sem anotações.</p>
       </Layout>
     )
   }
 
   return (
     <Layout location={location} title={siteTitle}>
+      <SectionTitle>bloco de notas</SectionTitle>
       <Seo title="All posts" />
-      <ol style={{ listStyle: `none` }}>
+      <div>
         {posts.map(post => {
           const title = post.frontmatter.title || post.fields.slug
 
           return (
-            <li key={post.fields.slug}>
-              <article
-                className="post-list-item"
-                itemScope
-                itemType="http://schema.org/Article"
-              >
-                <header>
-                  <h2>
-                    <Link to={post.fields.slug} itemProp="url">
-                      <span itemProp="headline">{title}</span>
-                    </Link>
-                  </h2>
-                  <small>{post.frontmatter.date}</small>
-                </header>
-                <section>
-                  <p
-                    dangerouslySetInnerHTML={{
-                      __html: post.frontmatter.description || post.excerpt,
-                    }}
-                    itemProp="description"
-                  />
-                </section>
-              </article>
-            </li>
+            <article>
+              <section>
+                <small>{post.frontmatter.date}</small>
+                <SecundaryTitle>
+                  <Link to={post.fields.slug} itemProp="url">
+                    <span itemProp="headline">{title}</span>
+                  </Link>
+                </SecundaryTitle>
+
+                <p
+                  dangerouslySetInnerHTML={{
+                    __html: post.frontmatter.description || post.excerpt,
+                  }}
+                  itemProp="description"
+                />
+              </section>
+              <Divider />
+            </article>
           )
         })}
-      </ol>
+      </div>
     </Layout>
   )
 }
@@ -93,7 +89,7 @@ export const pageQuery = graphql`
           slug
         }
         frontmatter {
-          date(formatString: "MMMM DD, YYYY")
+          date(formatString: "DD-MM-YYYY")
           title
           description
         }
