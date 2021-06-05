@@ -42,7 +42,7 @@ const NotesIndex: React.FC<PageProps<DataProps>> = ({ data, location }) => {
   return (
     <Layout location={location} title={siteTitle}>
       <SectionTitle>bloco de notas</SectionTitle>
-      <Seo title="All posts" />
+      <Seo title="Bloco de notas" />
       <div>
         {posts.map(post => {
           const title = post.frontmatter.title || post.fields.slug

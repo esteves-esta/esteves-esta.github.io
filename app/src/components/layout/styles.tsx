@@ -59,9 +59,6 @@ export const Navlink = styled(Link)`
       font-weight: 600;
       font-style: italic;
     `}
-  a:hover,
-  a:focus {
-  }
 `
 
 export const Footer = styled.footer`

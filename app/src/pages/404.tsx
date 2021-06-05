@@ -17,9 +17,9 @@ const NotFoundPage: React.FC<PageProps<DataProps>> = ({ data, location }) => {
 
   return (
     <Layout location={location} title={siteTitle}>
-      <Seo title="404: Not Found" />
-      <h1>404: Not Found</h1>
-      <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
+      <Seo title="404" />
+      <h1>404</h1>
+      <h2>Opa, parece que você achou uma página vázia.</h2>
     </Layout>
   )
 }

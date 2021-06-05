@@ -6,6 +6,7 @@ export const Row = styled.div`
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
+  margin-bottom: var(--spacing-6);
 `
 
 export const RowTitle = styled(Row)`
