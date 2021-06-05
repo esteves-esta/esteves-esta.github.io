@@ -1,0 +1,387 @@
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[esteves-esta]]></title><description><![CDATA[Site portifólio.]]></description><link>https://esteves-esta.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Sat, 05 Jun 2021 21:08:37 GMT</lastBuildDate><item><title><![CDATA[Configurando ambiente React Native no Ubuntu]]></title><description><![CDATA[Os passos abaixo vem de diversos artigos e sites listados no final e também com a experiência de realizar o processo algumas vezes.…]]></description><link>https://esteves-esta.github.io/configuracao-react-native/</link><guid isPermaLink="false">https://esteves-esta.github.io/configuracao-react-native/</guid><pubDate>Sun, 16 Feb 2020 00:00:00 GMT</pubDate><content:encoded>&lt;blockquote&gt;
+&lt;p&gt;Os passos abaixo vem de diversos artigos e sites listados no final e também com a experiência de realizar o processo algumas vezes.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2&gt;Instalação&lt;/h2&gt;
+&lt;h3&gt;Gerenciadores de Pacote&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;NODE.JS&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;curl -sL &lt;a href=&quot;https://deb.nodesource.com/setup_10.x&quot;&gt;https://deb.nodesource.com/setup_10.x&lt;/a&gt; | sudo -E bash -&lt;/li&gt;
+&lt;li&gt;sudo apt-get install -y nodejs&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Depois se certificar que foram instalados o node: &lt;code class=&quot;language-text&quot;&gt;node -v&lt;/code&gt;; e o npm: &lt;code class=&quot;language-text&quot;&gt;npm -v&lt;/code&gt;.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3&gt;GIT&lt;/h3&gt;
+&lt;p&gt;A instalação do git para controle de versionamento de projetos:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;sudo apt-get install git
+
+# verificando a instalação:  
+git --version&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;hr&gt;
+&lt;h3&gt;Java - JDK8&lt;/h3&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;# 1. adicionar a local de intalação
+sudo add-apt-repository ppa:openjdk-r/ppa` 
+    
+# 2. atualizar o apt-get
+sudo apt update
+    
+# 3. Checar a lista de itens para atualizar
+apt list --upgradable
+    
+# 4. e finalmente instala-lo: 
+sudo apt install openjdk-8-jdk
+    
+# 5. Testar a instalação do JDK 
+java -version&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;hr&gt;
+&lt;h3&gt;Visual Code&lt;/h3&gt;
+&lt;p&gt;O download pode ser feito pelo aplicativo padrão do Ubuntu, o Software Ubuntu, ou através de um arquivo de instalação de extensão .dev encontrado no site oficial. Pelo arquivo é necessário o seguinte comando para instalar o programa:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;sudo dpgk -i /caminho/para-o/arquivo.deb&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;hr&gt;
+&lt;h3&gt;Android Studio&lt;/h3&gt;
+&lt;p&gt;Também pode ser feito o download feito pelo Software Ubuntu ou pelo comando abaixo. Depois de instalado é necessário abrir o aplicativo e concluir a instalação: &lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;sudo snap install android-studio --classic&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Após a instalação devem ser adicionadas as variáveis de ambiente, as linhas abaixo, no final do arquivo &lt;strong&gt;/home/seu-usuario/.bashrc&lt;/strong&gt;. Verifique a pasta onde está seu android studio e se necessário troque o caminho nas linhas abaixo para se adequar a sua instalação.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;export ANDROID_HOME=$HOME/Android/Sdk
+export PATH=$PATH:$ANDROID_HOME/tools/bin
+export PATH=$PATH:$ANDROID_HOME/emulator 
+export PATH=$PATH:$ANDROID_HOME/tools 
+export PATH=$PATH:$ANDROID_HOME/platform-tools&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Depois é necessário atualizar o arquivo no seu terminal com o comando: &lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;source /.bashrc&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;blockquote&gt;
+&lt;p&gt;(Opcional) Dependendo do computador o android studio pode informar que é possivél configurar a aceleração de virtualização de hardware do Ubuntu.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Os comando podem variar dependendo da distribuição do linux, todas as variações se encontram na setuinte página do &lt;a href=&quot;https://help.ubuntu.com/community/KVM/Installation#Install_Necessary_Packages&quot;&gt;site oficial do Ubuntu&lt;/a&gt;. &lt;/p&gt;
+&lt;hr&gt;
+&lt;h3&gt;Emulador&lt;/h3&gt;
+&lt;p&gt;Após a configuração do android studio, instalar um emulador através do &lt;strong&gt;sdk manager&lt;/strong&gt; e escolher o tipo de celular e sdk do android. &lt;/p&gt;
+&lt;p&gt;O emulador pode ser aberto usando o android studio ou pelo terminal. &lt;/p&gt;
+&lt;p&gt;O comando &lt;code class=&quot;language-text&quot;&gt;emulator -avd -list-avds&lt;/code&gt; lista todos os emuladores existentes, se não aparecer nada na lista de emuladores pode se tentar rodar uma primeira vez pelo android studio. &lt;/p&gt;
+&lt;p&gt;Com o nome dele é possível iniciá-lo com o comando &lt;code class=&quot;language-text&quot;&gt;emulator -avd NOME-DO-EMULADOR&lt;/code&gt;. E verificar quais emuladores estão conectados através de &lt;code class=&quot;language-text&quot;&gt;adb devices&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Pode ser adicionado um atalho do comando para rodar o emulador no arquivo &lt;strong&gt;.bashrc&lt;/strong&gt; onde foram colocadas as variáveis de ambiente. Exemplo: &lt;code class=&quot;language-text&quot;&gt;alias run-emu=&amp;quot;emulator -avd NOME-DO-EMULADOR&amp;quot;&lt;/code&gt;&lt;/p&gt;
+&lt;h4&gt;Resolver erros com o emulador&lt;/h4&gt;
+&lt;h5&gt;Erro de permissão no &lt;em&gt;/dev/kvm&lt;/em&gt;&lt;/h5&gt;
+&lt;ol&gt;
+&lt;li&gt;Instalar o qemu-kvm
+&lt;code class=&quot;language-text&quot;&gt;sudo apt install qemu-kvm&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Depois adicionar seu usuário no grupo kvm
+&lt;code class=&quot;language-text&quot;&gt;sudo adduser &amp;lt;username&amp;gt; kvm&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Verificar se está adicionado ao grupo
+&lt;code class=&quot;language-text&quot;&gt;grep kvm /etc/group&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Adicionar seu usuário como dono do diretório:
+&lt;code class=&quot;language-text&quot;&gt;sudo chown &amp;lt;username&amp;gt; /dev/kvm&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Se após todos os comando continuar com o erro tentar mudar permissão do diretório:
+&lt;code class=&quot;language-text&quot;&gt;sudo chmod 777 -R /dev/kvm&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;h3&gt;Watchman&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;Instalar dependências: &lt;code class=&quot;language-text&quot;&gt;sudo apt install -y autoconf automake build-essential libtool pkg-config libssl-dev python-dev&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Clonar o repositório: &lt;code class=&quot;language-text&quot;&gt;git clone https://github.com/facebook/watchman.git&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;entrar na pasta criada &lt;code class=&quot;language-text&quot;&gt;cd watchmangit&lt;/code&gt;, e depois &lt;code class=&quot;language-text&quot;&gt;git checkout v4.9.0&lt;/code&gt; &lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;/autogen.sh./configure --enable-lenient&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;make&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;sudo make install&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;h3&gt;Resolver erros com o watchman&lt;/h3&gt;
+&lt;h5&gt;Erro ‘System limit of number of file watchers reached’ ou ‘inotifier…’&lt;/h5&gt;
+&lt;p&gt;Tentar alguns dos comando abaixo: &lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;# 1
+echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf &amp;amp;&amp;amp; sudo sysctl -p
+
+# 2
+echo 999999 | sudo tee -a /proc/sys/fs/inotify/max_user_watches &amp;amp;&amp;amp; echo 999999 | sudo tee -a /proc/sys/fs/inotify/max_queued_events &amp;amp;&amp;amp; echo 999999 | sudo tee -a /proc/sys/fs/inotify/max_user_instances &amp;amp;&amp;amp; watchman shutdown-server &amp;amp;&amp;amp; sudo sysctl -p 
+
+# 3
+watchman watch-del-all
+
+# 4
+watchman shutdown-server&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;hr&gt;
+&lt;h3&gt;React Native Cli&lt;/h3&gt;
+&lt;p&gt;Instalar (globalmente) o React Native pelo: &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;NPM: &lt;code class=&quot;language-text&quot;&gt;npm install -g react-native-cli&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;YARN: &lt;code class=&quot;language-text&quot;&gt;yarn global add react-native-cli&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3&gt;Rodar seu aplicativo React Native&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;Instalar o aplicativo no emulador/dispositivo (rodar o comando dentro do repositório onde está seu código): &lt;code class=&quot;language-text&quot;&gt;&amp;gt; react-native run-android&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Iniciar o servidor: &lt;code class=&quot;language-text&quot;&gt;&amp;gt; react-native start&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;(EMULADOR) Abrir o menu (ctrl+m) e entrar no &lt;em&gt;dev settings&lt;/em&gt; do emulador e inserir seu ip e a porta. Exemplo: 192.168.15.10:8081. O seu ip pode ser descoberto com o comando &lt;code class=&quot;language-text&quot;&gt;ip addr show&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://facebook.github.io/react-native/docs/running-on-device&quot;&gt;(CELULAR)&lt;/a&gt; Após conectar o celular ao computador por usb, e configurar o celular ao permitir as &lt;strong&gt;opções de desenvolvedor&lt;/strong&gt;, usar o comando &lt;code class=&quot;language-text&quot;&gt;lssub&lt;/code&gt; para pegar o código do celular; depois usar o comando  trocando &lt;strong&gt;04e8&lt;/strong&gt; pelo código do celular: &lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;echo &amp;#39;SUBSYSTEM==&amp;quot;usb&amp;quot;, ATTR{idVendor}==&amp;quot;04e8&amp;quot;, MODE=&amp;quot;0666&amp;quot;, GROUP=&amp;quot;plugdev&amp;quot;&amp;#39; | sudo tee /etc/udev/rules.d/51-android-usb.rules&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Verificar se o celular está conectado pelo comando &lt;code class=&quot;language-text&quot;&gt;adb devices&lt;/code&gt;.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3&gt;Erros ao rodar o aplicativo&lt;/h3&gt;
+&lt;h4&gt;‘Could not install the app on the device, read the error above for details’&lt;/h4&gt;
+&lt;p&gt;Este erro pode ser resolvido mudando a permissão do seguinte arquivo &lt;strong&gt;/seu-projeto-react-native/android/gradlew&lt;/strong&gt; com o comando: &lt;code class=&quot;language-text&quot;&gt;chmod 755 /seu-projeto-react-native/android/gradlew&lt;/code&gt;&lt;/p&gt;
+&lt;h4&gt;Erro com o arquivo .debug-keystore&lt;/h4&gt;
+&lt;p&gt;Se o projeto foi clonado de um repositório remoto como o github pode ocorrer de o arquivo &lt;strong&gt;.gitignore&lt;/strong&gt; ignorar o arquivo &lt;strong&gt;.debug-keystore&lt;/strong&gt; e sem ele não é possível rodar o projeto. Você pode pegar o arquivo de algum outro projeto que você possua do react native ou gera-lo pelo android studio com os seguintes passos:&lt;/p&gt;
+&lt;h4&gt;error: bundling failed: Error: Unable to resolve module ‘./chunk-2fd513a6.js” from ”node_modules/@redux-saga/core/dist/redux-saga-effects.prod.cjs.js:&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Limpar cache do yarn e npm:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;yarn cache clean
+
+npm cache clean --force&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;Limpar cache do react-native&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;react-native start --reset-cache&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;hr&gt;
+&lt;h2&gt;Links de Referência&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://stackoverflow.com/questions/50328656/dev-kvm-permission-denied-android-emulator&quot;&gt;https://stackoverflow.com/questions/50328656/dev-kvm-permission-denied-android-emulator&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://medium.com/@jeancabral/instalando-e-configurando-react-native-no-ubuntu-18-04-e3329ac090a0&quot;&gt;https://medium.com/@jeancabral/instalando-e-configurando-react-native-no-ubuntu-18-04-e3329ac090a0&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://medium.com/dooboolab/running-react-native-app-in-ubuntu-18-04-7d1db4ac7518&quot;&gt;https://medium.com/dooboolab/running-react-native-app-in-ubuntu-18-04-7d1db4ac7518&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://medium.com/@wnyao0830/run-create-react-native-app-on-android-studios-emulator-ad678a0c362f&quot;&gt;https://medium.com/@wnyao0830/run-create-react-native-app-on-android-studios-emulator-ad678a0c362f&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://docs.rocketseat.dev/ambiente-react-native/android/linux#configurando-sdk-do-android-no-linux&quot;&gt;https://docs.rocketseat.dev/ambiente-react-native/android/linux#configurando-sdk-do-android-no-linux&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://help.ubuntu.com/community/KVM/Installation#Install_Necessary_Packages&quot;&gt;https://help.ubuntu.com/community/KVM/Installation#Install_Necessary_Packages&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://askubuntu.com/questions/770374/user-limit-of-inotify-watches-reached-on-ubuntu-16-04&quot;&gt;https://askubuntu.com/questions/770374/user-limit-of-inotify-watches-reached-on-ubuntu-16-04&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/fabiossantoss/deb_app_mobile/blob/master/package.json&quot;&gt;https://github.com/fabiossantoss/deb_app_mobile/blob/master/package.json&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://stackoverflow.com/questions/42554337/cannot-launch-avd-in-emulatorqt-library-not-found&quot;&gt;https://stackoverflow.com/questions/42554337/cannot-launch-avd-in-emulatorqt-library-not-found&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://stackoverflow.com/questions/47075661/error-user-limit-of-inotify-watches-reached-extreact-build&quot;&gt;https://stackoverflow.com/questions/47075661/error-user-limit-of-inotify-watches-reached-extreact-build&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://stackoverflow.com/questions/32572399/android-failed-to-load-js-bundle&quot;&gt;https://stackoverflow.com/questions/32572399/android-failed-to-load-js-bundle&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://stackoverflow.com/questions/54541734/spawnsync-gradlew-eacces-error-when-running-react-native-project-on-emulator-u&quot;&gt;https://stackoverflow.com/questions/54541734/spawnsync-gradlew-eacces-error-when-running-react-native-project-on-emulator-u&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/facebook/react-native/issues/8868&quot;&gt;https://github.com/facebook/react-native/issues/8868&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[React - Redux e Saga]]></title><description><![CDATA[As informações presentes são uma forma de documentar meu entendimento sobre esse assunto. Abaixo estão algumas referências utilizadas.…]]></description><link>https://esteves-esta.github.io/saga/</link><guid isPermaLink="false">https://esteves-esta.github.io/saga/</guid><pubDate>Sun, 16 Feb 2020 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;As informações presentes são uma forma de documentar meu entendimento sobre esse assunto. Abaixo estão algumas referências utilizadas.&lt;/p&gt;
+&lt;h3&gt;Referências&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://redux-saga.js.org/docs/advanced/Testing.html&quot;&gt;Redux-Saga Oficial Docs&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://bjarte.tech/2019/02/22/javascript-redux-saga-testing-creation/&quot;&gt;JavaScript – Redux Saga Testing – Creation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://blog.scottlogic.com/2018/01/16/evaluating-redux-saga-test-libraries.html&quot;&gt;Evaluating redux saga test libraries&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://medium.com/practo-engineering/testing-redux-sagas-with-a-plan-e59124c5d139&quot;&gt;Testing redux sagas with a plan&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/antoinejaussoin/redux-saga-testing&quot;&gt;redux-saga-testing library&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=7cRQorjgLyY&quot;&gt;Redux Sagas Make Testing Easier&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://scastiel.dev/posts/2019-08-03-lost-redux-saga-reimplement-them/&quot;&gt;Lost with Redux and sagas? Implement them yourself!&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Redux&lt;/h3&gt;
+&lt;h4&gt;redux&lt;/h4&gt;
+&lt;p&gt;O redux é uma forma de facilitar o fluxo de dados em uma aplicação, atráves dele pode-se criar um único local de entrada e saída de dados
+assim se criando um única &lt;strong&gt;fonte de verdade&lt;/strong&gt; que é a &lt;strong&gt;store&lt;/strong&gt; da aplicação.&lt;/p&gt;
+&lt;h4&gt;store&lt;/h4&gt;
+&lt;p&gt;A store então nada mais é que um “local” onde se armazena todos os dados importantes da aplicação, que são os nossos &lt;strong&gt;states&lt;/strong&gt;.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;// src/store/index.tsx
+
+import {createStore} from &amp;#39;redux&amp;#39;;
+import rootReducer from &amp;#39;./ducks&amp;#39;;
+
+const store = createStore(
+  rootReducer
+);&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;// src/store/ducks/index.tsx
+
+import {combineReducers} from &amp;#39;redux&amp;#39;;
+
+import getModal from &amp;#39;./Modal&amp;#39;;
+
+const rootReducer = combineReducers({
+  getModal
+});
+
+export default rootReducer;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h4&gt;state&lt;/h4&gt;
+&lt;p&gt;Um state é um conjunto de dados que são utilizados em muitos lugares de sua aplicação, e podem ser acessados por um hook do redux &lt;code class=&quot;language-text&quot;&gt;useSelector(state =&amp;gt; state.NomeDoReducer)&lt;/code&gt;.
+O &lt;code class=&quot;language-text&quot;&gt;nomeDoReducer&lt;/code&gt; é o nome dado ao reducer na função &lt;code class=&quot;language-text&quot;&gt;combineReducers()&lt;/code&gt;.
+Como dito antes os dados só podem ser alterado de um local, entao para realizar essa ação é utilizado um &lt;strong&gt;action&lt;/strong&gt; que chama um &lt;strong&gt;reducer&lt;/strong&gt;.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;// src/store/ducks/Modal/index.tsx
+
+interface State {
+  visible: boolean,
+  message: string
+}
+
+export const INITIAL_STATE: State = {
+  visible: false,
+  message: undefined,
+};&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h4&gt;action&lt;/h4&gt;
+&lt;p&gt;O action é um objeto que possui um tipo que comunica o que se deseja fazer com o state. ex: se quer receber os dados ou altera-los.
+Além do tipo pode ser enviado um sedundo atributo com dados a serem enviados para o state.&lt;/p&gt;
+&lt;p&gt;Um action pode ser chamado atráves do hook do redux &lt;code class=&quot;language-text&quot;&gt;useDispatch({type: string, payload?: any}): Action&lt;/code&gt;.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;// src/store/ducks/Modal/index.tsx
+
+export enum Types {
+  SHOW_MODAL = &amp;#39;MODAL/SHOW_MODAL&amp;#39;,
+  HIDE_MODAL = &amp;#39;MODAL/HIDE_MODAL&amp;#39;,
+};
+
+export interface Action {
+  type: Types;
+  message?: string
+}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h4&gt;reducer&lt;/h4&gt;
+&lt;p&gt;Um reducer nada mais é que uma função que recebe dois paramêtros &lt;code class=&quot;language-text&quot;&gt;reducer(state, action)&lt;/code&gt;, o primeiro parâmetro sendo o state atual e o segundo a action(ação) que deve
+ser realizada nesse state.
+O reducer é de forma simples uma função que possui um switch case que verifica o tipo de ação recebida no action e realizada alguma alteração no state.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;// src/store/ducks/Modal/index.tsx
+
+export default function getModal(
+  state: State = INITIAL_STATE, action: Action
+): State {
+  switch (action.type) {
+    case Types.SHOW_MODAL: {
+      return { visible: true, message: action.message };
+    }
+    case Types.HIDE_MODAL: {
+      return { ...state, visible: false };
+    }
+    default:
+      return state;
+  }
+}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3&gt;SAGA&lt;/h3&gt;
+&lt;h4&gt;saga&lt;/h4&gt;
+&lt;p&gt;O saga é o local onde se realização ação assincronas na aplicação e lida com a distribuição dos dados asincronos para a &lt;strong&gt;store&lt;/strong&gt;.
+O saga é uma função generator &lt;code class=&quot;language-text&quot;&gt;function*&lt;/code&gt;, esse tipo de função se utiliza do &lt;code class=&quot;language-text&quot;&gt;yield&lt;/code&gt; para parar a execução em um ponto até receber o resultado asincrono.&lt;/p&gt;
+&lt;h4&gt;rootSaga&lt;/h4&gt;
+&lt;p&gt;Com o saga temos um saga raiz onde podemos conectar um tipo de ação (action) a uma função saga especifíca para um &lt;strong&gt;state&lt;/strong&gt;.
+Nesse saga raiz pode-se determinar se um saga será acionado em cada chamada de uma ação &lt;code class=&quot;language-text&quot;&gt;takeEvery()&lt;/code&gt; ou se será acionado somente uma unica vez com o &lt;code class=&quot;language-text&quot;&gt;takeLatest()&lt;/code&gt;.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;// src/store/sagas/index.tsx
+
+import {all, takeLatest} from &amp;#39;redux-saga/effects&amp;#39;;
+import {Types as ModalTypes} from &amp;#39;~/store/ducks/Modal&amp;#39;;
+import {getModal} from &amp;#39;./Modal&amp;#39;;
+
+export default function* rootSaga() {
+  return yield all([
+    takeLatest(ModalTypes.SHOW_MODAL, getModal),
+  ]);
+}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h4&gt;stateSaga&lt;/h4&gt;
+&lt;p&gt;Temos então um saga para cada state onde pode ser realizado, por exemplo, uma chamada a uma api &lt;code class=&quot;language-text&quot;&gt;yield call(api, params)&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;A resposta da api pode ser incluída no state chamada uma &lt;strong&gt;action&lt;/strong&gt; pela função &lt;code class=&quot;language-text&quot;&gt;yield put({type: string, payload?: any})&lt;/code&gt; que funciona como o &lt;code class=&quot;language-text&quot;&gt;useDispatch&lt;/code&gt;
+onde pode ser chamada um tipo de ação e os dados que devem ser mandados ao state.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;// src/store/sagas/Modal/index.tsx
+
+import {call, put} from &amp;#39;redux-saga/effects&amp;#39;;
+import api from &amp;#39;~/services/api&amp;#39;;
+import {Types as ModalTypes, Action} from &amp;#39;~/store/ducks/Modal&amp;#39;;
+import { AxiosResponse, AxiosError } from &amp;#39;axios&amp;#39;;
+
+export function* sagaModal() {
+  try {
+    type Response = AxiosResponse&amp;lt;IResponse&amp;lt;string&amp;gt;&amp;gt;;
+    const response: Response = yield call(api.get, &amp;#39;/modal/status&amp;#39;);
+
+    yield put&amp;lt;Action&amp;gt;({
+      type: ModalTypes.SHOW_MODAL,
+      data: response.data,
+    });
+  } catch (error) {
+    const axiosError = error as AxiosError&amp;lt;IResponse&amp;gt;;
+    const erroMensagem = error.message || axiosError.response.data.message;
+
+    yield put&amp;lt;Action&amp;gt;({
+      type: ModalTypes.HIDE_MODAL,
+      error: erroMensagem
+    });
+  }
+}
+
+interface IResponse&amp;lt;T = null&amp;gt; {
+  value: T,
+  result: boolean,
+  message: string,
+}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;Testes&lt;/h2&gt;
+&lt;h3&gt;Redux&lt;/h3&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;// __tests__/ducks/Modal.test.tsx
+
+import reducer, {
+  INITIAL_STATE,
+  Types,
+} from &amp;#39;~/store/ducks/Modal&amp;#39;;
+
+describe(&amp;#39;Modal Reducer&amp;#39;, () =&amp;gt; {
+  it(&amp;#39;if not passed an action to throw error&amp;#39;, () =&amp;gt; {
+    expect(() =&amp;gt; {
+      reducer(undefined, undefined)
+    }).toThrow();
+  });
+
+  it(&amp;#39;must return the SHOW_MODAL&amp;#39;, () =&amp;gt; {
+    expect(reducer(undefined, {type: Types.SHOW_MODAL, message: &amp;quot;hello world&amp;quot;})).toEqual({
+      visible: true,
+      message: &amp;quot;hello world&amp;quot;
+    });
+  });
+
+  it(&amp;#39;must return the HIDE_MODAL&amp;#39;, () =&amp;gt; {
+    expect(
+      reducer(undefined, {type: Types.HIDE_MODAL})
+      ).toEqual({
+        visible: false,
+        message: undefined
+    });
+  });
+});&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3&gt;Saga&lt;/h3&gt;
+&lt;p&gt;Utilizando a biblioteca redux-saga-testing é possível testar o saga sem ter que mockar as chamadas a api. E testar cada yield que ocorre dentro do saga desejado.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;// __tests__/sagas/Modal.test.tsx
+
+import sagaHelper from &amp;#39;redux-saga-testing&amp;#39;;
+import {call, put} from &amp;#39;redux-saga/effects&amp;#39;;
+import api from &amp;#39;~/services/api&amp;#39;;
+import { Types, Action } from &amp;#39;~/store/ducks/Modal&amp;#39;;
+import {sagaModal} from &amp;#39;~/store/sagas/Modal&amp;#39;;
+
+const actionShow = (message?: string): Action =&amp;gt; ({type: Types.SHOW_MODAL, message });
+const actionHide = (): Action =&amp;gt; ({type: Types.HIDE_MODAL });
+
+api.get = jest.fn();
+
+describe(&amp;#39;sagaModal&amp;#39;, () =&amp;gt; {
+  describe(&amp;#39;test sucessul return from api&amp;#39;, () =&amp;gt; {
+    
+    // ao inves de usar o it do jest estamos
+    // criando o nosso proprio it atraves da biblioteca redux-saga-testing
+    const it = sagaHelper(sagaModal());
+
+    // mockando o resultado do axios
+    const mockSucessResponse = {
+      data: &amp;quot;hello world&amp;quot;
+    };
+
+    it(&amp;#39;should call api with correct URI&amp;#39;, sagaResult =&amp;gt; {
+      expect(sagaResult).toEqual(call(api.get, &amp;#39;/modal/status&amp;#39;));
+
+      return mockSucessResponse;
+    });
+
+    it(&amp;#39;should return with sucess and send SHOW_MODAL&amp;#39;, sagaResult =&amp;gt; {
+      expect(sagaResult).toEqual(put(actionShow(mockSucessResponse.data)));
+    });
+
+    it(&amp;#39;should end saga&amp;#39;, sagaResult =&amp;gt; {
+      expect(sagaResult).toBeUndefined();
+    });
+  });
+
+  describe(&amp;#39;test error return from api&amp;#39;, () =&amp;gt; {
+    
+    const it = sagaHelper(sagaModal());
+
+    // mockando mensagem de erro
+    const mockErrorResponse = &amp;quot;status 500&amp;quot;;
+
+    it(&amp;#39;should call api with correct URI&amp;#39;, sagaResult =&amp;gt; {
+      expect(sagaResult).toEqual(call(api.post, &amp;#39;/modal/status&amp;#39;));
+
+      return new Error(mockErrorResponse);
+    });
+
+    it(&amp;#39;should return with error and send action HIDE_MODAL&amp;#39;, sagaResult =&amp;gt; {
+      expect(sagaResult).toEqual(put(actionError(mockErrorResponse)));
+    });
+
+    it(&amp;#39;should end saga&amp;#39;, sagaResult =&amp;gt; {
+      expect(sagaResult).toBeUndefined();
+    });
+  });
+
+});&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item></channel></rss>
