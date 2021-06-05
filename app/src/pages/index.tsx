@@ -82,7 +82,7 @@ const Index = ({ location }) => {
             <StaticImage
               height={400}
               alt="logo"
-              src="../images/projetos/zenite_aplicativo.gif"
+              src="../images/projetos/zenite_aplicativo.png"
             />
           </Row>
           <Col>

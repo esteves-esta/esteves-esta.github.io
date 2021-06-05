@@ -45,7 +45,7 @@ export const Nav = styled.nav`
 `
 
 function verifyIfIsCurrentPage(props) {
-  return props.to === location.pathname
+  return props.to === props.location.pathname
 }
 
 export const Navlink = styled(Link)`
