@@ -22,7 +22,11 @@ const Layout = ({ location, title, children }) => {
       <header>
         <Header>
           <Link to="/">
-            <StaticImage alt="logo" src="../../images/esteves-esta/logo2.png" />
+            <StaticImage
+              height={50}
+              alt="logo"
+              src="../../images/esteves-esta/logo2.png"
+            />
           </Link>
           <Nav>
             <Navlink to="/" location={location}>

@@ -26,10 +26,6 @@ export const Header = styled(CenterContainer)`
   justify-content: space-between;
   align-items: center;
   height: 120px;
-  /* background-color: yellow; */
-  img {
-    height: 50px;
-  }
 `
 
 export const Nav = styled.nav`
