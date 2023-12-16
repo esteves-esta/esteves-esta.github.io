@@ -3,7 +3,7 @@
 name: Deploy static content to Pages
 defaults:
   run:
-    working-directory: ./portfolio/
+    working-directory: ./portfolio
 
 on:
   # Runs on pushes targeting the default branch
@@ -31,9 +31,6 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: ./portfolio/
     steps:
       - name: Checkout
         uses: actions/checkout@v4
