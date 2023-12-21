@@ -1,0 +1,11 @@
+.emoticon {
+  font-style: normal;
+  font-size: .8em;
+  color: var(--header-accent-color);
+  font-variation-settings: "wght" 900, "soft" 1, "opsz" 0;
+  letter-spacing: 1.65px;
+}
+
+.header h1 {
+  font-variation-settings: "wght" 798, "soft" 100, "opsz" 1;
+}

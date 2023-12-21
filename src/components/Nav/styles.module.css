@@ -1,0 +1,28 @@
+.emoticon {
+  padding-left: .3em;
+  color: var(--nav-accent-color)
+}
+
+.navigation button {
+  font-style: normal;
+  /* font-variation-settings: "wght" 600, "soft" 100, "opsz" 30; */
+  font-weight: 200;
+  font-size: 1.5em;
+  font-style: normal;
+  text-align: left;
+  background: transparent;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  color: var(--nav-text-color)
+}
+
+.navigation button span:nth-child(1)::after {
+  content: "";
+  display: flex;
+  position: relative;
+  top: -2px;
+  width: 30%;
+
+  border-top: 3px solid var(--nav-text-color);
+}
