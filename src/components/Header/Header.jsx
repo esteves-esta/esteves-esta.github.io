@@ -3,9 +3,8 @@ import {
   PlusCircle,
   Asterisk,
   Sparkles,
-  Figma,
-  Headphones,
-  Ampersand,
+  Palette,
+  Headphones
 } from "lucide-react";
 import React from "react";
 import classes from "./styles.module.css";
@@ -17,12 +16,12 @@ function Header({ timeOfDay }) {
       icon: PlusCircle,
     },
     {
-      text: "sou uma pessoa introvertida e meus hobbies se refletem nisso, amo plantas, quebra-cabeças, livros, além disso",
+      text: "sou uma pessoa introvertida e meus hobbies se refletem nisso, amo plantas, quebra-cabeças, livros; e além disso",
       icon: Puzzle,
     },
     {
-      text: "sou formada tanto em design e desenvolvimento de sistemas então já tive a oportunidade de prototipar e desenvolver funcionalidades; e também",
-      icon: Figma,
+      text: "sou formada em design gráfico e desenvolvimento de sistemas então já prototipei e desenvolvi funcionalidades; e também",
+      icon: Palette,
     },
     {
       text: "amo todos os gêneros de música, estou sempre de fone de ouvido e",

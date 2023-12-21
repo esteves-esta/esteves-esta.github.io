@@ -41,13 +41,13 @@ function ProjectWomenBands({ showNextProject }) {
 
           <p>
             Este projeto surgiu no dia que percebi que todas as bandas de metal
-            que conhecia só tinham homems como vocalistas. Comecei a juntar uma
+            que conhecia só tinham homems como vocalistas. Comecei a reunir uma
             lista com bandas com vocalistas mulheres e achei que seria
             interessante criar uma aplicação com os dados que estava reunindo.
           </p>
 
           <p>
-            O projeto foi iniciado com React pois na epóca estava estudando
+            O projeto foi realizado com React pois na época estava estudando
             react com o curso “Joy of React” de Josh Comeau.
           </p>
 
@@ -66,24 +66,29 @@ function ProjectWomenBands({ showNextProject }) {
 
           <p>
             No curso “Joy of React” nós estudantes somos instigados após alguns
-            módulos a praticar de forma “não guiada”, e uma das ideias para essa
-            praticar era criar um componente que geralmente usamos de
-            bibliotecas.
+            módulos a praticar de forma “não guiada”, oque significa praticar
+            sem acompanhar um tutorial e criando nossos próprios objetivos.
+          </p>
+          <p>
+            Uma das ideias dada para praticar de forma não guiada era criar um
+            componente que geralmente usamos pronto atráves de bibliotecas.
           </p>
 
           <p>
             No trabalho já usei diversas bibliotecas para criar datatables porém
-            não tinha criado até esse momento um componente desse, tanto o
+            não tinha criado até esse momento esse componente do zero, tanto o
             design como a lógica. Criar esse componente realmente me fez ganhar
             uma nova apreciação pelas bibliotecas que uso normalmente para
             realizar essa função ( ^ v ^ ).
           </p>
 
           <p>
-            Com os objetivos que eu tive ao realizar a lógica, permitir que as
-            colunas pudesse ser customizar para diversos tipos de dado e mesmo
-            assim ter a mesma lógica de ordenção e pesquisa para todas as
-            colunas não foi a coisa mais rápida do mundo XD
+            Devido aos os objetivos que eu me planejei não foi a coisa mais
+            rápida ou fácil do mundo o desenvolvimento deste compoente. Sendo
+            estes objetivos por exemplos de no uso do compoennte dar a opção de
+            ter colunas customizadas para diversos tipos de dado e ao mesmo
+            tempo manter a mesma lógica de ordenção e pesquisa para todas as
+            colunas
           </p>
         </section>
 
@@ -95,12 +100,12 @@ function ProjectWomenBands({ showNextProject }) {
           <p>
             Realizei a funcionalide de pesquisa no cliente-side porém percebi
             que não seria a melhorar forma pois conforme a lista foi aumentando
-            o processo não é tão rápido quanto o desejado.
+            o processo de pesquisa não é tão rápido quanto o desejado.
           </p>
 
           <p>
             Por isso planejo substituir essa lógica por uma api e colocar os
-            dadosem um banco não relacional, como o redis.
+            dados em um banco não relacional, como o redis.
           </p>
         </section>
       </div>

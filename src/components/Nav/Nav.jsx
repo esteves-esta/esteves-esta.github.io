@@ -41,11 +41,11 @@ function Nav({
         )}
       </button>
       <br />
-      {closeHeader && showNextProject == 1 && (
+      {/* {closeHeader && showNextProject == 1 && (
         <button onClick={goToNextProject}>
           <span>próximo</span>
         </button>
-      )}
+      )} */}
     </nav>
   );
 }
