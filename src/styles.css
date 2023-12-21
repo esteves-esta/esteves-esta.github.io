@@ -105,7 +105,9 @@ header {
   color: var(--text-color);
 }
 
-header, nav, article {
+header,
+nav,
+article {
   background-color: var(--header-bg-color);
   color: var(--text-color);
   transition:
@@ -175,7 +177,7 @@ header, nav, article {
   transition: color 450ms ease .8s;
 }
 
-.afternoon .time-icon {
+.afternoon .time-icon div {
   height: 18px;
   overflow: hidden;
 }
@@ -188,7 +190,7 @@ header, nav, article {
     filter 450ms ease;
 }
 
-.afternoon .time-icon::before {
+/* .afternoon .time-icon::before {
   content: "";
   display: block;
   cursor: auto;
@@ -198,7 +200,7 @@ header, nav, article {
   z-index: 2;
   border-top: 2.5px solid var(--red-2);
   transition: all 450ms ease,
-}
+} */
 
 .time-icon:hover {
   transform: scale(1.3);

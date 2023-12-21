@@ -37,8 +37,10 @@ function App() {
         <p>fernanda esteves</p>
 
         <button onClick={changeTime} className="time-icon">
-          {timeOfDay == "night" && <Moon size={32} />}
-          {timeOfDay !== "night" && <Sun size={32} />}
+          <div>
+            {timeOfDay == "night" && <Moon size={32} />}
+            {timeOfDay !== "night" && <Sun size={32} />}
+          </div>
         </button>
         <p>
           <a href="https://github.com/esteves-esta/" target="_blank">
