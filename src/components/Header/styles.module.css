@@ -9,3 +9,83 @@
 .header h1 {
   font-variation-settings: "wght" 798, "soft" 100, "opsz" 1;
 }
+
+.aboutMe svg {
+  display: inline;
+  color: var(--header-accent-color);
+  vertical-align: middle;
+  will-change: contents;
+  transition:
+    filter 850ms ease,
+    transform 750ms ease;
+  margin-left: .2em;
+}
+
+.aboutMe:hover svg {
+  filter: saturate(2) brightness(.9);
+  transform: scale(1.12);
+}
+
+.aboutMe {
+  
+  width: 75%;
+  /* display: inline; */
+  color: var(--text-color);
+  font-size: 1em;
+  font-variation-settings: "wght" 600, "soft" 100, "opsz" 1;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  will-change: contents;
+
+  text-align: left;
+  cursor: pointer;
+}
+
+.aboutMe span>span {
+  color: var(--header-accent-color);
+}
+
+
+.aboutMe span {
+  background: linear-gradient(0deg, var(--header-accent-color), var(--header-accent-color)) no-repeat right bottom / 100% 8%;
+  transition: filter 850ms ease,background-size 750ms ease;
+}
+
+.aboutMe:hover span {
+  filter: saturate(2) brightness(.9);
+  background-size: 0% 8%;
+}
+
+/* border-radius: 100px;
+== box-shadow: var(--header-accent-color) 0px 0px 0px 2px,
+  var(--text-color) 0px 0px 0px 3px; 
+== animation: testando2 2s infinite ease; 
+
+transition: box-shadow 250ms ease;
+will-change: transform;
+box-shadow: var(--header-accent-color) 0px 0px 0px 2px,
+  var(--header-bg-color) 0px 0px 0px 2px;
+  */
+
+/* .aboutMe button:hover {
+  box-shadow: var(--header-bg-color) 0px 0px 0px 2px,
+    var(--header-accent-color) 0px 0px 0px 0px;
+} */
+
+/* @keyframes testando2 {
+  0% {
+    box-shadow: var(--header-accent-color) 0px 0px 0px 2px,
+      var(--header-bg-color) 0px 0px 0px 0px;
+  }
+
+  50% {
+    box-shadow: var(--header-bg-color) 0px 0px 0px 2px,
+      var(--header-accent-color) 0px 0px 0px 0px;
+  }
+
+  100% {
+    box-shadow: var(--header-accent-color) 0px 0px 0px 2px,
+      var(--header-bg-color) 0px 0px 0px 0px;
+  }
+} */

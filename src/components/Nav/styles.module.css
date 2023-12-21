@@ -1,3 +1,8 @@
+.navigation {
+  display: flex;
+  align-items: center;
+}
+
 .emoticon {
   padding-left: .3em;
   color: var(--nav-accent-color)
@@ -7,22 +12,27 @@
   font-style: normal;
   /* font-variation-settings: "wght" 600, "soft" 100, "opsz" 30; */
   font-weight: 200;
-  font-size: 1.5em;
+  font-size: 1.25em;
+  letter-spacing: .029em;
   font-style: normal;
   text-align: left;
   background: transparent;
   outline: none;
   border: none;
   cursor: pointer;
-  color: var(--nav-text-color)
+  color: var(--nav-text-color);
+  transition:
+    filter 750ms ease;
 }
 
-.navigation button span:nth-child(1)::after {
-  content: "";
-  display: flex;
-  position: relative;
-  top: -2px;
-  width: 30%;
+.navigation button:hover span:nth-child(1) {
+  filter: brightness(1.16);
+  background-size: 0% 2%;
+}
 
-  border-top: 3px solid var(--nav-text-color);
+.navigation button span:nth-child(1) {
+  background: linear-gradient(0deg, var(--nav-text-color), var(--nav-text-color)) no-repeat right bottom / 100% 2%;
+  transition:
+    filter 750ms ease,
+    background-size 750ms ease;
 }

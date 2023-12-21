@@ -8,6 +8,7 @@ function App() {
   const [timeOfDay] = React.useState(() => {
     const date = new Date();
     const currentHour = date.getHours(); 
+ 
     if (currentHour < 12 ) return "morning";
     if (currentHour >= 12 && currentHour < 18) return "afternoon";
     if (currentHour >= 18 && currentHour < 4) return "night";

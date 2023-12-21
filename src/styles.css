@@ -8,7 +8,7 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; */
   /* ^^ check later */
-  --inner-padding: 1.8em;
+  --inner-padding: 1.8em 5em;
 }
 
 main {
@@ -19,7 +19,7 @@ main {
   --blue-1: #3E4962;
   --blue-2: #C8D6D4;
   --orange-1: #E08E57;
-  --orange-2: #FBB474;
+  --orange-2: hsl(28, 88%, 75%);
   --red-1: #4D3144;
   --red-2: #DA5C4C;
 
@@ -92,10 +92,9 @@ main {
   content: "";
   display: block;
   position: absolute;
-  top: 20px;
-  width: 32px;
-  height: 10px;
-  border-top: 3px solid var(--red-2);
+  top: 58px;
+  width: 32px;;
+  border-top: 2.5px solid var(--red-2);
 }
 
 .night {
@@ -127,9 +126,11 @@ header {
 
   position: absolute;
   z-index: 1;
-  width: 94%;
-  top: var(--inner-padding);
-  left: var(--inner-padding);
+  width: 100%;
+
+  top: 0;
+  left: 0;
+  padding: var(--inner-padding);
 }
 
 .top-fixed *:nth-child(1) {
@@ -194,12 +195,12 @@ header {
 }
 
 
-nav {
-  padding: var(--inner-padding);
+.closeHeader nav {
   padding-top: 3.5em;
 }
 
 nav {
+  padding: var(--inner-padding);
   display: flex;
   flex-direction: row;
   justify-content: space-between;
