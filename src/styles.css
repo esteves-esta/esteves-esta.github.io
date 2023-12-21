@@ -146,7 +146,9 @@ article {
     background-size 750ms ease;
 }
 
-.top-fixed a:hover {
+.top-fixed a:hover,
+.top-fixed a:focus {
+  outline: none;
   filter: brightness(1.1);
   background-size: 100% .1em;
 }
@@ -202,7 +204,9 @@ article {
   transition: all 450ms ease,
 } */
 
-.time-icon:hover {
+.time-icon:hover ,
+.time-icon:focus {
+  outline: none;
   transform: scale(1.3);
   filter: brightness(1.1);
 }

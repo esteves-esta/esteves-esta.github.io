@@ -49,7 +49,7 @@ function App() {
         </p>
       </div>
 
-      <Header timeOfDay={timeOfDay} />
+      <Header closeHeader={closeHeader} timeOfDay={timeOfDay} />
 
       <Nav
         closeHeader={closeHeader}
@@ -58,7 +58,7 @@ function App() {
         setShowNextProject={setShowNextProject}
       />
 
-      <Projects showNextProject={showNextProject} />
+      <Projects closeHeader={closeHeader} showNextProject={showNextProject} />
     </main>
   );
 }

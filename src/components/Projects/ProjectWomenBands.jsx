@@ -3,7 +3,7 @@ import classes from "./styles.module.css";
 import projectImgSrc from "./projectWomenBands.png";
 import gridMediaPlayerImgSrc from "./grid-and-media-player.png";
 
-function ProjectWomenBands({ showNextProject }) {
+function ProjectWomenBands({ closeHeader }) {
   return (
     <div className={`content ${classes.projectContent}`}>
       <div>
@@ -120,6 +120,7 @@ function ProjectWomenBands({ showNextProject }) {
           <ul>
             <li>
               <a
+                tabIndex={!closeHeader ? -1 : 0}
                 href="https://esteves-esta.github.io/women-fronted-metal-bands/"
                 target="_blank"
               >
@@ -128,6 +129,7 @@ function ProjectWomenBands({ showNextProject }) {
             </li>
             <li>
               <a
+                tabIndex={!closeHeader ? -1 : 0}
                 href="https://github.com/esteves-esta/women-fronted-metal-bands"
                 target="_blank"
               >

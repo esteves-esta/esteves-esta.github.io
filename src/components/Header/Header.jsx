@@ -4,12 +4,12 @@ import {
   Asterisk,
   Sparkles,
   Palette,
-  Headphones
+  Headphones,
 } from "lucide-react";
 import React from "react";
 import classes from "./styles.module.css";
 
-function Header({ timeOfDay }) {
+function Header({ closeHeader, timeOfDay }) {
   const aboutMeList = [
     {
       text: "sou a fernanda e trabalho como desenvolvedora frontend a 4 anos e",
@@ -38,9 +38,12 @@ function Header({ timeOfDay }) {
   ];
 
   const [aboutIndex, setAboutIndex] = React.useState(0);
-  const [aboutMeText, setAboutMeText] = React.useState(aboutMeList[aboutIndex].text);
-  const [AboutMeIcon, setAboutMeIcon] = React.useState(aboutMeList[aboutIndex].icon);
-
+  const [aboutMeText, setAboutMeText] = React.useState(
+    aboutMeList[aboutIndex].text
+  );
+  const [AboutMeIcon, setAboutMeIcon] = React.useState(
+    aboutMeList[aboutIndex].icon
+  );
 
   function changeAboutMe() {
     let newIndex = aboutIndex + 1;
@@ -61,14 +64,17 @@ function Header({ timeOfDay }) {
         </h1>
         <h1>bem vindo ao meu portfolio</h1>
 
-        <button onClick={changeAboutMe} className={classes.aboutMe}>
+        <button
+          tabIndex={closeHeader ? -1 : 0}
+          onClick={changeAboutMe}
+          className={classes.aboutMe}
+        >
           <span>
             {aboutMeText}
             <span>‧₊˚‧⁺˖</span>
           </span>
           <AboutMeIcon size={22} />
         </button>
-        
       </div>
     </header>
   );

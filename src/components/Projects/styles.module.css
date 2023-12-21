@@ -83,7 +83,9 @@
     background-size 750ms ease;
 }
 
-.projectContent li a:hover {
+.projectContent li a:hover,
+.projectContent li a:focus {
+  outline: none;
   filter: brightness(1.16);
   background-size: 0% .15em;
 }

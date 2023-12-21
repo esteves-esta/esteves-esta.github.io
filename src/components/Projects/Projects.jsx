@@ -1,12 +1,12 @@
 import ProjectWomenBands from "./ProjectWomenBands";
 import classes from "./styles.module.css";
 
-function Projects({ showNextProject }) {
+function Projects({ showNextProject, closeHeader }) {
   const projectClass = showNextProject === 1 ? `currentPage` : "";
   return (
     <div className={showNextProject === 2 ? "show-next projects" : "projects"}>
       <article className={projectClass}>
-        <ProjectWomenBands />
+        <ProjectWomenBands closeHeader={closeHeader} />
       </article>
 
       <article className={showNextProject === 2 ? "currentPage" : ""}>

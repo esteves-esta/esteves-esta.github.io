@@ -47,12 +47,14 @@
   transition: transform 350ms ease;
 }
 
-.aboutMe span>span {will-change: contents;
+.aboutMe span>span {
+  will-change: contents;
   color: var(--header-accent-color);
 }
 
 
-.aboutMe span {will-change: contents;
+.aboutMe span {
+  will-change: contents;
   background: linear-gradient(0deg, var(--header-accent-color), var(--header-accent-color)) no-repeat right bottom / 100% .1em;
   transition:
     filter 850ms ease,
@@ -61,12 +63,15 @@
 
 }
 
-.aboutMe:hover span {
+.aboutMe:hover span,
+.aboutMe:focus span {
+  outline: none;
   filter: saturate(2) brightness(.9);
   background-size: 0% .1em;
 }
 
-.aboutMe:active {
+.aboutMe:active,
+.aboutMe:focus {
   transform: scale(1.01);
 }
 

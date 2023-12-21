@@ -25,7 +25,8 @@
     filter 750ms ease;
 }
 
-.navigation button:hover span:nth-child(1) {
+.navigation button:hover span:nth-child(1), 
+.navigation button:focus span:nth-child(1){
   filter: brightness(1.16);
   background-size: 0% .09em;
 }
