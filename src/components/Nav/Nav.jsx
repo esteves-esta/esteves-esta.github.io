@@ -7,6 +7,11 @@ function Nav({
   closeHeader,
 }) {
   const toggleProjects = () => {
+    if (showNextProject === 2) {
+      setShowNextProject(1);
+      return;
+    }
+
     setCloseHeader(!closeHeader);
     setShowNextProject(0);
     if (!closeHeader) setShowNextProject(1);
@@ -36,7 +41,7 @@ function Nav({
         )}
       </button>
       <br />
-      {closeHeader && (
+      {closeHeader && showNextProject == 1 && (
         <button onClick={goToNextProject}>
           <span>próximo</span>
         </button>

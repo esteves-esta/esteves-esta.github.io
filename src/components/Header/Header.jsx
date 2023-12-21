@@ -29,7 +29,7 @@ function Header({ timeOfDay }) {
       icon: Headphones,
     },
     {
-      text: "sou uma pessoa proativa e muitas vezes já adiantou as tarefas que precisam ser realizadas",
+      text: "sou uma pessoa proativa e muitas vezes já adiantei as tarefas que precisavam ser realizadas",
       icon: Sparkles,
     },
     {
@@ -57,7 +57,7 @@ function Header({ timeOfDay }) {
         <h1>
           {timeOfDay == "morning" && "bom dia"}
           {timeOfDay == "afternoon" && "boa tarde"}
-          {timeOfDay == "night" && "boa noire"}
+          {timeOfDay == "night" && "boa noite"}
           <span className={classes.emoticon}>\(^-^)/</span>
         </h1>
         <h1>bem vindo ao meu portfolio</h1>

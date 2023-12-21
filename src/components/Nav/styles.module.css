@@ -27,12 +27,16 @@
 
 .navigation button:hover span:nth-child(1) {
   filter: brightness(1.16);
-  background-size: 0% 2%;
+  background-size: 0% .09em;
 }
 
 .navigation button span:nth-child(1) {
-  background: linear-gradient(0deg, var(--nav-text-color), var(--nav-text-color)) no-repeat right bottom / 100% 2%;
+  background: linear-gradient(0deg, var(--nav-text-color), var(--nav-text-color)) no-repeat right bottom / 100% .09em;
   transition:
     filter 750ms ease,
     background-size 750ms ease;
+}
+
+.navigation button:active {
+  transform: scale(1.1);
 }

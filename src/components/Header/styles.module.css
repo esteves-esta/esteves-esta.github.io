@@ -44,21 +44,30 @@
 
   text-align: left;
   cursor: pointer;
+  transition: transform 350ms ease;
 }
 
-.aboutMe span>span {
+.aboutMe span>span {will-change: contents;
   color: var(--header-accent-color);
 }
 
 
-.aboutMe span {
-  background: linear-gradient(0deg, var(--header-accent-color), var(--header-accent-color)) no-repeat right bottom / 100% 8%;
-  transition: filter 850ms ease, background-size 750ms ease;
+.aboutMe span {will-change: contents;
+  background: linear-gradient(0deg, var(--header-accent-color), var(--header-accent-color)) no-repeat right bottom / 100% .1em;
+  transition:
+    filter 850ms ease,
+    background-size 750ms ease,
+    transform 350ms ease;
+
 }
 
 .aboutMe:hover span {
   filter: saturate(2) brightness(.9);
-  background-size: 0% 8%;
+  background-size: 0% .1em;
+}
+
+.aboutMe:active {
+  transform: scale(1.01);
 }
 
 @media screen and (min-width: 430px) {
