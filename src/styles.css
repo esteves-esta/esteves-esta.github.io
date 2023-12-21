@@ -130,9 +130,12 @@ header {
 .top-fixed *:nth-child(3) a {
   color: var(--top-github);
   text-decoration: none;
-  transition: color 250ms ease .1s;
   background: linear-gradient(0deg, var(--header-accent-color), var(--header-accent-color)) no-repeat right bottom / 0% .1em;
-  transition: filter 850ms ease, background-size 750ms ease;
+  transition:
+    color 250ms ease .1s,
+    filter 850ms ease,
+    transform 750ms ease,
+    background-size 750ms ease;
 }
 
 .top-fixed a:hover {
@@ -302,6 +305,10 @@ article {
     width 550ms ease 400ms;
 }
 
+.morning .content a {
+  color: var(--nav-text-color);
+  background: linear-gradient(0deg, var(--nav-text-color), var(--nav-text-color)) no-repeat right bottom / 100% .15em;
+}
 
 @media screen and (min-width: 780px) {
   .content {
