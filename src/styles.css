@@ -48,7 +48,7 @@ main {
   font-size: 1.3rem;
   display: grid;
   grid-template-rows: 5fr 1fr 0fr;
-  transition: 1s ease-out;
+  transition: grid-template-rows 1s ease-out;
 }
 
 .morning {
@@ -84,8 +84,6 @@ main {
   --content-bg-color: var(--pink-1);
 }
 
-
-
 .night {
   --top-name: var(--pink-1);
   --top-github: var(--blue-2);
@@ -105,6 +103,14 @@ main {
 header {
   background-color: var(--header-bg-color);
   color: var(--text-color);
+}
+
+header, nav, article {
+  background-color: var(--header-bg-color);
+  color: var(--text-color);
+  transition:
+    background 850ms ease,
+    color 350ms ease;
 }
 
 .top-fixed {
