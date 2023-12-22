@@ -1,10 +1,14 @@
 import {
   Puzzle,
   PlusCircle,
-  Asterisk,
+  MessageSquareHeart,
   Sparkles,
   Palette,
   Headphones,
+  BookHeart,
+  Rocket,
+  Brain,
+  HeartHandshake,
 } from "lucide-react";
 import React from "react";
 import classes from "./styles.module.css";
@@ -20,21 +24,39 @@ function Header({ closeHeader, timeOfDay }) {
       icon: Puzzle,
     },
     {
+      text: "sou uma pessoa que tenho gosto por manter os projetos organizados e documentados e segundo um feedback de um colega de trabalho 'o contéudo que a fernanda adiciona na wiki é sempre muito bem escrito, bem detalhado e organizado, e já me foram úteis em múltiplas ocasiões', e",
+      icon: BookHeart,
+    },
+    {
       text: "sou formada em design gráfico e desenvolvimento de sistemas então já prototipei e desenvolvi funcionalidades; e também",
       icon: Palette,
+    },
+    {
+      text: "eu sou uma pessoa que 'abraça com positividade toda mudança e novidade e participa da melhor forma possível' (feedback de uma gestora direta)",
+      icon: MessageSquareHeart,
     },
     {
       text: "amo todos os gêneros de música, estou sempre de fone de ouvido e",
       icon: Headphones,
     },
     {
-      text: "sou uma pessoa proativa e muitas vezes já adiantei as tarefas que precisavam ser realizadas",
+      text: "sou 'uma pessoa que domina o que faz, que sabe passar seu conhecimento aos outros, muito dedicada e inteligente' (feedback de um colega), e",
+      icon: Brain,
+    },
+    {
+      text: "sou uma pessoa proativa e muitas vezes já adiantei as tarefas que precisavam ser realizadas, e",
       icon: Sparkles,
     },
     {
-      text: "sou uma pessoa objetiva e gosto de foco e organização.",
-      icon: Asterisk,
+      text: "sou uma pessoa que 'aceita os desafios propostos e busca soluções inovadoras' (feedback de um gestor direto), e também",
+      icon: Rocket,
     },
+    {
+      text: "sou uma pessoa 'participativa, engajada e que apoia o time com troca de conhecimento, visão critíca e pensa fora da caixa' (feedback de uma gestora direta)",
+      icon: HeartHandshake,
+    },
+
+    /* sou uma pessoa que "busca entender o negócio e entregar sistemas adequados às necessidades" (feedback de um gestor direto) */
   ];
 
   const [aboutIndex, setAboutIndex] = React.useState(0);
