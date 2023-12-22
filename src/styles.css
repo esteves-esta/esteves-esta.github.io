@@ -120,7 +120,7 @@ article {
   flex-direction: row;
   justify-content: space-between;
   font-variation-settings: "wght" 798, "soft" 100, "opsz" 1;
-
+  font-style: italic;
   position: absolute;
   z-index: 1;
   width: 100%;
@@ -204,7 +204,7 @@ article {
   transition: all 450ms ease,
 } */
 
-.time-icon:hover ,
+.time-icon:hover,
 .time-icon:focus {
   outline: none;
   transform: scale(1.3);

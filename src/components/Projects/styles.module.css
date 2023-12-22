@@ -10,12 +10,23 @@
 
 .projectContent h3 {
   font-size: 1.5em;
+  font-style: italic;
   margin-bottom: .4em;
 }
 
-.subtitle {
-  font-size: 1.1em;
-  margin-bottom: 1em;
+.projectContent p {
+  font-style: normal;
+  font-weight: 600;
+  font-variation-settings: "wght" 400, "soft" 100, "opsz" 0;
+  font-size: .8em;
+  line-height: 1.7em;
+  margin-bottom: 1.2em;
+}
+
+.projectContent .subtitle {
+  font-size: 1em;
+  margin-bottom: 1.2em;
+  font-weight: 400;
 }
 
 .projectContent hr {
@@ -26,13 +37,8 @@
 }
 
 .projectContent h4 {
+  font-style: italic;
   margin-bottom: .8em;
-}
-
-.projectContent p {
-  font-size: .9em;
-  line-height: 1.7em;
-  margin-bottom: 1.2em;
 }
 
 .projectContent ul {

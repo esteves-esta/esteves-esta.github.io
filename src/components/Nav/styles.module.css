@@ -10,8 +10,7 @@
 
 .navigation button {
   font-style: normal;
-  /* font-variation-settings: "wght" 600, "soft" 100, "opsz" 30; */
-  font-weight: 200;
+  font-variation-settings: "wght" 600, "soft" 100, "opsz" 30;
   font-size: 1.25em;
   letter-spacing: .029em;
   font-style: normal;
@@ -22,13 +21,18 @@
   cursor: pointer;
   color: var(--nav-text-color);
   transition:
-    filter 750ms ease;
+    filter 750ms ease,
+    transform 750ms ease;
 }
 
-.navigation button:hover span:nth-child(1), 
-.navigation button:focus span:nth-child(1){
+.navigation button:hover span:nth-child(1) {
   filter: brightness(1.16);
   background-size: 0% .09em;
+}
+
+.navigation button:focus {
+  filter: brightness(1.2);
+  transform: scale(1.05) !important;
 }
 
 .navigation button span:nth-child(1) {
@@ -39,5 +43,5 @@
 }
 
 .navigation button:active {
-  transform: scale(1.1);
+  transform: scale(1.05);
 }
