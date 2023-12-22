@@ -138,18 +138,18 @@ article {
 .top-fixed *:nth-child(3) a {
   color: var(--top-github);
   text-decoration: none;
-  background: linear-gradient(0deg, var(--header-accent-color), var(--header-accent-color)) no-repeat right bottom / 0% .1em;
+  background: linear-gradient(0deg, var(--header-accent-color), var(--header-accent-color)) no-repeat left bottom / 0% .1em;
   transition:
     color 250ms ease .1s,
     filter 850ms ease,
-    transform 750ms ease,
+    /* transform 750ms ease, */
     background-size 750ms ease;
 }
 
-.top-fixed a:hover,
-.top-fixed a:focus {
+.top-fixed *:nth-child(3) a:hover,
+.top-fixed *:nth-child(3) a:focus {
   outline: none;
-  filter: brightness(1.1);
+  filter: brightness(1.05);
   background-size: 100% .1em;
 }
 
