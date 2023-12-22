@@ -1,0 +1,101 @@
+.projectContent {
+  padding-top: 3em !important;
+}
+
+@media screen and (min-width: 780px) {
+  .projectContent {
+    padding-right: 0em !important;
+  }
+}
+
+.projectContent h3 {
+  font-size: 1.5em;
+  font-style: italic;
+  margin-bottom: .4em;
+}
+
+.projectContent p {
+  font-style: normal;
+  font-weight: 600;
+  font-variation-settings: "wght" 400, "soft" 100, "opsz" 0;
+  font-size: .8em;
+  line-height: 1.7em;
+  margin-bottom: 1.2em;
+}
+
+.projectContent .subtitle {
+  font-size: 1em;
+  margin-bottom: 1.2em;
+  font-weight: 400;
+}
+
+.projectContent hr {
+  margin: 3em 3em;
+  border-color: var(--nav-bg-color);
+  border-width: .095em;
+  border-style: dashed;
+}
+
+.projectContent h4 {
+  font-style: italic;
+  margin-bottom: .8em;
+}
+
+.projectContent ul {
+  font-size: .9em;
+  line-height: 1.7em;
+  margin-bottom: 1.2em;
+}
+
+.projectContent ul li {
+  margin-bottom: .4em;
+}
+
+.projectImg {
+  height: 350px;
+  overflow: hidden;
+  transition: height 750ms ease;
+  margin: .5em 0em;
+}
+
+.projectImg:hover {
+  height: 600px;
+}
+
+.projectTopImg {
+  background-image: url('./grid-mode-toast.png');
+  background-position: 0% 100%;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  height: 250px;
+  overflow: hidden;
+}
+
+@media screen and (min-width: 780px) {
+  .projectTopImg {
+    background-size: 80%;
+    height: 350px;
+  }
+}
+
+.projectContent a {
+  color: var(--nav-bg-color);
+  text-decoration: none;
+  display: inline-block;
+  background: linear-gradient(0deg, var(--nav-bg-color), var(--nav-bg-color)) no-repeat right bottom / 100% .15em;
+  transition:
+    transform 750ms ease,
+    filter 750ms ease,
+    background-size 750ms ease;
+}
+
+.projectContent li a:hover,
+.projectContent li a:focus {
+  outline: none;
+  filter: brightness(1.16);
+  background-size: 0% .15em;
+}
+
+.projectContent li a:active {
+  transform: scale(1.1);
+}

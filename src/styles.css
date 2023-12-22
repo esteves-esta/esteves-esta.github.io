@@ -1,78 +1,339 @@
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+  /* check later */
+  /* line-height: 1.5; */
+  /* font-weight: 400; */
+  /* font-synthesis: none;
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  -moz-osx-font-smoothing: grayscale; */
+  /* ^^ check later */
+  --inner-padding: 1.7em;
 }
 
-body {
-  font-family: 'Fraunces', serif;
-  margin: 0;
-  padding: 2em;
-  width: 100%;
-  min-height: 100vh;
-  background-image: linear-gradient(155deg,
-      hsl(245deg 14% 16%) 6%,
-      hsl(269deg 19% 22%) 49%,
-      hsl(296deg 22% 26%) 60%,
-      hsl(319deg 30% 32%) 65%,
-      hsl(333deg 37% 38%) 69%,
-      hsl(344deg 41% 45%) 71%,
-      hsl(355deg 45% 52%) 73%,
-      hsl(8deg 58% 55%) 77%,
-      hsl(19deg 69% 54%) 95%);
-}
-
-#root {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+@media screen and (min-width: 640px) {
+  :root {
+    --inner-padding: 1.8em 5em;
+  }
 }
 
 main {
-  /* min-height: 100vh; */
-  margin-top: 7em;
+  font-family: "Fraunces", serif;
+
+  --pink-1: #E7C4BE;
+  --pink-2: #FBE8D7;
+  --blue-1: #3E4962;
+  --blue-2: #C8D6D4;
+  --orange-1: #E08E57;
+  --orange-2: hsl(28, 88%, 75%);
+  --red-1: #4D3144;
+  --red-2: #DA5C4C;
+
+  --top-name: ;
+  --top-github: ;
+  --top-sun: ;
+
+  --text-color: ;
+  --header-bg-color: ;
+  --header-accent-color: ;
+
+  --nav-bg-color: ;
+  --nav-accent-color: ;
+  --nav-text-color: ;
+
+  --content-bg-color: ;
+
+  /* background-color: #777; */
+  height: 100vh;
+  font-size: 1.3rem;
+  display: grid;
+  grid-template-rows: 5fr 1fr 0fr;
+  transition: grid-template-rows 1s ease-out;
+}
+
+.morning {
+  --top-name: var(--pink-1);
+  --top-github: var(--blue-2);
+  --top-sun: var(--orange-2);
+
+  --text-color: var(--blue-1);
+  --header-bg-color: var(--pink-2);
+  --header-accent-color: var(--pink-1);
+
+  --nav-bg-color: var(--pink-1);
+  --nav-accent-color: var(--pink-2);
+  --nav-text-color: var(--red-1);
+
+  --content-bg-color: var(--blue-2);
+}
+
+.afternoon {
+  --top-name: var(--orange-1);
+  --top-github: var(--pink-2);
+  --top-sun: var(--red-2);
+
+  --text-color: var(--red-1);
+
+  --header-bg-color: var(--orange-2);
+  --header-accent-color: var(--orange-1);
+
+  --nav-bg-color: var(--blue-1);
+  --nav-text-color: var(--pink-1);
+  --nav-accent-color: var(--blue-2);
+
+  --content-bg-color: var(--pink-1);
+}
+
+.night {
+  --top-name: var(--pink-1);
+  --top-github: var(--blue-2);
+  --top-sun: var(--pink-2);
+
+  --text-color: var(--pink-2);
+  --header-bg-color: var(--blue-1);
+  --header-accent-color: var(--blue-2);
+
+  --nav-bg-color: var(--orange-2);
+  --nav-accent-color: var(--orange-1);
+  --nav-text-color: var(--red-1);
+
+  --content-bg-color: var(--red-1);
+}
+
+header {
+  background-color: var(--header-bg-color);
+  color: var(--text-color);
+}
+
+header,
+nav,
+article {
+  background-color: var(--header-bg-color);
+  color: var(--text-color);
+  transition:
+    background 850ms ease,
+    color 350ms ease;
+}
+
+.top-fixed {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-variation-settings: "wght" 798, "soft" 100, "opsz" 1;
+  font-style: italic;
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+
+  top: 0;
+  left: 0;
+  padding: var(--inner-padding);
+}
+
+.top-fixed *:nth-child(1) {
+  color: var(--top-name);
+  transition: color 250ms ease .1s;
+}
+
+.top-fixed *:nth-child(3) a {
+  color: var(--top-github);
+  text-decoration: none;
+  background: linear-gradient(0deg, var(--header-accent-color), var(--header-accent-color)) no-repeat left bottom / 0% .1em;
+  transition:
+    color 250ms ease .1s,
+    filter 850ms ease,
+    /* transform 750ms ease, */
+    background-size 750ms ease;
+}
+
+.top-fixed *:nth-child(3) a:hover,
+.top-fixed *:nth-child(3) a:focus {
+  outline: none;
+  filter: brightness(1.05);
+  background-size: 100% .1em;
+}
+
+.night.closeHeader .top-fixed *:nth-child(1) {
+  color: var(--orange-1);
+  transition: color 450ms ease .8s;
+}
+
+.night.closeHeader .top-fixed *:nth-child(3) {
+  color: var(--pink-2);
+  transition: color 450ms ease .8s;
+}
+
+.morning.closeHeader .top-fixed *:nth-child(1) {
+  color: var(--pink-2);
+  transition: color 450ms ease .8s;
+}
+
+.morning.closeHeader .top-fixed *:nth-child(3) {
+  color: var(--orange-1);
+  transition: color 450ms ease .8s;
+
+}
+
+.time-icon svg {
+  stroke: var(--top-sun);
+  transition: color 450ms ease .8s;
+}
+
+.afternoon .time-icon div {
+  height: 18px;
+  overflow: hidden;
+}
+
+.time-icon {
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  transition: transform 450ms ease,
+    filter 450ms ease;
+}
+
+/* .afternoon .time-icon::before {
+  content: "";
+  display: block;
+  cursor: auto;
+  position: absolute;
+  top: 58px;
+  width: 32px;
+  z-index: 2;
+  border-top: 2.5px solid var(--red-2);
+  transition: all 450ms ease,
+} */
+
+.time-icon:hover,
+.time-icon:focus {
+  outline: none;
+  transform: scale(1.3);
+  filter: brightness(1.1);
+}
+
+.time-icon:active {
+  transform: scale(1.6);
+}
+
+.morning.closeHeader .time-icon svg {
+  stroke: var(--orange-1);
+}
+
+.closeHeader {
+  grid-template-rows: 0fr 1fr 5fr;
+  transition: 1s ease;
+}
+
+.header-content {
+  padding: var(--inner-padding);
   display: flex;
   flex-direction: column;
-  justify-content: center;
+
+  opacity: 1;
+  position: absolute;
+  transform: translateY(30vh);
+  transition:
+    transform 250ms ease,
+    opacity 550ms ease 250ms;
+}
+
+
+.closeHeader .header-content {
+  transform: translateY(-100vh);
+  opacity: 0;
+  transition:
+    opacity 250ms ease,
+    transform 550ms ease 250ms;
+}
+
+
+.closeHeader nav {
+  padding-top: 3.5em;
+}
+
+@media screen and (min-width: 640px) {
+  .closeHeader {
+    grid-template-rows: 0fr 1.4fr 5fr;
+  }
+}
+
+nav {
+  padding: var(--inner-padding);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   align-items: center;
   position: relative;
-  text-align: center;
-  gap: 12em;
+  background-color: var(--nav-bg-color);
+  color: var(--nav-text-color);
+  /* height: 10vh; */
 }
 
-.sun {
-  position: absolute;
-  top: -140%;
-  left: -120%;
+/* 
+https://www.joshwcomeau.com/css/interactive-guide-to-grid/
+https://css-tricks.com/animating-css-grid-how-to-examples/ 
+
+*/
+.projects {
+  display: grid;
+  grid-template-columns: 100% 0%;
+  transition: grid-template-columns 750ms ease;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  scrollbar-color: var(--nav-text-color) var(--nav-bg-color);
+  scrollbar-width: thin;
 }
 
-.title1 {
-  font-weight: 500;
-  font-style: italic;
-  font-size: 2em;
+.projects::-webkit-scrollbar {
+  background-color: var(--nav-bg-color);
+  width: 10px;
 }
 
-.title2 {
-  font-weight: 900;
-  font-style: italic;
-  font-size: 2.5em;
-  margin: -.4em;
+.projects::-webkit-scrollbar-thumb {
+  background-color: var(--content-bg-color);
 }
 
-h2 {
-  font-size: 2em;
-  font-style: italic;
-  letter-spacing: 0.788px;
-  font-variation-settings: "wght" 798, "soft" 1, "opsz" 1;
+article {
+  background-color: var(--content-bg-color);
+  color: var(--text-color);
+  /* height: 30vh; */
+  height: 100%;
+}
 
+.show-next {
+  grid-template-columns: 0% 100%
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+
+  width: 0px;
+  opacity: 0;
+  transition:
+    opacity 450ms ease,
+    padding 550ms ease 400ms,
+    width 550ms ease 400ms;
+}
+
+.morning .content a {
+  color: var(--nav-text-color);
+  background: linear-gradient(0deg, var(--nav-text-color), var(--nav-text-color)) no-repeat right bottom / 100% .15em;
+}
+
+@media screen and (min-width: 780px) {
+  .content {
+    grid-template-columns: 2fr 1fr;
+  }
+}
+
+.currentPage .content {
+  padding: var(--inner-padding);
+  width: 100%;
+  opacity: 1;
+  transition:
+    padding 450ms ease,
+    width 550ms ease,
+    opacity 550ms ease 400ms;
 }
