@@ -276,7 +276,7 @@ https://css-tricks.com/animating-css-grid-how-to-examples/
 */
 .projects {
   display: grid;
-  grid-template-columns: 100% 0%;
+  grid-template-columns: 100% 0% 0%;
   transition: grid-template-columns 750ms ease;
   overflow-x: hidden;
   overflow-y: scroll;
@@ -300,8 +300,12 @@ article {
   height: 100%;
 }
 
-.show-next {
-  grid-template-columns: 0% 100%
+.show-next2 {
+  grid-template-columns: 0% 100% 0%
+}
+
+.show-next3 {
+  grid-template-columns: 0% 0% 100%
 }
 
 .content {

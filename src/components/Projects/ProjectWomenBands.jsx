@@ -1,7 +1,6 @@
 // import React from 'react';
 import classes from "./styles.module.css";
-import projectImgSrc from "./projectWomenBands.png";
-import gridMediaPlayerImgSrc from "./grid-and-media-player.png";
+import projectImgSrc from "../../assets/women-bands/projectWomenBands.png";
 
 function ProjectWomenBands({ closeHeader }) {
   return (
@@ -20,19 +19,19 @@ function ProjectWomenBands({ closeHeader }) {
             <li>
               Datatable criado do zero;
               <ul>
-                <li>modo grid</li>
-                <li>filtros e pesquisa por todas ou uma coluna</li>
-                <li>escolher colunas visíveis</li>
-                <li>paginação e escolha de quantidade de itens por página</li>
+                <li>Modo grid;</li>
+                <li>Filtros e pesquisa por todas ou uma coluna;</li>
+                <li>Escolher colunas visíveis;</li>
+                <li>Ppaginação e escolha de quantidade de itens por página;</li>
               </ul>
             </li>
             <li>Reprodução de uma preview da band usando a API do Deezer;</li>
             <li>Media Player criado do zero;</li>
-            <li>Gráficos para visualizar de forma rápida os dados</li>
+            <li>Gráficos para visualizar de forma rápida os dados.</li>
           </ul>
         </section>
 
-        <div className={classes.projectTopImg}></div>
+        <div className={classes.projectBandTopImg}/>
 
         <hr />
 
@@ -111,7 +110,7 @@ function ProjectWomenBands({ closeHeader }) {
       </div>
 
       <aside>
-        <div className={classes.projectImg}>
+        <div className={classes.projectBandImg}>
           <img src={projectImgSrc} alt="Imagem do site, visão geral" />
         </div>
 

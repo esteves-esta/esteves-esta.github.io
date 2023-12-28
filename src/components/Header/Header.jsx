@@ -55,6 +55,14 @@ function Header({ closeHeader, timeOfDay }) {
       text: "sou uma pessoa 'participativa, engajada e que apoia o time com troca de conhecimento, visão critíca e pensa fora da caixa' (feedback de uma gestora direta)",
       icon: HeartHandshake,
     },
+    // {
+    //   text: "amo digitar do jeito 'touch-typing' (digitação com todos os dedos e sem olhar o teclado) e fiz até uma lista com jogos e sites de pratica no meu github",
+    //   icon: HeartHandshake,
+    // },
+    // {
+    //   text: "joguei recentemente 'A little to the left' e simplesmente amei",
+    //   icon: HeartHandshake,
+    // },
 
     /* sou uma pessoa que "busca entender o negócio e entregar sistemas adequados às necessidades" (feedback de um gestor direto) */
   ];

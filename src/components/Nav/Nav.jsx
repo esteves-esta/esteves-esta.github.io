@@ -11,6 +11,10 @@ function Nav({
       setShowNextProject(1);
       return;
     }
+    if (showNextProject === 3) {
+      setShowNextProject(2);
+      return;
+    }
 
     setCloseHeader(!closeHeader);
     setShowNextProject(0);
@@ -23,6 +27,9 @@ function Nav({
         setShowNextProject(2);
         break;
       case 2:
+        setShowNextProject(3);
+        break;
+      case 3:
         setShowNextProject(1);
         break;
     }
@@ -41,11 +48,11 @@ function Nav({
         )}
       </button>
       <br />
-      {/* {closeHeader && showNextProject == 1 && (
+      {closeHeader && showNextProject > 0 && showNextProject < 3 && (
         <button onClick={goToNextProject}>
           <span>próximo</span>
         </button>
-      )} */}
+      )}
     </nav>
   );
 }
