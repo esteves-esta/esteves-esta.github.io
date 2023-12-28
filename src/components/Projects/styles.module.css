@@ -2,6 +2,10 @@
   padding-top: 3em !important;
 }
 
+.imgs {
+  margin-bottom: 1em;
+}
+
 @media screen and (min-width: 780px) {
   .projectContent {
     padding-right: 0em !important;
@@ -51,23 +55,45 @@
   margin-bottom: .4em;
 }
 
-.projectImg {
+.projectlateralImg {
+  height: 350px;
+}
+
+.projectBandImg {
   height: 350px;
   overflow: hidden;
   transition: height 750ms ease;
   margin: .5em 0em;
 }
 
-.projectImg:hover {
+.projectBandImg:hover {
   height: 600px;
 }
 
-.projectTopImg {
-  background-image: url('./grid-mode-toast.png');
+.projectBandTopImg {
+  background-image: url('../../assets/women-bands/grid-mode-toast.png');
   background-position: 0% 100%;
   background-repeat: no-repeat;
   background-size: 100%;
   height: 250px;
+  overflow: hidden;
+}
+
+.projectHumansTopImg {
+  background-image: url('../../assets/humans-of-seoul/header-readme.png');
+  background-position: 0% 100%;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  height: 250px;
+  overflow: hidden;
+}
+
+.projectCalendarTopImg {
+  background-image: url('../../assets/onepage-calendar/header-weekCustomizations.png');
+  background-position: 0% 100%;
+  background-repeat: no-repeat;
+  background-size: 100%;
+
   overflow: hidden;
 }
 

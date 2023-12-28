@@ -1,18 +1,29 @@
 import ProjectWomenBands from "./ProjectWomenBands";
-import classes from "./styles.module.css";
+import ProjectHumansOfSeoul from "./ProjectHumansOfSeoul";
+import ProjectOnePageCalendar from "./ProjectOnePageCalendar";
 
 function Projects({ showNextProject, closeHeader }) {
-  const projectClass = showNextProject === 1 ? `currentPage` : "";
+  const projectClass = (page) =>
+    showNextProject === page ? `currentPage` : "";
+
   return (
-    <div className={showNextProject === 2 ? "show-next projects" : "projects"}>
-      <article className={projectClass}>
+    <div
+      className={
+        showNextProject >= 2
+          ? `show-next${showNextProject} projects`
+          : "projects"
+      }
+    >
+      <article className={projectClass(1)}>
         <ProjectWomenBands closeHeader={closeHeader} />
       </article>
 
-      <article className={showNextProject === 2 ? "currentPage" : ""}>
-        <div className="content">
-          <p>teste2</p>
-        </div>
+      <article className={projectClass(2)}>
+        <ProjectHumansOfSeoul />
+      </article>
+
+      <article className={projectClass(3)}>
+        <ProjectOnePageCalendar />
       </article>
     </div>
   );
