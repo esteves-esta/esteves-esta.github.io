@@ -34,7 +34,11 @@ function App() {
   return (
     <main className={closeHeader ? `closeHeader ${timeOfDay}` : timeOfDay}>
       <div className="top-fixed">
-        <p>fernanda esteves</p>
+        <p>
+          <a href="https://experimental-garden.netlify.app/" target="_blank">
+            fernanda esteves
+          </a>
+        </p>
 
         <button onClick={changeTime} className="time-icon">
           <div>
