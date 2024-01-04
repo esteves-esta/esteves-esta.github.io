@@ -130,10 +130,24 @@ article {
   padding: var(--inner-padding);
 }
 
-.top-fixed *:nth-child(1) {
+.top-fixed *:nth-child(1) a {
   color: var(--top-name);
   transition: color 250ms ease .1s;
+  text-decoration: none;
+  background: linear-gradient(0deg, var(--top-name), var(--top-name)) no-repeat left bottom / 100% .1em;
+  transition:
+    color 250ms ease .1s,
+    filter 850ms ease,
+    /* transform 750ms ease, */
+    background-size 750ms ease;
 }
+
+.top-fixed *:nth-child(1) a:hover,
+.top-fixed *:nth-child(1) a:focus {
+  outline: none;
+  filter: brightness(1.05);
+  background-size: 0% .1em;
+} 
 
 .top-fixed *:nth-child(3) a {
   color: var(--top-github);
