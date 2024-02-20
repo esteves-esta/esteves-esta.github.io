@@ -103,7 +103,7 @@ function ProjectWomenBands({ closeHeader }) {
           </p>
 
           <p>
-            Por isso planejo substituir essa lógica por uma api e colocar os
+            Por isso planejo substituir essa lógica usando o serveless functions do Netlify e colocar os
             dados em um banco não relacional, como o redis.
           </p>
         </section>
@@ -120,7 +120,7 @@ function ProjectWomenBands({ closeHeader }) {
             <li>
               <a
                 tabIndex={!closeHeader ? -1 : 0}
-                href="https://esteves-esta.github.io/women-fronted-metal-bands/"
+                href="https://women-fronted-metal-bands.netlify.app/"
                 target="_blank"
               >
                 site
@@ -147,6 +147,7 @@ function ProjectWomenBands({ closeHeader }) {
             <li>RadixUI Unstyled</li>
             <li>Nivo Charts</li>
             <li>DeezerAPI</li>
+            <li>Hosted on Netlify</li>
           </ul>
         </section>
       </aside>
