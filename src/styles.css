@@ -324,10 +324,10 @@ article {
 }
 
 .content {
-  display: grid;
+  /* display: grid; */
   grid-template-columns: 1fr;
   gap: 20px;
-
+  display: none;
   width: 0px;
   opacity: 0;
   transition:
@@ -350,6 +350,7 @@ article {
 .currentPage .content {
   padding: var(--inner-padding);
   width: 100%;
+  display: grid;
   opacity: 1;
   transition:
     padding 450ms ease,
