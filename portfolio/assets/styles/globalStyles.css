@@ -184,5 +184,10 @@ nav {
 }
 
 time-travel:not(:defined) {
-  visibility: hidden;
+  opacity: 0;
+}
+
+time-travel {
+  transition: all ease-in 250ms;
+  opacity: 1;
 }
