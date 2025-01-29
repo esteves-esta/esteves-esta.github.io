@@ -1,26 +1,70 @@
-const template = document.createElement("template");
-template.innerHTML = `
-<nav>
-  <span>time travel throught the web</span>
-  <div>
-    <a href="/">index</a>
-    <a href="/pages/">oldweb</a>
-    <a href="/pages/teste/">teste</a>
-  </div>
-</nav>
-`;
+// https://developer.mozilla.org/pt-BR/docs/Web/API/Web_components/Using_custom_elements
 
-class TimeTravel extends HTMLElement {
-  constructor() {
-    super();
-    this.attachShadow({ mode: "open" });
+const pages = [
+  { link: "/", name: "index" },
+  { link: "/pages/", name: "oldweb" },
+  { link: "/pages/teste/", name: "teste" }
+  // { link: "/pages/noughties", name: "noughties" },
+  // { link: "/pages/future-experimentation", name: "future-experimentation" }
+];
 
-    const style = document.createElement("style");
-    style.textContent = `
-      @import "/assets/styles/teste.css";
-    `;
-    this.shadowRoot?.append(style, template.content.cloneNode(true));
+const style = `
+nav {
+  display: flex;
+  justify-content: space-between;
+  color: palegoldenrod;
+  width: 100%;
+  transition: all 990ms ease-in;
+  a {
+    color: palegoldenrod;
+  }
+  a.selected {
+    color: red !important;
+    font-weight: bold;
   }
 }
 
-customElements.define("time-travel-nav", TimeTravel);
+`;
+
+class Teste extends HTMLElement {
+  name: string;
+  shadow: ShadowRoot;
+
+  constructor() {
+    super();
+    this.name = "";
+    this.shadow = this.attachShadow({ mode: "open" });
+
+    const template = document.createElement("template");
+    this.shadow.appendChild(template);
+  }
+
+  connectedCallback() {
+    const links: string[] = pages.map(({ link, name }) => {
+      return `<a class="${
+        this.name === name ? "selected" : ""
+      }" href="${link}">${name}</a>`;
+    });
+    console;
+    this.shadow.innerHTML = `
+    <style>${style}</style>
+
+    <nav>
+      <span>time travel throught the web</span>
+      <div>
+        ${links.join(" ")}
+      </div>
+    </nav>`;
+  }
+
+  static get observedAttributes() {
+    return ["name"];
+  }
+
+  attributeChangedCallback(property, oldValue, newValue) {
+    if (oldValue === newValue) return;
+    this[property] = newValue;
+  }
+}
+
+customElements.define("time-travel", Teste);

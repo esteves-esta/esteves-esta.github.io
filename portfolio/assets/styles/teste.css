@@ -1,0 +1,15 @@
+nav {
+  display: flex;
+  /* gap: 20px; */
+  justify-content: space-between;
+  color: palegoldenrod;
+  width: 100%;
+  a {
+    color: palegoldenrod;
+    /* transition: color 990ms ease-in; */
+  }
+  a.selected {
+    color: red !important;
+    font-weight: bold;
+  }
+}
