@@ -191,3 +191,30 @@ time-travel {
   transition: all ease-in 250ms;
   opacity: 1;
 }
+
+@view-transition {
+  navigation: auto;
+}
+
+h1 {
+  view-transition-name: hero
+}
+
+::view-transition-old(hero) {
+  animation: fade 0.2s linear forwards;
+}
+
+/* New stuff coming in */
+::view-transition-new(hero) {
+  animation: fade 0.3s linear reverse;
+}
+
+@keyframes fade {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}

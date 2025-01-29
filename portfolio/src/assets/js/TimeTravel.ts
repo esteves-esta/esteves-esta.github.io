@@ -2,8 +2,8 @@
 
 const pages = [
   { link: "/", name: "index" },
-  { link: "/pages/", name: "oldweb" },
-  { link: "/pages/teste/", name: "teste" }
+  { link: "/src/pages/", name: "oldweb" },
+  { link: "/src/pages/teste", name: "teste" }
   // { link: "/pages/noughties", name: "noughties" },
   // { link: "/pages/future-experimentation", name: "future-experimentation" }
 ];
@@ -61,7 +61,7 @@ class Teste extends HTMLElement {
     return ["name"];
   }
 
-  attributeChangedCallback(property, oldValue, newValue) {
+  attributeChangedCallback(property: string | number, oldValue: any, newValue: any) {
     if (oldValue === newValue) return;
     this[property] = newValue;
   }
