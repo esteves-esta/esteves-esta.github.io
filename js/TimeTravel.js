@@ -2,8 +2,8 @@
 
 const pages = [
   { link: "/", name: "index" },
-  { link: "/src/pages/", name: "oldweb" },
-  { link: "/src/pages/teste", name: "teste" }
+  { link: "./pages.html", name: "oldweb" },
+  { link: "./teste.html", name: "teste" }
   // { link: "/pages/noughties", name: "noughties" },
   // { link: "/pages/future-experimentation", name: "future-experimentation" }
 ];
@@ -27,9 +27,6 @@ nav {
 `;
 
 class Teste extends HTMLElement {
-  name: string;
-  shadow: ShadowRoot;
-
   constructor() {
     super();
     this.name = "";
@@ -40,7 +37,7 @@ class Teste extends HTMLElement {
   }
 
   connectedCallback() {
-    const links: string[] = pages.map(({ link, name }) => {
+    const links = pages.map(({ link, name }) => {
       return `<a class="${
         this.name === name ? "selected" : ""
       }" href="${link}">${name}</a>`;
@@ -61,7 +58,7 @@ class Teste extends HTMLElement {
     return ["name"];
   }
 
-  attributeChangedCallback(property: string | number, oldValue: any, newValue: any) {
+  attributeChangedCallback(property, oldValue, newValue) {
     if (oldValue === newValue) return;
     this[property] = newValue;
   }
