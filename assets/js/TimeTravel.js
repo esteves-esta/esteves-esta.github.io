@@ -1,9 +1,10 @@
 // https://developer.mozilla.org/pt-BR/docs/Web/API/Web_components/Using_custom_elements
 
 const pages = [
-  { link: "/", name: "index" },
-  { link: "./pages.html", name: "oldweb" },
-  { link: "./teste.html", name: "teste" }
+  { link: "index.html", name: "index" },
+  { link: "pages.html", name: "oldweb" },
+  { link: "teste2.html", name: "hello" },
+  { link: "teste.html", name: "asdfasd" }
   // { link: "/pages/noughties", name: "noughties" },
   // { link: "/pages/future-experimentation", name: "future-experimentation" }
 ];

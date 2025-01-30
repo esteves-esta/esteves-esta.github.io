@@ -169,7 +169,7 @@ body {
   width: 100%;
   font-weight: normal;
   display: grid;
-  grid-template-rows: var(--timetravel-height) 1fr;
+  grid-template-rows: var(--timetravel-height) 1fr 1fr;
 }
 
 nav {
@@ -216,5 +216,46 @@ h1 {
 
   to {
     opacity: 0;
+  }
+}
+
+/* ss */
+
+
+h1 {
+  color: red;
+}
+
+main {
+  view-transition-name: content;
+}
+
+::view-transition-old(content) {
+  animation: slide-out 0.5s cubic-bezier(0.86, 0, 0.07, 1) forwards;
+}
+
+::view-transition-new(content) {
+  animation: slide-in 0.5s cubic-bezier(0.86, 0, 0.07, 1) forwards;
+}
+
+@keyframes slide-out {
+  0% {
+    transform: translateX(0%);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateX(calc(50% * var(--direction)));
+  }
+}
+
+@keyframes slide-in {
+  0% {
+    opacity: 0;
+    transform: translateX(calc(-50% * var(--direction)));
+  }
+
+  100% {
+    transform: translateX(0%);
   }
 }
