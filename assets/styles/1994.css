@@ -32,12 +32,20 @@
  }
 
  p {
-  margin-bottom: 1rem;
+   margin-bottom: 1rem;
+ }
+
+ .project-summary a:before {
+   content: "|";
+   padding: 10px;
+   color: #999;
+
  }
 
  .text-center {
    text-align: center;
  }
+
  small {
    font-size: .9rem;
    font-style: italic;
@@ -63,11 +71,13 @@
 
  footer {
    padding-bottom: 50px;
+
    nav {
-    display: flex;
-    justify-content: space-between;
-    a[disabled] {
-      opacity: .5;
-    }
+     display: flex;
+     justify-content: space-between;
+
+     a[disabled] {
+       opacity: .5;
+     }
    }
  }
