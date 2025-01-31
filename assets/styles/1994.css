@@ -1,0 +1,73 @@
+ main {
+   font-family: 'Times New Roman', Times, serif;
+   background-color: #FBE8D7;
+   display: flex;
+   flex-direction: column;
+   /* justify-content: center; */
+   align-items: center;
+   height: 100%;
+ }
+
+ article {
+   padding-top: 5%;
+ }
+
+ article,
+ footer {
+   width: 900px;
+ }
+
+ hr {
+   margin: .9rem 0px;
+   border-top: .02rem solid #444;
+ }
+
+ h1 {
+   font-size: 1.8rem;
+ }
+
+ h3 {
+   font-size: 1.45rem;
+   margin: .5rem 0rem;
+ }
+
+ p {
+  margin-bottom: 1rem;
+ }
+
+ .text-center {
+   text-align: center;
+ }
+ small {
+   font-size: .9rem;
+   font-style: italic;
+ }
+
+ table,
+ tbody,
+ tr,
+ td {
+   border: 1px solid;
+ }
+
+ table {
+   margin: 2rem 0px;
+   width: 100%;
+   padding: 1px;
+ }
+
+ td {
+   padding: 10px
+ }
+
+
+ footer {
+   padding-bottom: 50px;
+   nav {
+    display: flex;
+    justify-content: space-between;
+    a[disabled] {
+      opacity: .5;
+    }
+   }
+ }

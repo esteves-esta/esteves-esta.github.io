@@ -1,0 +1,37 @@
+@view-transition {
+  navigation: auto;
+}
+
+#time-travel-container {
+  view-transition-name: content;
+}
+
+::view-transition-old(content) {
+  animation: slide-out .5s cubic-bezier(0.86, 0, 0.07, 1) forwards;
+}
+
+::view-transition-new(content) {
+  animation: slide-in .5s cubic-bezier(0.86, 0, 0.07, 1) forwards;
+}
+
+@keyframes slide-out {
+  0% {
+    transform: translateY(0%);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateY(calc(50% * var(--direction, 1)));
+  }
+}
+
+@keyframes slide-in {
+  0% {
+    opacity: 0;
+    transform: translateY(calc(-50% * var(--direction, 1)));
+  }
+
+  100% {
+    transform: translateY(0%);
+  }
+}

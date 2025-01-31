@@ -10,6 +10,8 @@ const pages = [
   { link: "2030.html", name: "2030" },
 ];
 
+/* TODO - jump to content - a11y */
+
 const style = `
 nav {
   height: 100%;
@@ -50,6 +52,7 @@ class Teste extends HTMLElement {
   constructor() {
     super();
     this.name = "";
+    this.path = "";
     this.shadow = this.attachShadow({ mode: "open" });
 
     const template = document.createElement("template");
@@ -60,7 +63,7 @@ class Teste extends HTMLElement {
     const links = pages.map(({ link, name }) => {
       return `<a class="${
         this.name === name ? "selected" : ""
-      }" href="${link}">${name}</a>`;
+        }" href="${this.path ? this.path : ''}${link}">${name}</a>`;
     });
     console;
     this.shadow.innerHTML = `
@@ -75,7 +78,7 @@ class Teste extends HTMLElement {
   }
 
   static get observedAttributes() {
-    return ["name"];
+    return ["name", "path"];
   }
 
   attributeChangedCallback(property, oldValue, newValue) {

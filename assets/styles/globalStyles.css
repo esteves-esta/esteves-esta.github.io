@@ -1,17 +1,12 @@
 @import url('./reset.css');
-@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT,WONK@1,9..144,620,100,1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap');
 
-/* ------------ */
-/*
-  Theme and global variables
-*/
-
-/* @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@900&family=Lexend+Peta:wght@900&display=swap'); */
+@view-transition {
+  navigation: auto;
+}
 
 :root {
   --box-shadow-focus: 0px 0px 3px 1px var(--color-primary-lighten3);
-  --primary-font-family: 'Cinzel', serif;
-  --secondary-font-family: 'Lexend Peta', sans-serif;
   --text-color-alpha-8: hsla(0deg 0% 40% / 0.8);
   --text-color-alpha-9: hsla(0deg 0% 80.78% / 0.8);
   --text-color: hsl(0deg 0% 80.78%);
@@ -24,9 +19,6 @@
   --color-grey-900: hsl(var(--grey) 15% 15%);
   --border-color: var(--color-grey-700);
 
-  --color-dark-alpha-3: hsl(0 0% 5% / .2);
-  --color-dark-alpha-5: hsl(0 0% 5% / .5);
-
   --primary: 291 85%;
   --color-primary: hsl(var(--primary) 38%);
   --color-primary-light: hsl(var(--primary) 70%);
@@ -34,61 +26,19 @@
   --color-primary-alpha-300: hsl(var(--primary) 50% / 0.1);
   --color-primary-alpha-500: hsl(var(--primary) 50% / 0.5);
   --color-primary-alpha-700: hsl(var(--primary) 50% / 0.7);
-
-  --secondary: 291 46%;
-  --color-secondary: hsl(var(--secondary) 24%);
-  --color-secondary-light: hsl(var(--secondary) 70%);
-  --color-secondary-dark: hsl(var(--secondary) 15%);
-  --color-secondary-dark-alpha-700: hsl(var(--secondary) 15% / 0.7);
-  --color-secondary-alpha-200: hsl(var(--secondary) 50% / 0.2);
-  --color-secondary-alpha-300: hsl(var(--secondary) 50% / 0.3);
-  --color-secondary-alpha-500: hsl(var(--secondary) 50% / 0.5);
-  --color-secondary-alpha-700: hsl(var(--secondary) 50% / 0.7);
-
-  --tertiary: 251 68%;
-  --color-tertiary-light: hsl(var(--tertiary) 55%);
-  --color-tertiary: hsl(var(--tertiary) 24%);
-  --color-tertiary-dark: hsl(var(--tertiary) 15%);
-  --color-tertiary-alpha-300: hsl(var(--tertiary) 50% / 0.3);
-  --color-tertiary-alpha-500: hsl(var(--tertiary) 50% / 0.5);
-  --color-tertiary-alpha-700: hsl(var(--tertiary) 50% / 0.7);
-
-  /* hues and intensities */
-  --purple: 280;
-  --green: 94;
-  --blue: 241;
-  --yellow: 47;
-  --red: 15;
-  --cyan: 183;
-  --black: 0;
-  --intensity-0: 27% 49%;
-  --intensity-1: 40% 34%;
-  --intensity-2: 71% 20%;
-  --intensity-3: 60% 11%;
-
-  --gradient-bg1: linear-gradient(180deg,
-      hsl(291deg 96% 10%) 0%,
-      hsl(291deg 95% 8%) 24%,
-      hsl(290deg 95% 7%) 35%,
-      hsl(291deg 93% 6%) 45%,
-      hsl(291deg 91% 5%) 55%,
-      hsl(291deg 88% 3%) 65%,
-      hsl(291deg 100% 1%) 76%,
-      hsl(0deg 0% 0%) 100%);
   --timetravel-height: 35px;
   --timetravel-color: black;
 
 }
-@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap');
-/* TIME TRAVEL NAVIGATION */
+
 body {
   font-weight: normal;
   display: grid;
-  grid-template-rows: var(--timetravel-height) 1fr 1fr;
+  grid-template-rows: var(--timetravel-height) 1fr;
+  align-items: stretch;
 }
 
-/* CUSTOM COMPONENT */
-nav {
+body > nav {
   height: var(--timetravel-height);
   background: var(--timetravel-color);
 }
@@ -102,78 +52,9 @@ time-travel {
   opacity: 1;
 }
 
-/*  */
 
 @media (prefers-reduced-motion: no-preference) {
   html {
     scroll-behavior: smooth;
-  }
-}
-
-/* View transition - TITLE teste */
-
-@view-transition {
-  navigation: auto;
-}
-
-/* h1 {
-  view-transition-name: hero
-}
-
-::view-transition-old(hero) {
-  animation: fade 0.2s linear forwards;
-}
-::view-transition-new(hero) {
-  animation: fade 0.3s linear reverse;
-}
-
-@keyframes fade {
-  from {
-    opacity: 1;
-  }
-
-  to {
-    opacity: 0;
-  }
-} 
-
-/* View transition PAGE */
-
-#time-travel-container {
-  width: 100%;
-  height: calc(100vh - var(--timetravel-height));
-  /* Fallback for legacy users */
-  height: calc(100dvh - var(--timetravel-height));;
-
-  view-transition-name: content;
-}
-
-::view-transition-old(content) {
-  animation: slide-out 0.5s cubic-bezier(0.86, 0, 0.07, 1) forwards;
-}
-
-::view-transition-new(content) {
-  animation: slide-in 0.5s cubic-bezier(0.86, 0, 0.07, 1) forwards;
-}
-
-@keyframes slide-out {
-  0% {
-    transform: translateY(0%);
-  }
-
-  100% {
-    opacity: 0;
-    transform: translateY(calc(50% * 1));
-  }
-}
-
-@keyframes slide-in {
-  0% {
-    opacity: 0;
-    transform: translateY(calc(-50% * -1));
-  }
-
-  100% {
-    transform: translateY(0%);
   }
 }
