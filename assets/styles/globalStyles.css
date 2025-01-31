@@ -32,6 +32,7 @@ body {
 body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
 
 /*
@@ -157,30 +158,17 @@ h6 {
 
 }
 
-
+/* TIME TRAVEL NAVIGATION */
 body {
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  line-height: 1.6;
-  font-size: 15px;
-  font-family: Arial, sans-serif;
-  min-height: 100%;
-  width: 100%;
   font-weight: normal;
   display: grid;
   grid-template-rows: var(--timetravel-height) 1fr 1fr;
 }
 
+/* CUSTOM COMPONENT */
 nav {
   height: var(--timetravel-height);
   background: var(--timetravel-color);
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  html {
-    scroll-behavior: smooth;
-  }
 }
 
 time-travel:not(:defined) {
@@ -192,19 +180,27 @@ time-travel {
   opacity: 1;
 }
 
+/*  */
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+/* View transition - TITLE teste */
+
 @view-transition {
   navigation: auto;
 }
 
-h1 {
+/* h1 {
   view-transition-name: hero
 }
 
 ::view-transition-old(hero) {
   animation: fade 0.2s linear forwards;
 }
-
-/* New stuff coming in */
 ::view-transition-new(hero) {
   animation: fade 0.3s linear reverse;
 }
@@ -217,16 +213,16 @@ h1 {
   to {
     opacity: 0;
   }
-}
+} 
 
-/* ss */
+/* View transition PAGE */
 
+#time-travel-container {
+  width: 100%;
+  height: calc(100vh - var(--timetravel-height));
+  /* Fallback for legacy users */
+  height: calc(100dvh - var(--timetravel-height));;
 
-h1 {
-  color: red;
-}
-
-main {
   view-transition-name: content;
 }
 
@@ -240,22 +236,22 @@ main {
 
 @keyframes slide-out {
   0% {
-    transform: translateX(0%);
+    transform: translateY(0%);
   }
 
   100% {
     opacity: 0;
-    transform: translateX(calc(50% * var(--direction)));
+    transform: translateY(calc(50% * 1));
   }
 }
 
 @keyframes slide-in {
   0% {
     opacity: 0;
-    transform: translateX(calc(-50% * var(--direction)));
+    transform: translateY(calc(-50% * -1));
   }
 
   100% {
-    transform: translateX(0%);
+    transform: translateY(0%);
   }
 }

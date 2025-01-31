@@ -1,12 +1,13 @@
 // https://developer.mozilla.org/pt-BR/docs/Web/API/Web_components/Using_custom_elements
 
 const pages = [
-  { link: "index.html", name: "index" },
-  { link: "pages.html", name: "oldweb" },
-  { link: "teste2.html", name: "hello" },
-  { link: "teste.html", name: "asdfasd" }
-  // { link: "/pages/noughties", name: "noughties" },
-  // { link: "/pages/future-experimentation", name: "future-experimentation" }
+  { link: "1994.html", name: "1994" },
+  { link: "1997.html", name: "1997" },
+  { link: "2006.html", name: "2006" },
+  { link: "2015.html", name: "2015" },
+  { link: "2020.html", name: "2020" },
+  { link: "index.html", name: "2025" },
+  { link: "2030.html", name: "2030" },
 ];
 
 const style = `
