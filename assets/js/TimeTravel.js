@@ -12,17 +12,35 @@ const pages = [
 
 const style = `
 nav {
+  height: 100%;
+  padding: 0px 10px;
+
   display: flex;
+  align-items: center;
   justify-content: space-between;
-  color: palegoldenrod;
-  width: 100%;
   transition: all 990ms ease-in;
+  color: palegoldenrod;
+  font-family: Arial, 'sans-serif';
+  span {
+    font-family: "Fraunces", serif;
+  }
+  .links {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
   a {
     color: palegoldenrod;
+    padding: 5px;
+    text-underline-offset: 2.5px;
+  }
+  a:hover {
+    background-color: #444;
   }
   a.selected {
-    color: red !important;
+    color: white !important;
     font-weight: bold;
+    background-color: #222;
   }
 }
 
@@ -50,7 +68,7 @@ class Teste extends HTMLElement {
 
     <nav>
       <span>time travel throught the web</span>
-      <div>
+      <div class="links">
         ${links.join(" ")}
       </div>
     </nav>`;
