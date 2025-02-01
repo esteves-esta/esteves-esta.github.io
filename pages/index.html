@@ -11,6 +11,19 @@
   <style>
     main {
       background-color: palegoldenrod;
+      display: grid;
+      align-items: stretch;
+      grid-template-columns: 1fr;
+    }
+
+    @media (min-width: 450px) {
+      main {
+        grid-template-columns:
+          repeat(16, 1fr);
+        /* grid-template-columns:
+          repeat(auto-fill,
+            minmax(400px, 1fr)); */
+      }
     }
   </style>
 </head>
@@ -21,8 +34,15 @@
   </nav>
 
   <main id="time-travel-container">
-    <h1>index</h1>
-    <a href="2015.html">asdfas</a>
+    <div style="height: 100%; background-color: blue;">
+    </div>
+
+    <div style="height: 100%; background-color: pink;">
+    </div>
+
+    <div style="height: 100%; background-color: red;">
+    </div>
+
 
   </main>
 
