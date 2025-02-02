@@ -64,7 +64,7 @@
      font-size: 0.9rem;
    }
 
-   @media (min-width: 750px) {
+   @media (min-width: 1050px) {
      .box {
        display: grid;
        align-content: center;
@@ -239,7 +239,7 @@
      height: 80%;
    }
 
-   @media (min-width: 750px) {
+   @media (min-width: 1050px) {
      main {
        grid-template-columns: repeat(6, 1fr);
        grid-template-rows: repeat(9, 80px);
