@@ -1,22 +1,33 @@
+const range = (start, end, step = 1) => {
+  let output = [];
+  if (typeof end === "undefined") {
+    end = start;
+    start = 0;
+  }
+  for (let i = start; i < end; i += step) {
+    output.push(i);
+  }
+  return output;
+};
+
 // https://developer.mozilla.org/pt-BR/docs/Web/API/Web_components/Using_custom_elements
 
 const pages = [
-  { link: "1994.html", name: "1994" },
-  { link: "1997.html", name: "1997" },
-  { link: "2006.html", name: "2006" },
-  { link: "2015.html", name: "2015" },
-  { link: "2020.html", name: "2020" },
-  { link: "index.html", name: "2025" },
-  { link: "2030.html", name: "2030" },
+  { link: "1994.html", name: "1994", color: "--color-teal-3" },
+  { link: "1997.html", name: "1997", color: "--color-dull-orange-3" },
+  { link: "2006.html", name: "2006", color: "--color-pink-3" },
+  { link: "2015.html", name: "2015", color: "--color-orange-3" },
+  { link: "2020.html", name: "2020", color: "--color-red-2" },
+  { link: "index.html", name: "2025", color: "--color-blue-2" },
+  { link: "2030.html", name: "2030", color: "--color-pink-3" },
 ];
 
 /* TODO - jump to content - a11y */
 
 const style = `
 nav {
+  position: relative;
   height: 100%;
-  padding: 0px 10px;
-
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -24,12 +35,14 @@ nav {
   color: palegoldenrod;
   font-family: Arial, 'sans-serif';
   span {
+    padding-left: 10px;
     font-family: "Fraunces", serif;
   }
   .links {
     display: flex;
     align-items: center;
     gap: 15px;
+    padding-right: 10px;
   }
   a {
     color: palegoldenrod;
@@ -42,7 +55,25 @@ nav {
   a.selected {
     color: white !important;
     font-weight: bold;
-    background-color: #222;
+    background-color: var(--link-color, var(--color-teal-3));
+  }
+  .teste {
+    width: 100%;
+    height: 5px;
+    position: absolute;
+    bottom: 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: end;
+    .path {
+      width: 1px;
+      height: 5px;
+      background-color:rgba(255, 255, 255, 0.47);
+    }
+    .long {
+      height: 10px !important;
+    }
   }
 }
 
@@ -60,19 +91,33 @@ class Teste extends HTMLElement {
   }
 
   connectedCallback() {
-    const links = pages.map(({ link, name }) => {
-      return `<a class="${
-        this.name === name ? "selected" : ""
-        }" href="${this.path ? this.path : ''}${link}">${name}</a>`;
+    const links = pages.map(({ link, name, color }) => {
+      return `
+      <a 
+        style="--link-color: var(${color})"
+        class="${this.name === name ? "selected" : ""}" 
+        href="${this.path ? this.path : ""}${link}"
+      >
+      ${name}
+      </a>`;
     });
-    console;
+
+    const width = document.body.clientWidth;
+    const timeSpikes = width <= 700 ? 50 : 100;
+
     this.shadow.innerHTML = `
     <style>${style}</style>
-
     <nav>
       <span>time travel throught the web</span>
       <div class="links">
         ${links.join(" ")}
+      </div>
+      <div class="teste">
+        ${range(timeSpikes)
+          .map((i) => {
+            return `<div class="path ${i % 2 == 0 ? "long" : ""}"></div>`;
+          })
+          .join(" ")}
       </div>
     </nav>`;
   }
