@@ -7,7 +7,9 @@ function getTime() {
   var options = { hour: "2-digit", minute: "2-digit" };
   const currentHour = new Date().toLocaleTimeString("pt-BR", options);
 
-  const dayPeriod = new Date().toLocaleTimeString();
+  const dayPeriod = new Date().toLocaleTimeString("pt-BR", {
+    hour12: true,
+  });
   let greeting = "Bom dia";
   const split = dayPeriod.split(":");
   if (dayPeriod.includes("PM")) {
