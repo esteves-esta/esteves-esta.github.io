@@ -26,6 +26,7 @@ const pages = [
 
 const style = `
 nav {
+  user-select: none;
   position: relative;
   height: 100%;
   display: flex;
