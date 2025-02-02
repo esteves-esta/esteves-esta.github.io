@@ -17,8 +17,10 @@ function getTime() {
     if (split[0] < 5) greeting = "Boa noite";
   }
 
-  document.querySelector("#time-now").innerHTML = currentHour;
-  document.querySelector("#greeting").innerHTML = greeting;
+  const timeHtml = document.querySelector("#time-now");
+  const greetingHtml = document.querySelector("#greeting");
+  if (timeHtml) timeHtml.innerHTML = currentHour;
+  if (greetingHtml) greetingHtml.innerHTML = greeting;
 }
 getTime();
 
