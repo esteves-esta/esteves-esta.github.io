@@ -1,0 +1,355 @@
+   :root {
+     --bg: var(--dark-pink);
+     --stroke: var(--color-red);
+     --box-stroke: var(--color-red);
+     --accent: var(--dark-orange);
+     --svg-bg: var(--bg);
+     font-family: "Fraunces", serif;
+   }
+
+   /* @media (prefers-color-scheme: dark) {
+     :root {
+       --bg: var(--color-blue);
+       --stroke: var(--pink);
+       --box-stroke: var(--pink);
+       --accent: var(--dark-orange);
+       --svg-bg: var(--bg);
+     }
+   } */
+
+   main {
+     background-color: var(--bg);
+     display: grid;
+     align-items: stretch;
+     grid-template-columns: 1fr;
+     grid-template-rows: repeat(auto-fill, minmax(150px, 1fr));
+     padding: 30px;
+     gap: 25px;
+   }
+
+   .box {
+     overflow: hidden;
+     --rect-width: 100%;
+     width: var(--rect-width);
+     height: 150px;
+     border: 0.13rem solid;
+     border-color: var(--box-stroke);
+     position: relative;
+     color: var(--stroke);
+     padding: 15px;
+     text-align: center;
+   }
+
+   .main h1 {
+     font-size: 1rem;
+     margin-bottom: .2rem;
+   }
+
+   h1 {
+     font-size: 1.6rem;
+     margin-bottom: .5rem;
+   }
+
+   p {
+    font-weight: 600;
+     font-size: 0.9rem;
+   }
+
+   .box.one {
+     --accent: var(--color-blue-300);
+
+     &:hover {
+       --stroke: var(--accent);
+     }
+
+     svg {
+       position: absolute;
+
+       path {
+         fill: var(--stroke) !important;
+       }
+     }
+   }
+
+   .box.one svg {
+     bottom: 0px;
+     left: -30%;
+     width: 80%;
+   }
+
+   .box:not(.main) {
+     --svg-bg: var(--bg);
+     background-color: var(--bg);
+
+     &:hover {
+       --svg-bg: var(--accent);
+       --box-stroke: var(--accent);
+     }
+
+     svg {
+       position: absolute;
+     }
+   }
+
+   .box:not(.six) {
+     svg {
+       path {
+         stroke: var(--stroke);
+         fill: var(--svg-bg);
+       }
+     }
+   }
+
+   .box.two {
+     --accent: var(--red);
+
+     svg {
+       top: -20px;
+       right: -50px;
+       height: 60%;
+     }
+   }
+
+   .box.three {
+     --accent: var(--dark-orange);
+
+     svg {
+       bottom: -50px;
+       left: -30px;
+       width: 50%;
+     }
+   }
+
+   .box.four {
+     --accent: var(--red);
+   }
+
+   .box.four svg {
+     right: -23%;
+     width: 80%;
+   }
+
+   .box.five {
+     svg {
+       left: 40px;
+       top: -80px;
+     }
+   }
+
+   .box.seven {
+     --accent: var(--orange);
+   }
+
+   .box.seven svg {
+     left: -10px;
+     top: 10px;
+   }
+
+   .box.eight {
+     --accent: var(--red);
+
+     svg {
+       top: 50px;
+     }
+   }
+
+
+
+   .main {
+     --accent: var(--orange);
+     background-color: var(--stroke);
+     text-align: center;
+     color: var(--bg);
+     padding: 0px 30px;
+     padding-top: 35px;
+
+     svg {
+       position: absolute;
+     }
+
+     &:hover {
+       --svg-bg: var(--accent);
+       background-color: var(--svg-bg);
+       color: var(--stroke);
+     }
+   }
+
+   @media (prefers-color-scheme: dark) {
+     .main {
+       --accent: var(--red);
+     }
+   }
+
+   .main #monitor {
+     top: -55px;
+     left: 5px;
+     height: 65%;
+   }
+
+   .main #mouse {
+     top: 5px;
+     right: -10px;
+   }
+
+   .main #keyboard {
+     top: 80px;
+     right: 20px;
+     height: 90%;
+   }
+
+   .box.six {
+     --svg-bg: var(--bg);
+     --accent: var(--orange);
+
+     &:hover {
+       --svg-bg: var(--accent);
+     }
+   }
+
+   .box.six svg {
+     bottom: 0px;
+     left: 40%;
+     height: 80%;
+   }
+
+   @media (min-width: 750px) {
+     main {
+       grid-template-columns: repeat(6, 1fr);
+       grid-template-rows: repeat(8, 80px);
+       align-content: center;
+       gap: 10px;
+       padding: 0px;
+     }
+
+     .box {
+       overflow: initial;
+     }
+
+     .box.one {
+       height: 100%;
+       --rect-width: 60%;
+       justify-self: center;
+       align-self: center;
+
+       grid-column: 2;
+       grid-row: 2 / 5;
+     }
+
+     .box.one svg {
+       bottom: 20px;
+       left: -20px;
+       width: 80%;
+     }
+
+     .box.two {
+       height: 65%;
+       --rect-width: 55%;
+       justify-self: end;
+       align-self: center;
+       margin-right: 10px;
+       grid-column: 2;
+       grid-row: 5 / 9;
+     }
+
+     .box.three {
+       height: 65%;
+       --rect-width: 90%;
+       justify-self: center;
+       align-self: center;
+
+       grid-column: 3;
+       grid-row: 2 / 4;
+     }
+
+     .box.four {
+       height: 70%;
+       --rect-width: 70%;
+       justify-self: center;
+       align-self: start;
+
+       grid-column: 4;
+       grid-row: 2 / 4;
+     }
+
+     .box.four svg {
+       left: 20px;
+       width: 80%;
+     }
+
+     .box.five {
+       height: 80%;
+       --rect-width: 60%;
+       justify-self: start;
+       align-self: end;
+
+       grid-column: 5;
+       grid-row: 2 / 4;
+     }
+
+     .box.six {
+       height: 75%;
+       --rect-width: 60%;
+       justify-self: center;
+       align-self: center;
+
+       grid-column: 5;
+       grid-row: 4 / 8;
+     }
+
+     .box.six svg {
+       bottom: -60px;
+       right: -60px;
+       height: 80%;
+     }
+
+     .box.seven {
+       height: 70%;
+       --rect-width: 90%;
+       justify-self: center;
+       align-self: center;
+
+       grid-column: 4;
+       grid-row: 7 / 9;
+     }
+
+     .box.seven svg {
+       right: -50px;
+       top: 40px;
+     }
+
+     .box.eight {
+       height: 75%;
+       --rect-width: 60%;
+       justify-self: center;
+       align-self: center;
+
+       grid-column: 3;
+       grid-row: 7 / 9;
+     }
+
+     .main {
+       height: 65%;
+       --rect-width: 80%;
+       justify-self: center;
+       align-self: center;
+       grid-column: 3 / 5;
+       grid-row: 4 / 7;
+     }
+
+     .main #monitor {
+       top: -70px;
+       right: -5px;
+       height: 65%;
+     }
+
+     .main #mouse {
+       top: 50px;
+       right: -30px;
+     }
+
+     .main #keyboard {
+       top: 100px;
+       right: 20px;
+       height: 90%;
+     }
+   }

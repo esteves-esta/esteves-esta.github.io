@@ -1,52 +1,79 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="noindex,nofollow" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>esteves-esta</title>
+    <link rel="stylesheet" href="../assets/styles/globalStyles.css" />
+    <link rel="stylesheet" href="../assets/styles/view-transition.css" />
+    <link rel="stylesheet" href="../assets/styles/2025.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="robots" content="noindex,nofollow" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>esteves-esta</title>
-  <link rel="stylesheet" href="../assets/styles/globalStyles.css">
-  <link rel="stylesheet" href="../assets/styles/view-transition.css">
-  <style>
-    main {
-      background-color: palegoldenrod;
-      display: grid;
-      align-items: stretch;
-      grid-template-columns: 1fr;
-    }
+  <body>
+    <nav>
+      <time-travel name="2025"></time-travel>
+    </nav>
 
-    @media (min-width: 450px) {
-      main {
-        grid-template-columns:
-          repeat(16, 1fr);
-        /* grid-template-columns:
-          repeat(auto-fill,
-            minmax(400px, 1fr)); */
-      }
-    }
-  </style>
-</head>
+    <main id="time-travel-container">
+      <div class="box main">
+        <svg id="monitor" data-src="../assets/svg/monitor.svg"></svg>
+        <svg id="keyboard" data-src="../assets/svg/keyboard.svg"></svg>
+        <svg id="mouse" data-src="../assets/svg/mouse.svg"></svg>
+        <h1>olá, bem vindo ao meu portfolio</h1>
+        <p>
+          Sou a fernanda, desenvolvedora frontend há
+          <span id="anos-trabalho"></span> anos, e aqui neste meu pequeno espaço
+          web estão meus projetos pessoais.
+        </p>
+      </div>
 
-<body>
-  <nav>
-    <time-travel name="2025"></time-travel>
-  </nav>
+      <div class="box one">
+        <!-- <img src="../assets/svg/TEA.svg" /> -->
+        <svg data-src="../assets/svg/GLASSES.svg"></svg>
+        <h1>titulo</h1>
+      </div>
 
-  <main id="time-travel-container">
-    <div style="height: 100%; background-color: blue;">
-    </div>
+      <div class="box two">
+        <svg data-src="../assets/svg/PLANT.svg"></svg>
+        <h1>titulo</h1>
+      </div>
 
-    <div style="height: 100%; background-color: pink;">
-    </div>
+      <div class="box three">
+        <svg data-src="../assets/svg/pens.svg"></svg>
+        <h1>titulo</h1>
+      </div>
 
-    <div style="height: 100%; background-color: red;">
-    </div>
+      <div class="box four">
+        <svg data-src="../assets/svg/books.svg"></svg>
+        <h1>titulo</h1>
+      </div>
 
+      <div class="box five">
+        <svg data-src="../assets/svg/WRISTWATCH.svg"></svg>
+        <h1>titulo</h1>
+      </div>
 
-  </main>
+      <div class="box six">
+        <svg data-src="../assets/svg/hand.svg"></svg>
+        <h1>titulo</h1>
+      </div>
 
+      <div class="box seven">
+        <svg data-src="../assets/svg/NOTEBOOK.svg"></svg>
+        <h1>titulo</h1>
+      </div>
+
+      <div class="box eight">
+        <svg data-src="../assets/svg/TEA.svg"></svg>
+        <h1>titulo</h1>
+      </div>
+    </main>
+  </body>
   <script src="../assets/js/TimeTravel.js"></script>
-</body>
-
+  <script src="../assets/js/main.js"></script>
+  <script
+    type="text/javascript"
+    src="https://unpkg.com/external-svg-loader@latest/svg-loader.min.js"
+  ></script>
 </html>
