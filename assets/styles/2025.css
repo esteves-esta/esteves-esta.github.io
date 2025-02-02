@@ -1,4 +1,5 @@
    :root {
+     user-select: none;
      --bg: var(--color-orange);
      --stroke: var(--color-red-3);
      --box-stroke: var(--color-red-3);
