@@ -29,30 +29,42 @@
   --timetravel-height: 35px;
   --timetravel-color: black;
 
-  --dark-blue: 222 23%;
-  --color-blue: hsl(var(--dark-blue) 31%);
-  --color-blue-300: hsl(var(--dark-blue) 11%);
-  --color-blue-500: hsl(var(--dark-blue) 71%);
+  --blue: 222 23%;
+  --color-blue: hsl(var(--blue) 71%);
+  --color-blue-2: hsl(var(--blue) 31%);
+  --color-blue-3: hsl(var(--blue) 11%);
 
-  --blue: 171 15%;
-  --color-blue: hsl(var(--blue) 81%);
-  --color-blue-300: hsl(var(--blue) 31%);
-  --color-blue-500: hsl(var(--blue) 23%);
+  --teal: 171 15%;
+  --color-teal: hsl(var(--teal) 81%);
+  --color-teal-2: hsl(var(--teal) 61%);
+  --color-teal-3: hsl(var(--teal) 33%);
 
-  --dark-red: 319 22%;
-  --color-red: hsl(var(--dark-red) 25%);
-  --color-red-300: hsl(var(--dark-red) 11%);
-  --color-red-500: hsl(var(--dark-red) 41%);
+  --wine: 319 22%;
+  --color-wine: hsl(var(--wine) 41%);
+  --color-wine-2: hsl(var(--wine) 25%);
+  --color-wine-3: hsl(var(--wine) 11%);
 
-  --red: hsl(7 66 58%);
+  --red: 7 66%;
+  --color-red: hsl(var(--red) 58%);
+  --color-red-2: hsl(var(--red) 41%);
+  --color-red-3: hsl(var(--red) 11%);
 
-  --dark-orange: hsl(24 69 61%);
+  --pink: 9 46%;
+  --color-pink: hsl(var(--pink) 83%);
+  --color-pink-2: hsl(var(--pink) 61%);
+  --color-pink-3: hsl(var(--pink) 31%);
 
-  --orange: hsl(28 94 72%);
+  --dull-orange: 24 69%;
+  --color-dull-orange: hsl(var(--dull-orange) 71%);
+  --color-dull-orange-2: hsl(var(--dull-orange) 51%);
+  --color-dull-orange-3: hsl(var(--dull-orange) 31%);
 
-  --dark-pink: hsl(9 46 83%);
+  --orange: 28 94%;
+  --color-orange: hsl(var(--orange) 91%);
+  --color-orange-2: hsl(var(--orange) 72%);
+  --color-orange-3: hsl(var(--orange) 61%);
+  --color-orange-4: hsl(var(--orange) 31%);
 
-  --pink: hsl(28 81 91%);
 
 }
 

@@ -1,31 +1,70 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="noindex,nofollow" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>esteves-esta 2020</title>
+    <link rel="stylesheet" href="../assets/styles/globalStyles.css" />
+    <link rel="stylesheet" href="../assets/styles/view-transition.css" />
+    <style>
+      main {
+        /* background-color: antiquewhite; */
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        gap: 20px;
+      }
+      .box {
+        width: 100px;
+        height: 100px;
+        background-color: var(--box, red);
+      }
+    </style>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="robots" content="noindex,nofollow" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>esteves-esta 2020</title>
-  <link rel="stylesheet" href="../assets/styles/globalStyles.css">
-<link rel="stylesheet" href="../assets/styles/view-transition.css">
-  <style>
-    main {
-      background-color: antiquewhite;
-    }
-  </style>
-</head>
+  <body>
+    <nav>
+      <time-travel name="2006"></time-travel>
+    </nav>
 
-<body>
-  <nav>
-    <time-travel name="2006"></time-travel>
-  </nav>
+    <main id="time-travel-container">
+      <h1>2006</h1>
+      <div class="box" style="--box: var(--color-orange)"></div>
+      <div class="box" style="--box: var(--color-orange-2)"></div>
+      <div class="box" style="--box: var(--color-orange-3)"></div>
+      <div class="box" style="--box: var(--color-orange-4)"></div>
 
-  <main id="time-travel-container">
-    <h1>2006</h1>
+      <hr />
+      <div class="box" style="--box: var(--color-dull-orange)"></div>
+      <div class="box" style="--box: var(--color-dull-orange-2)"></div>
+      <div class="box" style="--box: var(--color-dull-orange-3)"></div>
 
-  </main>
+      <hr />
+      <div class="box" style="--box: var(--color-pink)"></div>
+      <div class="box" style="--box: var(--color-pink-2)"></div>
+      <div class="box" style="--box: var(--color-pink-3)"></div>
 
-  <script src="../assets/js/TimeTravel.js"></script>
-</body>
+      <hr />
+      <div class="box" style="--box: var(--color-red)"></div>
+      <div class="box" style="--box: var(--color-red-2)"></div>
+      <div class="box" style="--box: var(--color-red-3)"></div>
 
+      <hr />
+      <div class="box" style="--box: var(--color-wine)"></div>
+      <div class="box" style="--box: var(--color-wine-2)"></div>
+      <div class="box" style="--box: var(--color-wine-3)"></div>
+
+      <hr />
+      <div class="box" style="--box: var(--color-blue)"></div>
+      <div class="box" style="--box: var(--color-blue-2)"></div>
+      <div class="box" style="--box: var(--color-blue-3)"></div>
+      <hr />
+      <div class="box" style="--box: var(--color-teal)"></div>
+      <div class="box" style="--box: var(--color-teal-2)"></div>
+      <div class="box" style="--box: var(--color-teal-3)"></div>
+    </main>
+
+    <script src="../assets/js/TimeTravel.js"></script>
+  </body>
 </html>
