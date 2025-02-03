@@ -1,31 +1,102 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="robots" content="noindex,nofollow" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>esteves-esta</title>
-    <link rel="stylesheet" href="assets/styles/globalStyles.css" />
-    <link rel="stylesheet" href="assets/styles/view-transition.css" />
-    <style>
-      main {
-        background-color: pink;
-        display: grid;
-        align-content: center;
-        justify-content: center;
-      }
-    </style>
-  </head>
 
-  <body>
-    <nav>
-      <time-travel name="2020"></time-travel>
-    </nav>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="robots" content="noindex,nofollow" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>esteves-esta</title>
+  <link rel="stylesheet" href="assets/styles/globalStyles.css" />
+  <link rel="stylesheet" href="assets/styles/view-transition.css" />
+  <link rel="stylesheet" href="assets/styles/2020.css">
+</head>
 
-    <main id="time-travel-container">
-      <h1>STILL INCOMING FROM TIME TRAVEL MACHINE.....</h1>
-    </main>
+<body>
+  <nav>
+    <time-travel name="2020"></time-travel>
+  </nav>
 
-    <script src="assets/js/TimeTravel.js"></script>
-  </body>
+  <main id="time-travel-container">
+    <article class="about">
+
+      <h1>bem vindo ao meu portfolio</h1>
+
+      <section>
+        <h3>minha carreira</h3>
+        <p>
+          sou desenvolvedora frontend a <span id="anos-trabalho"></span> anos, formada em design gráfico e análise e
+          desenvolvimento de sistemas.
+        </p>
+      </section>
+      <section>
+        <h3>personalidade</h3>
+        <p>
+          a minha vibe está mais para a introversão então tenho vários hobbies que refletem isso, jardinagem,
+          quebra-cabeças, fotografia, leitura e crochet.
+        </p>
+      </section>
+      <section>
+        <h3>work ethics</h3>
+        <p>
+          <em> “fernanda é uma pessoa proativa, que abraça com positividade á mudanças e que domina o que faz, sabe
+            passar
+            seu
+            conhecimento aos outros, muito dedicada” (feedback de gestores e colegas diretos)”
+          </em>
+        </p>
+      </section>
+    </article>
+
+    <article class="work">
+      <section>
+        <h2>work experience</h2>
+        <ul>
+          <li>
+            <span class="company">clearsale</span>
+            <span class="role">Desenvolvedora Frontend Pleno</span>
+            <span class="years">2021-now</span>
+          </li>
+          <li>
+            <span class="company">linx</span>
+            <span class="role">Desenvolvedora Frontend Jr.</span>
+            <span class="years">2019-2021</span>
+          </li>
+        </ul>
+
+      </section>
+    </article>
+
+    <article class="projects">
+      <section>
+
+        <h2>projetos</h2>
+
+        <div>
+          <h3>Women fronted metal bands</h3>
+          <p>Projeto criado para listar bandas de metal com vocalistas mulheres.</p>
+          <ul>
+            <li>Pesquisa aberta e filtros específicos;</li>
+            <li>API serveless com Netlify Functions;</li>
+            <li>Reprodução de preview de uma música de cada banda usando a API do serviço de streaming Deezer;</li>
+            <li>Caso a banda não tenha perfil no Deezer há o link official da banda;</li>
+            <li>Gráficos resumindo as informações obtidas pelos dados;</li>
+            <li>Visão grid e tabela dos dados;</li>
+            <li>Favoritar músicas poder exportar lista de favoritos como .csv;</li>
+            <li>Exportar a lista de bandas como .csv;</li>
+          </ul>
+          <button>acessar</button>
+          <button>repositório</button>
+          <p>
+            <strong>Tech stack:</strong>
+            React, Vite, Typescript, SWR, RadixUI, Nivo Charts
+          </p>
+        </div>
+      </section>
+    </article>
+
+  </main>
+
+  <script src="assets/js/TimeTravel.js"></script>
+</body>
+
 </html>

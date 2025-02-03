@@ -1,0 +1,108 @@
+main {
+  font-family: "Fraunces", serif;
+}
+
+article {
+  padding: 100px 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+}
+
+h1,
+section {
+  width: 900px;
+}
+
+h1 {
+  color: var(--color-blue-2);
+  font-size: 2.6rem;
+  font-weight: 900;
+}
+
+.about {
+  background-color: var(--color-orange);
+
+  h3 {
+    font-family: Arial, sans-serif;
+    text-transform: uppercase;
+    font-size: .8rem;
+    letter-spacing: .2rem;
+    color: var(--color-blue-2);
+    margin-bottom: 15px;
+    font-weight: bold;
+  }
+
+  p {
+    font-size: 1.7rem;
+    font-weight: 900;
+    color: var(--color-red)
+  }
+
+  section {
+    padding-bottom: 50px;
+    border-bottom: 1px solid var(--color-red);
+  }
+}
+
+h2 {
+  color: var(--color-pink);
+  font-size: 1.8rem;
+  font-weight: 900;
+  margin-bottom: 50px;
+}
+
+.work,
+.projects {
+  color: var(--color-pink);
+}
+
+.work {
+  background-color: var(--color-blue-2);
+
+  ul {
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+  }
+
+  li {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.3rem;
+    display: flex;
+    gap: 25px;
+    position: relative;
+    margin-bottom: 50px;
+  }
+
+    li:after {
+      content: "";
+      display: block;
+      background-color: var(--color-pink);
+      opacity: .5;
+      position: absolute;
+      width: 35%;
+      height: 1px;
+      top: 50%;
+      left: 50%;
+    }
+
+  .company {
+    font-weight: bold;
+  }
+
+  .role {
+    opacity: .8;
+    font-weight: lighter;
+  }
+  .years {
+    margin-left: auto;
+  }
+  
+}
+
+.projects {
+  background-color: var(--color-blue-3);
+}
