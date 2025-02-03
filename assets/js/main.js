@@ -1,6 +1,11 @@
 // YEARS WORKING
 const current_year = new Date().getFullYear();
-document.querySelector("#anos-trabalho").innerHTML = current_year - 2019;
+const workYearHTML = document.querySelector("#anos-trabalho");
+if (workYearHTML) workYearHTML.innerHTML = current_year - 2019;
+
+//  current year
+const yearHTML = document.querySelector("#year");
+if (yearHTML) yearHTML.innerHTML = current_year;
 
 // TIME FUNCTION
 function getTime() {
@@ -24,8 +29,11 @@ function getTime() {
   if (timeHtml) timeHtml.innerHTML = currentHour;
   if (greetingHtml) greetingHtml.innerHTML = greeting;
 }
+
 getTime();
 
 window.setInterval(() => {
   getTime();
 }, 3 * 10000);
+
+

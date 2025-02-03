@@ -10,6 +10,7 @@ const range = (start, end, step = 1) => {
   return output;
 };
 
+
 // https://developer.mozilla.org/pt-BR/docs/Web/API/Web_components/Using_custom_elements
 
 const pages = [
@@ -80,7 +81,7 @@ nav {
 
 `;
 
-class Teste extends HTMLElement {
+class TimeTravel extends HTMLElement {
   constructor() {
     super();
     this.name = "";
@@ -115,10 +116,10 @@ class Teste extends HTMLElement {
       </div>
       <div class="teste">
         ${range(timeSpikes)
-          .map((i) => {
-            return `<div class="path ${i % 2 == 0 ? "long" : ""}"></div>`;
-          })
-          .join(" ")}
+        .map((i) => {
+          return `<div class="path ${i % 2 == 0 ? "long" : ""}"></div>`;
+        })
+        .join(" ")}
       </div>
     </nav>`;
   }
@@ -133,4 +134,4 @@ class Teste extends HTMLElement {
   }
 }
 
-customElements.define("time-travel", Teste);
+customElements.define("time-travel", TimeTravel);
