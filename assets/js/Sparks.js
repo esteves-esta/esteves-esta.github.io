@@ -1,6 +1,6 @@
 const SparkStyle = `
 span {
-  color: var(--color-red);
+  color: var(--color-orange-2);
   font-style: italic;
 }
 `;
