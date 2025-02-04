@@ -74,6 +74,7 @@
 }
 
 body {
+  font-family: "Fraunces", serif;
   font-weight: normal;
   display: grid;
   grid-template-rows: var(--timetravel-height) 1fr;
