@@ -13,12 +13,12 @@ article {
 
 h1,
 section {
-  width: 900px;
+  width: clamp(300px, 70%, 1000px);
 }
 
 h1 {
   color: var(--color-blue-2);
-  font-size: 2.6rem;
+  font-size: 2rem;
   font-weight: 900;
 }
 
@@ -36,7 +36,7 @@ h1 {
   }
 
   p {
-    font-size: 1.7rem;
+    font-size: 1.4rem;
     font-weight: 900;
     color: var(--color-red)
   }
@@ -72,10 +72,118 @@ h2 {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1.3rem;
     display: flex;
-    gap: 25px;
+    flex-direction: column;
+    gap: 5px;
     position: relative;
     margin-bottom: 50px;
   }
+
+  .company {
+    font-weight: bold;
+  }
+
+  .role {
+    opacity: .8;
+    font-weight: lighter;
+  }
+
+
+
+}
+
+.projects {
+  background-color: var(--color-blue-3);
+}
+
+.project-list {
+  --gap: 20px;
+  display: flex;
+  gap: var(--gap);
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.project {
+  width: 100%;
+  /* max-width: 450px; */
+  border: 1px solid var(--color-pink);
+  border-radius: 4px;
+  overflow: hidden;
+
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    padding: 25px 30px;
+  }
+
+  h3 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    text-transform: lowercase;
+  }
+
+  p {
+    font-weight: 400;
+    margin: 1rem 0rem;
+  }
+
+  .project-summary {
+    font-size: 1.2rem;
+    font-style: italic;
+  }
+
+  ul li {
+    margin-bottom: .5rem;
+    font-size: .9rem;
+  }
+
+  .action-btn-row {
+    display: flex;
+    gap: 32px;
+    margin: 20px 0px;
+
+  }
+
+  .action-btn-row a {
+    display: block;
+    text-decoration: none;
+    --btn-color: var(--color-pink);
+    background-color: transparent;
+    color: var(--btn-color);
+    border: 1px solid var(--btn-color);
+    padding: 5px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 800;
+    transition: all 450ms ease-out;
+
+    &:hover {
+      --btn-color: var(--color-pink-2);
+    }
+  }
+}
+
+@media (min-width: 650px) {
+  .project-list {
+    flex-direction: row;
+  }
+
+  h1 {
+    font-size: 2.6rem;
+  }
+
+  .about {
+    p {
+      font-size: 1.7rem;
+    }
+  }
+
+
+  .work {
+    li {
+      flex-direction: row;
+      gap: 25px;
+    }
 
     li:after {
       content: "";
@@ -89,20 +197,12 @@ h2 {
       left: 50%;
     }
 
-  .company {
-    font-weight: bold;
+    .years {
+      margin-left: auto;
+    }
   }
 
-  .role {
-    opacity: .8;
-    font-weight: lighter;
+  .project {
+    width: calc(50% - var(--gap) / 2);
   }
-  .years {
-    margin-left: auto;
-  }
-  
-}
-
-.projects {
-  background-color: var(--color-blue-3);
 }
