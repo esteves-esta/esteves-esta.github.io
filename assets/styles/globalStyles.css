@@ -26,8 +26,6 @@
   --color-primary-alpha-300: hsl(var(--primary) 50% / 0.1);
   --color-primary-alpha-500: hsl(var(--primary) 50% / 0.5);
   --color-primary-alpha-700: hsl(var(--primary) 50% / 0.7);
-  --timetravel-height: 35px;
-  --timetravel-color: black;
 
   --blue: 222 23%;
   --color-blue: hsl(var(--blue) 71%);
@@ -65,7 +63,14 @@
   --color-orange-3: hsl(var(--orange) 61%);
   --color-orange-4: hsl(var(--orange) 31%);
 
+  --timetravel-height: 55px;
+  --timetravel-color: black;
+}
 
+@media (min-width: 650px) {
+  :root {
+    --timetravel-height: 35px;
+  }
 }
 
 body {

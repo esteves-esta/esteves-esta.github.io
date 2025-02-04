@@ -31,13 +31,14 @@ nav {
   position: relative;
   height: 100%;
   display: flex;
-  align-items: center;
+  
   justify-content: space-between;
+  flex-direction: column;
   transition: all 990ms ease-in;
   color: palegoldenrod;
   font-family: Arial, 'sans-serif';
+  padding-left: 10px;
   span {
-    padding-left: 10px;
     font-family: "Fraunces", serif;
   }
   .links {
@@ -76,6 +77,17 @@ nav {
     .long {
       height: 10px !important;
     }
+  }
+}
+
+@media (min-width: 650px) {
+  nav {
+    flex-direction: row;
+    align-items: center;
+    padding-left: 0px;
+  }
+  span {
+    padding-left: 10px;
   }
 }
 
