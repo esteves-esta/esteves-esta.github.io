@@ -35,10 +35,17 @@ h1 {
     font-weight: bold;
   }
 
-  p {
+  p,
+  blockquote {
     font-size: 1.4rem;
     font-weight: 900;
     color: var(--color-red)
+  }
+
+  cite {
+    font-size: .9em;
+    font-weight: 800;
+    color: var(--color-pink-2)
   }
 
   section {
@@ -163,7 +170,21 @@ h2 {
   }
 }
 
-@media (min-width: 650px) {
+@media (min-width: 1100px) {
+  .work li:after {
+    content: "";
+    display: block;
+    background-color: var(--color-pink);
+    opacity: .5;
+    position: absolute;
+    width: 35%;
+    height: 1px;
+    top: 50%;
+    left: 50%;
+  }
+}
+
+@media (min-width: 860px) {
   .project-list {
     flex-direction: row;
   }
@@ -173,7 +194,9 @@ h2 {
   }
 
   .about {
-    p {
+
+    p,
+    blockquote {
       font-size: 1.7rem;
     }
   }
@@ -185,17 +208,7 @@ h2 {
       gap: 25px;
     }
 
-    li:after {
-      content: "";
-      display: block;
-      background-color: var(--color-pink);
-      opacity: .5;
-      position: absolute;
-      width: 35%;
-      height: 1px;
-      top: 50%;
-      left: 50%;
-    }
+
 
     .years {
       margin-left: auto;
