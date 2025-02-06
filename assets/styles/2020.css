@@ -2,7 +2,7 @@ main {
   font-family: "Fraunces", serif;
 }
 
-.emoji {
+main .emoji {
   opacity: .5;
 }
 
