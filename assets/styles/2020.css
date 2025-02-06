@@ -2,6 +2,18 @@ main {
   font-family: "Fraunces", serif;
 }
 
+.emoji {
+  opacity: .5;
+}
+
+footer .rights {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 10px;
+
+}
+
 article {
   padding: 100px 0px;
   display: flex;
@@ -11,7 +23,9 @@ article {
   gap: 50px;
 }
 
+
 h1,
+footer-all-rights-reserved,
 section {
   width: clamp(300px, 70%, 1000px);
 }

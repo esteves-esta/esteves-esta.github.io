@@ -5,6 +5,15 @@
   navigation: auto;
 }
 
+@font-face {
+  font-family: og-emoji;
+  src: url(../fonts/og-dcm-emoji.ttf);
+}
+
+.emoji {
+  font-family: og-emoji, sans-serif;
+}
+
 :root {
   --box-shadow-focus: 0px 0px 3px 1px var(--color-primary-lighten3);
   --text-color-alpha-8: hsla(0deg 0% 40% / 0.8);
