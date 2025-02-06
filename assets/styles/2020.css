@@ -2,6 +2,18 @@ main {
   font-family: "Fraunces", serif;
 }
 
+main .emoji {
+  opacity: .5;
+}
+
+footer .rights {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 10px;
+
+}
+
 article {
   padding: 100px 0px;
   display: flex;
@@ -11,7 +23,9 @@ article {
   gap: 50px;
 }
 
+
 h1,
+footer-all-rights-reserved,
 section {
   width: clamp(300px, 70%, 1000px);
 }
@@ -35,17 +49,64 @@ h1 {
     font-weight: bold;
   }
 
-  p {
+  p,
+  blockquote {
     font-size: 1.4rem;
     font-weight: 900;
     color: var(--color-red)
   }
 
-  section {
+  cite {
+    font-size: .9em;
+    font-weight: 800;
+    color: var(--color-pink-2)
+  }
+
+  section:not(:last-child) {
     padding-bottom: 50px;
     border-bottom: 1px solid var(--color-red);
   }
 }
+
+.links {
+  font-size: 1.5rem;
+  font-weight: 900;
+  display: flex;
+  gap: 55px;
+  flex-direction: column;
+
+  small {
+    font-size: .7em;
+  }
+
+  h3 {
+    margin: 0px;
+  }
+
+  a {
+    color: var(--color-blue-2);
+    display: flex;
+    gap: 15px;
+    text-decoration: none;
+    align-items: center;
+  }
+
+  a:visited,
+  a:visited .emoji {
+    color: var(--color-blue-3);
+  }
+  
+  a[href]:hover,
+  a[href]:hover .emoji {
+    color: var(--color-red-2);
+  }
+
+  .emoji {
+    color: inherit;
+    opacity: .9;
+  }
+}
+
 
 h2 {
   color: var(--color-pink);
@@ -163,7 +224,21 @@ h2 {
   }
 }
 
-@media (min-width: 650px) {
+@media (min-width: 1100px) {
+  .work li:after {
+    content: "";
+    display: block;
+    background-color: var(--color-pink);
+    opacity: .5;
+    position: absolute;
+    width: 35%;
+    height: 1px;
+    top: 50%;
+    left: 50%;
+  }
+}
+
+@media (min-width: 860px) {
   .project-list {
     flex-direction: row;
   }
@@ -173,7 +248,9 @@ h2 {
   }
 
   .about {
-    p {
+
+    p,
+    blockquote {
       font-size: 1.7rem;
     }
   }
@@ -185,17 +262,7 @@ h2 {
       gap: 25px;
     }
 
-    li:after {
-      content: "";
-      display: block;
-      background-color: var(--color-pink);
-      opacity: .5;
-      position: absolute;
-      width: 35%;
-      height: 1px;
-      top: 50%;
-      left: 50%;
-    }
+
 
     .years {
       margin-left: auto;
@@ -204,5 +271,11 @@ h2 {
 
   .project {
     width: calc(50% - var(--gap) / 2);
+  }
+
+  .links {
+    flex-wrap: wrap;
+    align-items: center;
+    flex-direction: row;
   }
 }

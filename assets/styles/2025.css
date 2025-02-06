@@ -8,7 +8,7 @@
   font-family: "Fraunces", serif;
 }
 
-footer {
+footer-all-rights-reserved footer .rights {
   color: var(--stroke);
   display: flex;
   justify-content: space-between;
@@ -245,7 +245,7 @@ p {
 @media (min-width: 1050px) {
   main {
     grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: repeat(9, 80px);
+    grid-template-rows: repeat(10, 80px);
     align-content: center;
     gap: 10px;
     padding: 0px;
@@ -402,10 +402,10 @@ p {
     height: 90%;
   }
 
-  footer {
+  footer-all-rights-reserved {
     color: var(--stroke);
     grid-column: 2 / -2;
-    grid-row: 9 / 9;
+    grid-row: 9 / -1;
   }
 }
 

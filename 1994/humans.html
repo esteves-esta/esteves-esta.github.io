@@ -49,15 +49,14 @@
       <section>
         <h3>Funcionalidades</h3>
         <ul>
-          <li>Customizações do texto;</li>
+          <li>Customizações das cores e tipografia;</li>
           <ul>
-            <li>Mudança de tema de cor;</li>
-            <li>Tamanho, espessura e familia de fonte;</li>
+            <li>Mudança de tema;</li>
+            <li>Tamanho, espessura e tipo de tipografia;</li>
           </ul>
           <li>Espaçamento de palavras e linha;</li>
           <li>Alternar a visibilidade da tradução por linha;</li>
-          <li>Selecionar palavas do texto em coreano e exporta-las para usar na aplicação Anki;</li>
-          <li>Ao passar o mouse por uma palavra em coreano exibir popover com link para o dicionário Papago;</li>
+          <li>Ao passar o mouse por uma palavra exibir popover com link para o dicionário Papago;</li>
           <li>Salvar customizações e palavras selecionadas no Local Storage.</li>
         </ul>
 
@@ -67,8 +66,9 @@
         <h3>Desafios</h3>
         <p>
           Não havia ainda tido oportunidade de trabalhar com dados em XML, que é formato que o RSS Feed é fornecido.
-          Então foi um processo de pesquisa para entender como formatar e realizar esse processo corretamente para
-          atingir o meu objetivo.
+          Então foi um processo de pesquisa para entender como fazer o parse e formatar. Também tive que interar na
+          lógica para separar o texto em coreano e o texto traduzido, inicialmente estava usando o layout mas como essa
+          lógica estava propensa a falhar ajustei o código para utilizar da biblioteca Franc para realizar a detecção do idioma.
         </p>
       </section>
 
@@ -78,6 +78,7 @@
           <li>Vite</li>
           <li>React</li>
           <li>Typescript</li>
+          <li>FRANC - Natural language detection</li>
           <li>SWR - React Hooks para Data Fetching</li>
           <li>RadixUI</li>
           <li>Lucide React</li>

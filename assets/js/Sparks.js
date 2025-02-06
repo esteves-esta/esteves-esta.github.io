@@ -3,6 +3,14 @@ span {
   color: var(--color-orange-2);
   font-style: italic;
 }
+@font-face {
+  font-family: og-emoji;
+  src: url(../fonts/og-dcm-emoji.ttf);
+}
+
+.emoji {
+  font-family: og-emoji, sans-serif;
+}
 `;
 // https://creativecommons.org/share-your-work/cclicenses/
 class Sparks extends HTMLElement {
@@ -16,7 +24,9 @@ class Sparks extends HTMLElement {
     this.shadow.innerHTML = `
     <style>${SparkStyle}</style>
     <span>
-        &#127878; <slot name="username"></slot> &#127879;
+      <span class='emoji'>✨</span>
+      <slot name="text"></slot>
+      <span class='emoji'>✨</span>
     </span>`;
   }
 
