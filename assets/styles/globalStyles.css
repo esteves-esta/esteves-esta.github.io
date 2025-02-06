@@ -110,3 +110,7 @@ time-travel {
     scroll-behavior: smooth;
   }
 }
+
+.strike {
+  text-decoration: line-through !important;
+}

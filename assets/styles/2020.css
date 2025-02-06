@@ -62,11 +62,51 @@ h1 {
     color: var(--color-pink-2)
   }
 
-  section {
+  section:not(:last-child) {
     padding-bottom: 50px;
     border-bottom: 1px solid var(--color-red);
   }
 }
+
+.links {
+  font-size: 1.5rem;
+  font-weight: 900;
+  display: flex;
+  gap: 55px;
+  flex-direction: column;
+
+  small {
+    font-size: .7em;
+  }
+
+  h3 {
+    margin: 0px;
+  }
+
+  a {
+    color: var(--color-blue-2);
+    display: flex;
+    gap: 15px;
+    text-decoration: none;
+    align-items: center;
+  }
+
+  a:visited,
+  a:visited .emoji {
+    color: var(--color-blue-3);
+  }
+  
+  a[href]:hover,
+  a[href]:hover .emoji {
+    color: var(--color-red-2);
+  }
+
+  .emoji {
+    color: inherit;
+    opacity: .9;
+  }
+}
+
 
 h2 {
   color: var(--color-pink);
@@ -231,5 +271,11 @@ h2 {
 
   .project {
     width: calc(50% - var(--gap) / 2);
+  }
+
+  .links {
+    flex-wrap: wrap;
+    align-items: center;
+    flex-direction: row;
   }
 }

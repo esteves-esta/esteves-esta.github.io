@@ -15,8 +15,8 @@ class Footer extends HTMLElement {
       gap: 25px;
     }
 
-    a {
-      font-familyi: inherit;
+    .credits a {
+      font-family: inherit;
       color: inherit;
       text-decoration: none;
     }
@@ -34,8 +34,8 @@ class Footer extends HTMLElement {
           </spark-text>
         </small>
       </div>
-      <div class=".credits">
-      <p><strong>credits</strong></p>
+      <div class="credits">
+       <p><strong>credits</strong></p>
         <small>
           <span class='emoji'>↖</span>
           <a slot="credits" target="_blank" href="https://meowni.ca/posts/og-emoji-font/">emoji font by meowni</a>
