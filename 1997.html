@@ -10,10 +10,137 @@
   <link rel="stylesheet" href="assets/styles/view-transition.css" />
   <style>
     main {
-      background-color: cadetblue;
+      overflow: hidden;
+      background-color: var(--color-blue-3);
+      background-image: url("assets/images/patterns/340_viridian.png");
+      background-blend-mode: multiply;
+      height: calc(100vh - var(--timetravel-height));
+      background-size: 130px;
+
       display: grid;
+      align-items: stretch;
+      grid-template-columns: repeat(12, 1fr);
+      grid-template-rows: repeat(12, 10%);
       align-content: center;
-      justify-content: center;
+    }
+
+    .bookcase {
+      background-image: url("assets/images/patterns/misc341.jpg");
+      background-color: var(--color-wine-3);
+      background-blend-mode: multiply;
+      background-size: 70px;
+      border: 15px solid var(--color-wine-2);
+      border-style: outset;
+      justify-self: center;
+      align-self: center;
+      align-content: start;
+      grid-column: 5 / 9;
+      grid-row: 2 / 12;
+      width: 85%;
+      height: 85%;
+      padding: 3px;
+    }
+
+    .bookcase-inside {
+      border: 3px solid var(--color-wine-3);
+      border-style: ridge;
+      width: 100%;
+      height: 100%;
+
+      table,
+      tr,
+      td {
+        border: 2px solid var(--color-wine-2);
+      }
+
+      td {
+        padding: 2px;
+        text-align: center;
+
+        img {
+          margin: 0 auto;
+        }
+
+        /* height: 35px; */
+      }
+
+      table {
+        padding: 2px;
+        color: white;
+        width: 100%;
+      }
+
+      a {
+        color: var(--color-red)
+      }
+    }
+
+    .door {
+      grid-column: 1 / 2;
+      grid-row: 9 / 11;
+      justify-self: center;
+      /* align-self: center; */
+      /* align-content: start; */
+    }
+
+    .window {
+      grid-column: 11 / 12;
+      grid-row: 3 / 5;
+      /* justify-self: center; */
+      /* align-self: center; */
+      /* align-content: start; */
+    }
+
+    .on-computer2 {
+      grid-column: 11 / 12;
+      grid-row: 9 / 11;
+      /* justify-self: center; */
+      /* align-self: center; */
+      /* align-content: start; */
+    }
+
+    .grandfather-clock {
+      grid-column: 9 / 10;
+      grid-row: 8 / 11;
+      justify-self: center;
+      /* align-self: center; */
+      /* align-content: start; */
+    }
+
+    .plants-chain {
+      grid-column: 3 / 4;
+      grid-row: 3 / 6;
+      justify-self: center;
+      /* align-self: center; */
+      /* align-content: start; */
+    }
+
+    .books-tea {
+      grid-column: 2 / 3;
+      grid-row: 6 / 7;
+      justify-self: center;
+      /* align-self: center; */
+      /* align-content: start; */
+    }
+
+    .pics-line {
+      grid-column: 10 / -1;
+      grid-row: 2/ 3;
+    }
+
+    .plants {
+      grid-column: 5 / 9;
+      grid-row: 11;
+      justify-self: center;
+      align-self: center;
+
+    }
+
+    .top-plants {
+      grid-column: 5 / 9;
+      grid-row: 2;
+      justify-self: center;
+      align-self: center;
     }
   </style>
 </head>
@@ -21,27 +148,144 @@
 <body>
   <nav>
     <time-travel name="1997"></time-travel>
-
   </nav>
 
   <main id="time-travel-container">
-    <!-- https://meowni.ca/posts/og-emoji-font/ -->
+    <img class="plants-chain" src="assets/images/gifs/keychain (59).gif" />
 
-    <h1>
-      <span class='emoji'>✨ </span>
-      STILL INCOMING FROM TIME TRAVEL MACHINE.....
-      <span class='emoji'>✨ </span>
-    </h1>
-    <!-- <span class='emoji'>❤💔💓💕😃😖😞😵😠🎵♨💠💋✨💡💢👊💣🎶💤❗⁉‼💥💦💧💨</span>
-    <span class='emoji'>〰️➰⤴⤵↗↘↖↙☀☁︎☔︎⛄⚡︎🌀🌁🌂♈︎♉︎♊︎♋︎♌︎♍︎♎︎♏︎♐︎♑︎♒︎♓︎🎽⚾︎⛳🎾⚽︎🎿🏀🏁📟🚃Ⓜ🚄🚗🚙🚌🚢</span>
-    <span class='emoji'>🏠🏢🏣🏥🏦🏧🏨🏪⛽🅿🚥🚻🍴☕🍸🍺🍔👠✂︎🎤🎥🎠🎧🎨🎩🎪🎫🚬🚭📷👜📖🎀🎁🎂☎︎📱📝📺🎮</span>
-    <span class='emoji'>💿♥♠♦♣👀👂✊✋✌︎👣👟👓🌑🌔🌓🌙🌕🐶🐱⛵🎄📲📩📠✉︎💴🆓🆔↩🆑🔍🆕🚩➿#0123456789🆗</span>
+    <div class="bookcase">
+      <div class="bookcase-inside">
+        <table>
+          <tbody>
+            <tr>
+              <td colspan="4">
+                Bem vindo ao meu portifólio
+              </td>
+            </tr>
+            <tr>
+              <td colspan="4">
+                <em>
+                  sou desenvolvedora frontend a <span id="anos-trabalho"></span> anos
+                  <span class='emoji'>👓</span>
+                </em>
+              </td>
+            </tr>
+            <tr>
+              <td colspan="2">
+                linkedin
+
+              </td>
+              <td colspan="2">
+                github
+              </td>
+            </tr>
+            <tr>
+              <td rowspan="2" width="100">
+                <img src="assets/images/gifs/lavalamp.gif" height="81" />
+              </td>
+              <td rowspan="2" colspan="2" width="200">
+                <img src="assets/images/gifs/worldwideweb_badge.gif" height="75" />
+              </td>
+              <td rowspan="2" width="100">
+                <img src="assets/images/gifs/lavalamp.gif" height="81" />
+              </td>
+            </tr>
+            <tr></tr>
+            <tr>
+              <td colspan="4">
+                projetos
+              </td>
+            </tr>
+            <tr>
+
+              <td colspan="2">
+                <a href="https://women-fronted-metal-bands.netlify.app/" target="_blank">
+                  women fronted metal bands
+                </a>
+              </td>
+              <td>
+                <img src="assets/images/gifs/guitargreenblue.gif" />
+              </td>
+              <td colspan="2">
+                <img src="assets/images/gifs/boombox.gif" height="50" />
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <img src="assets/images/gifs/clock-red.png" />
+              </td>
+              <td>
+                <img src="assets/images/gifs/phone_17.gif" />
+              </td>
+              <td colspan="2">
+                <a href="https://esteves-esta.github.io/one-page-calendar/" target="_blank">
+                  one page calendar
+                </a>
+              </td>
+
+            </tr>
 
 
-    <a href="https://meowni.ca/posts/og-emoji-font/">emoji font by @meowni</a> -->
+            <tr>
+              <td colspan="2">
+                <a href="https://gerenciador-projetos-teste.netlify.app/" target="_blank">
+                  gerenciador de projetos
+                </a>
+              </td>
+              <td colspan="2">
+                <img src="assets/images/stamps/its_good_to_share.gif" />
+              </td>
+
+            <tr>
+              <td>
+                <img src="assets/images/gifs/Simple_book.gif" />
+              </td>
+              <td colspan="2">
+                <a href="https://esteves-esta.github.io/humans-of-seoul-feed-format/" target="_blank">
+                  humans of seoul
+                </a>
+              </td>
+              <td>
+                <img src="assets/images/gifs/Simple_book.gif" />
+              </td>
+            </tr>
+
+            </tr>
+            <tr>
+              <td>
+                <img src="assets/images/stamps/800x600.gif" />
+              </td>
+              <td>
+                <img src="assets/images/gifs/cam_13.gif" />
+              </td>
+              <td colspan="2">
+                <img src="assets/images/stamps/browser.gif" />
+              </td>
+            </tr>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <img class="door" src="assets/images/gifs/Fenster_104.gif" />
+    <img class="grandfather-clock" src="assets/images/gifs/clock5.gif" />
+    <!-- <img class="on-computer" src="assets/images/gifs/computer_085.gif" /> -->
+    <!-- <img class="window" src="assets/images/gifs/Fenster_29.gif" /> -->
+    <!-- <img class="books-tea" src="assets/images/gifs/kitchen5.gif" /> -->
+    <img class="on-computer2" src="assets/images/gifs/on_pc.gif" />
+    <img class="plants" src="assets/images/separator/lineplant.gif" />
+    <img class="top-plants" src="assets/images/separator/more_plants.png" />
+    <img class="pics-line" src="assets/images/separator/Linie_34.gif" />
+
+
   </main>
+  <footer>
+    patter: https://dollarchive.neocities.org/compendium
+  </footer>
 
   <script src="assets/js/TimeTravel.js"></script>
+  <script src="assets/js/main.js"></script>
 </body>
 
 </html>
