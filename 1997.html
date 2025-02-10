@@ -9,12 +9,37 @@
   <link rel="stylesheet" href="assets/styles/globalStyles.css" />
   <link rel="stylesheet" href="assets/styles/view-transition.css" />
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Handjet:wght@100..900&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=DotGothic16&display=swap');
+
+    img {
+      user-select: none;
+    }
+
     main {
+      font-family: "Silkscreen", serif;
+      font-weight: 400;
+      font-style: normal;
+      font-size: .9rem;
+
+      /* font-family: "Handjet", serif;
+      font-optical-sizing: auto;
+      font-weight: 600;
+      font-style: normal;
+      font-variation-settings:
+        "ELGR" 1,
+        "ELSH" 2;
+
+      font-size: 1.1rem; */
+
       overflow: hidden;
       background-color: var(--color-blue-3);
       background-image: url("assets/images/patterns/340_viridian.png");
       background-blend-mode: multiply;
-      height: calc(100vh - var(--timetravel-height));
+      /* height: 800px; */
+      min-width: 1300px;
+      max-width: 100%;
       background-size: 130px;
 
       display: grid;
@@ -71,9 +96,86 @@
       }
 
       a {
-        color: var(--color-red)
+        color: var(--color-red);
+        transition: all ease 500ms;
+      }
+
+      a:visited {
+        color: var(--color-wine)
+      }
+
+      a:hover,
+      a:active {
+        color: var(--color-red-2) !important
       }
     }
+
+    .frame {
+      user-select: none;
+      --frame_height: 150px;
+      border: 5px solid white;
+      box-shadow: 0 0 0px 10px var(--color-dull-orange-3);
+      object-fit: cover;
+      height: var(--frame_height);
+      width: auto;
+    }
+
+    .frame_1 {
+      grid-column: 1 / 3;
+      grid-row: 3;
+      align-items: center;
+      justify-self: center;
+      --frame_height: 200px;
+    }
+
+    .frame_2 {
+      grid-column: 4;
+      grid-row: 2;
+      --frame_height: 100px;
+    }
+
+    .frame_3 {
+      grid-column: 4;
+      grid-row: 5;
+      align-items: start;
+      justify-self: center;
+      --frame_height: 90px;
+    }
+
+    .frame_7 {
+      grid-column: 2 / 4;
+      grid-row: 7 / 9;
+      --frame_height: 250px;
+      justify-self: center;
+      align-items: center;
+    }
+
+    .frame_4 {
+      grid-column: 9 / 11;
+      grid-row: 3;
+      align-items: start;
+      justify-self: start;
+      --frame_height: 200px;
+    }
+
+    .frame_5 {
+      grid-column: 11 / -1;
+      grid-row: 2;
+      align-items: end;
+      justify-self: end;
+      --frame_height: 200px;
+    }
+
+    .frame_6 {
+      grid-column: 11 / 12;
+      grid-row: 6;
+      align-items: center;
+      justify-self: center;
+      --frame_height: 200px;
+    }
+
+
+
 
     .door {
       grid-column: 1 / 2;
@@ -128,6 +230,42 @@
       grid-row: 2/ 3;
     }
 
+    .tv {
+      grid-column: 4;
+      grid-row: 10;
+    }
+
+    .camera {
+      grid-column: 4 / 5;
+      grid-row: 7 / 9;
+      align-self: center;
+      justify-self: center;
+    }
+
+    .controller {
+      grid-column: 10;
+      grid-row: 9;
+    }
+
+    .mint {
+      grid-column: 12;
+      grid-row: 7 / 10;
+      align-self: center;
+      justify-self: center;
+    }
+
+    .fairy {
+      grid-column: 1;
+      grid-row: 5 / 10;
+      align-self: center;
+      justify-self: center;
+    }
+
+    .old-cat {
+      grid-column: 9;
+      grid-row: 10;
+    }
+
     .plants {
       grid-column: 5 / 9;
       grid-row: 11;
@@ -142,6 +280,23 @@
       justify-self: center;
       align-self: center;
     }
+
+    footer {
+      grid-column: 1 / -1;
+      grid-row: 11 /12;
+      background-color: var(--color-blue-2);
+      width: 100%;
+      padding: 5px 45px;
+      align-self: flex-end;
+      z-index: -1;
+      color: var(--color-blue);
+      display: flex;
+      justify-content: space-between;
+
+      a {
+        color: var(--color-pink-2);
+      }
+    }
   </style>
 </head>
 
@@ -152,6 +307,13 @@
 
   <main id="time-travel-container">
     <img class="plants-chain" src="assets/images/gifs/keychain (59).gif" />
+    <img class="frame frame_1" src="assets/images/digi_cam/DSCN6850.jpg" />
+    <img class="frame frame_2" src="assets/images/digi_cam/DSCN6667.jpg" />
+    <img class="frame frame_3" src="assets/images/digi_cam/DSCN8183.jpg" />
+    <img class="frame frame_4" src="assets/images/digi_cam/DSCN8387.jpg" />
+    <img class="frame frame_5" src="assets/images/digi_cam/DSCN7990.jpg" />
+    <img class="frame frame_6" src="assets/images/digi_cam/DSCN8087.jpg" />
+    <img class="frame frame_7" src="assets/images/digi_cam/DSCN7964.jpg" />
 
     <div class="bookcase">
       <div class="bookcase-inside">
@@ -165,8 +327,8 @@
             <tr>
               <td colspan="4">
                 <em>
-                  sou desenvolvedora frontend a <span id="anos-trabalho"></span> anos
-                  <span class='emoji'>👓</span>
+                  olá <span class='emoji'>😃</span> sou desenvolvedora <br> frontend
+                  a <span id="anos-trabalho"></span> anos <span class='emoji'>👓</span>
                 </em>
               </td>
             </tr>
@@ -253,13 +415,13 @@
             </tr>
             <tr>
               <td>
-                <img src="assets/images/stamps/800x600.gif" />
+                <img src="assets/images/gifs/classicgaming.gif" />
               </td>
               <td>
                 <img src="assets/images/gifs/cam_13.gif" />
               </td>
               <td colspan="2">
-                <img src="assets/images/stamps/browser.gif" />
+                <img src="assets/images/gifs/mailput.gif" />
               </td>
             </tr>
             </tr>
@@ -270,22 +432,53 @@
 
     <img class="door" src="assets/images/gifs/Fenster_104.gif" />
     <img class="grandfather-clock" src="assets/images/gifs/clock5.gif" />
-    <!-- <img class="on-computer" src="assets/images/gifs/computer_085.gif" /> -->
-    <!-- <img class="window" src="assets/images/gifs/Fenster_29.gif" /> -->
-    <!-- <img class="books-tea" src="assets/images/gifs/kitchen5.gif" /> -->
     <img class="on-computer2" src="assets/images/gifs/on_pc.gif" />
     <img class="plants" src="assets/images/separator/lineplant.gif" />
     <img class="top-plants" src="assets/images/separator/more_plants.png" />
     <img class="pics-line" src="assets/images/separator/Linie_34.gif" />
+    <img class="old-cat" src="assets/images/gifs/old_kitty.gif" />
+    <img class="tv" src="assets/images/gifs/tv_22.gif" />
+    <img class="camera" src="assets/images/gifs/cam_35.gif" />
+    <img class="controller" src="assets/images/gifs/gamecube_controller_by_king_lulu_deer-db02md5.gif" />
+    <img class="mint" src="assets/images/gifs/keychain (57).gif" />
+    <img class="fairy" src="assets/images/gifs/Moving-picture-fairie-in-with-sparkling-wings-animated-gif.gif" />
+    <footer>
+      <small>
+        <strong>credits:</strong>
+        <span>
+          <a href="https://dollarchive.neocities.org/compendium" target="_blank">background</a>
+        </span> |
+        <span>
+          all photography by me
+        </span>
+      </small>
 
-
+      <div>
+        <small>
+          <strong>colophon:</strong>
+          <span>HTML</span>
+          <span>CSS</span>
+          <span>JAVASCRIPT</span>
+        </small>
+      </div>
+    </footer>
   </main>
-  <footer>
-    patter: https://dollarchive.neocities.org/compendium
-  </footer>
-
+  
   <script src="assets/js/TimeTravel.js"></script>
   <script src="assets/js/main.js"></script>
+  
+  <!-- <script src="https://unpkg.com/cursor-effects@latest/dist/browser.js"></script> -->
+<!-- 
+  <script lang="js">
+    // https://github.com/tholman/cursor-effects
+    let cursorEffect;
+    window.addEventListener("load", (event) => {
+      cursorEffect = new ghostCursor();
+    });
+    window.addEventListener("unload", (event) => {
+      cursorEffect.ghostCursor();
+    });
+  </script> -->
 </body>
 
 </html>
