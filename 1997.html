@@ -76,6 +76,7 @@
       tr,
       td {
         border: 2px solid var(--color-wine-2);
+        height: 100%;
       }
 
       td {
@@ -86,7 +87,7 @@
           margin: 0 auto;
         }
 
-        /* height: 35px; */
+
       }
 
       table {
@@ -216,6 +217,46 @@
       /* align-self: center; */
       /* align-content: start; */
     }
+    .tiny-tv {
+      grid-column: 10;
+      grid-row: 10;
+      justify-self: center;
+      /* align-self: center; */
+      /* align-content: start; */
+    }
+    .music {
+      grid-column: 10;
+      grid-row: 7;
+      justify-self: center;
+      /* align-self: center; */
+      /* align-content: start; */
+    }
+    .daisies {
+      grid-column: 9;
+      grid-row: 11;
+      justify-self: center;
+      align-self: center;
+      z-index: 2;
+      /* align-content: start; */
+    }
+    .cam2 {
+      grid-column: 9;
+      grid-row: 7;
+      justify-self: center;
+      align-self: center;
+      /* align-content: start; */
+    }
+    .cakes {
+      grid-column: 11;
+      grid-row: 5;
+      justify-self: center;
+      align-self: center;
+    }
+    .books {
+      grid-column: 10 / 12;
+      grid-row: 3;
+      justify-self: center;
+    }
 
     .books-tea {
       grid-column: 2 / 3;
@@ -306,6 +347,17 @@
   </nav>
 
   <main id="time-travel-container">
+    <img class="cards" src="assets/images/gifs/wasongocard-002.png" />
+    <img class="tiny-tv" src="assets/images/gifs/tv_0806_02[1].gif" />
+    <img class="music" src="assets/images/gifs/music_17.gif" />
+    <img class="music2" src="assets/images/gifs/mini-graphics-electronics-942457.gif" />
+    <img class="daisies" src="assets/images/gifs/daisies_waving_lg_clr.gif" />
+    <img class="cactus" src="assets/images/gifs/crystalgreenhouse_bunnycactus.gif" />
+    <img class="books" src="assets/images/gifs/crystalgreenhouse_book.gif" />
+    <img class="cam2" src="assets/images/gifs/cam_24.gif" />
+    <img class="cakes" src="assets/images/gifs/cakes1.gif" />
+
+
     <img class="plants-chain" src="assets/images/gifs/keychain (59).gif" />
     <img class="frame frame_1" src="assets/images/digi_cam/DSCN6850.jpg" />
     <img class="frame frame_2" src="assets/images/digi_cam/DSCN6667.jpg" />
@@ -463,12 +515,12 @@
       </div>
     </footer>
   </main>
-  
+
   <script src="assets/js/TimeTravel.js"></script>
   <script src="assets/js/main.js"></script>
-  
+
   <!-- <script src="https://unpkg.com/cursor-effects@latest/dist/browser.js"></script> -->
-<!-- 
+  <!-- 
   <script lang="js">
     // https://github.com/tholman/cursor-effects
     let cursorEffect;
