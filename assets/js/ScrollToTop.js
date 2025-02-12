@@ -66,7 +66,8 @@ class ScrollToTop extends HTMLElement {
   connectedCallback() {
     let options = {
       root: null,
-      rootMargin: "0px"
+      rootMargin: "0px",
+      threshold: 0.8,
     };
     const observer = new IntersectionObserver((entries) => {
       const [entry] = entries;
