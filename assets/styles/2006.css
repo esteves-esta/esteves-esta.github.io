@@ -83,12 +83,14 @@ main nav {
   a {
     color: var(--color-red-3);
     text-decoration: none;
+    display: block;
+    padding: 8px 10px;
   }
 
   li {
     letter-spacing: .05rem;
     font-size: .8rem;
-    padding: 8px 10px;
+    ;
     width: 150px;
     list-style: none;
     background-color: var(--color-dull-orange);
@@ -341,7 +343,7 @@ main nav {
   }
 
   aside {
-    flex: 1 1 200px;
+    flex: 1 0 200px;
     background-color: var(--color-wine);
     color: var(--color-pink);
     /* height: 100%; */
@@ -382,4 +384,6 @@ main nav {
     inset white 0px 0px 10px -2px,
     inset rgba(0, 0, 0, 0.56) 0px 0px 3px 1px;
   padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
 }

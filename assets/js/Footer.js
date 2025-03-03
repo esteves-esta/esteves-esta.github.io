@@ -42,7 +42,9 @@ class Footer extends HTMLElement {
         </small>
         <br />
         <br />
-        <img src="assets/Not-By-AI/en/developed/black.svg" />
+          <a target="_blank" href="https://notbyai.fyi/">
+            <img src="assets/Not-By-AI/en/developed/black.svg"/>
+          </a>
       </div>
     </footer>`;
   }
