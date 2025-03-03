@@ -40,6 +40,9 @@ class Footer extends HTMLElement {
           <span class='emoji'>↖</span>
           <a slot="credits" target="_blank" href="https://meowni.ca/posts/og-emoji-font/">emoji font by meowni</a>
         </small>
+        <br />
+        <br />
+        <img src="assets/Not-By-AI/en/developed/black.svg" />
       </div>
     </footer>`;
   }

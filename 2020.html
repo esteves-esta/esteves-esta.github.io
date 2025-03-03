@@ -1,220 +1,280 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="noindex,nofollow" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>esteves-esta</title>
+    <link rel="stylesheet" href="assets/styles/globalStyles.css" />
+    <link rel="stylesheet" href="assets/styles/view-transition.css" />
+    <link rel="stylesheet" href="assets/styles/2020.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="robots" content="noindex,nofollow" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>esteves-esta</title>
-  <link rel="stylesheet" href="assets/styles/globalStyles.css" />
-  <link rel="stylesheet" href="assets/styles/view-transition.css" />
-  <link rel="stylesheet" href="assets/styles/2020.css">
-</head>
+  <body>
+    <nav>
+      <time-travel name="2020"></time-travel>
+    </nav>
 
-<body>
-  <nav>
-    <time-travel name="2020"></time-travel>
-  </nav>
+    <main id="time-travel-container">
+      <article class="about">
+        <h1>
+          bem vindo ao meu portfolio
+          <span class="emoji">😃</span>
+        </h1>
 
-  <main id="time-travel-container">
-    <article class="about">
+        <section>
+          <h3>minha carreira</h3>
+          <p>
+            sou desenvolvedora frontend a <span id="anos-trabalho"></span> anos,
+            formada em design gráfico e análise e desenvolvimento de sistemas.
+            <span class="emoji">👓</span>
+          </p>
+        </section>
+        <section>
+          <h3>personalidade</h3>
+          <p>
+            tenho alguns hobbies como jardinagem, quebra-cabeças, fotografia,
+            leitura e crochet.
+            <span class="emoji">💠</span>
+          </p>
+        </section>
+        <section>
+          <h3>work ethics</h3>
+          <blockquote>
+            “fernanda é uma pessoa proativa, que abraça com positividade á
+            mudanças e que domina o que faz, sabe passar seu conhecimento aos
+            outros, muito dedicada”
+            <span class="emoji">✨</span>
+            <br />
+            <cite>feedback de gestores e colegas diretos</cite>
+          </blockquote>
+        </section>
 
-      <h1>
+        <section class="links">
+          <h3>links</h3>
+          <a target="_blank" href="https://github.com/esteves-esta"
+            ><span class="emoji">🏠</span> github</a
+          >
+          <a target="_blank" href="https://linkedin.com/in/fernanda-e-48086a182"
+            ><span class="emoji">🏢</span> linkedin</a
+          >
+          <a>
+            <span class="emoji">📱</span>
+            <span class="strike"> no social media </span>
+          </a>
+          <a target="_blank" href="https://experimental-garden.netlify.app/">
+            <span class="emoji">☀</span>
+            garden
+            <!-- <small class='emoji'>⁉</small> -->
+          </a>
+        </section>
+      </article>
 
-        bem vindo ao meu portfolio
-        <span class='emoji'>😃</span>
-      </h1>
+      <article class="work">
+        <section>
+          <h2>work experience</h2>
+          <ul>
+            <li>
+              <span class="company">clicksign</span>
+              <span class="role">Desenvolvedora Frontend Pleno II</span>
+              <span class="years">2025 - now</span>
+            </li>
+            <li>
+              <span class="company">clearsale</span>
+              <span class="role">Desenvolvedora Frontend Pleno</span>
+              <span class="years">2021 - 2025</span>
+            </li>
+            <li>
+              <span class="company">linx</span>
+              <span class="role">Desenvolvedora Frontend Jr.</span>
+              <span class="years">2019 - 2021</span>
+            </li>
+          </ul>
+        </section>
+      </article>
 
-      <section>
-        <h3>minha carreira
-        </h3>
-        <p>
-          sou desenvolvedora frontend a <span id="anos-trabalho"></span> anos, formada em design gráfico e análise e
-          desenvolvimento de sistemas.
-          <span class='emoji'>👓</span>
-        </p>
-      </section>
-      <section>
-        <h3>personalidade</h3>
-        <p>
-          tenho alguns hobbies como jardinagem, quebra-cabeças, fotografia, leitura e crochet.
-          <span class='emoji'>💠</span>
-        </p>
-      </section>
-      <section>
-        <h3>work ethics</h3>
-        <blockquote>
-          “fernanda é uma pessoa proativa, que abraça com positividade á mudanças e que domina o que faz, sabe
-          passar
-          seu
-          conhecimento aos outros, muito dedicada”
-          <span class='emoji'>✨</span>
-          <br />
-          <cite>feedback de gestores e colegas diretos</cite>
-        </blockquote>
-      </section>
+      <article class="projects">
+        <section>
+          <h2>projetos</h2>
+          <div class="project-list">
+            <div class="project">
+              <img src="./assets/images/projetos.png" />
+              <div class="wrapper">
+                <h3>gerenciador de projetos</h3>
+                <p class="project-summary">
+                  Projeto foi realizado como teste técnico para uma vaga de
+                  Desenvolvedor Frontend Pleno.
+                </p>
 
-      <section class="links">
-        <h3>links</h3>
-        <a target="_blank" href="https://github.com/esteves-esta"><span class='emoji'>🏠</span> github</a>
-        <a target="_blank" href="https://linkedin.com/in/fernanda-e-48086a182"><span class='emoji'>🏢</span>
-          linkedin</a>
-        <a>
-          <span class='emoji'>📱</span>
-          <span class="strike">
-            no social media
-          </span>
-        </a>
-        <a target="_blank" href="https://experimental-garden.netlify.app/">
-          <span class='emoji'>☀</span>
-          garden
-          <!-- <small class='emoji'>⁉</small> -->
-        </a>
-      </section>
-    </article>
+                <ul>
+                  <li>
+                    Tela de listagem com filtro de favorito, ordenação e
+                    pesquisa;
+                  </li>
+                  <li>Tela de edição e criação de projeto;</li>
+                  <li>Opção de remoção com modal de confirmação.</li>
+                </ul>
 
-    <article class="work">
-      <section>
-        <h2>work experience</h2>
-        <ul>
-          <li>
-            <span class="company">clicksign</span>
-            <span class="role">Desenvolvedora Frontend Pleno II</span>
-            <span class="years">2025 - now</span>
-          </li>
-          <li>
-            <span class="company">clearsale</span>
-            <span class="role">Desenvolvedora Frontend Pleno</span>
-            <span class="years">2021 - 2025</span>
-          </li>
-          <li>
-            <span class="company">linx</span>
-            <span class="role">Desenvolvedora Frontend Jr.</span>
-            <span class="years">2019 - 2021</span>
-          </li>
-        </ul>
-      </section>
-    </article>
+                <div class="action-btn-row">
+                  <a
+                    target="_blank"
+                    href="https://gerenciador-projetos-teste.netlify.app/"
+                    >acessar</a
+                  >
+                  <a
+                    target="_blank"
+                    href="https://github.com/esteves-esta/teste-tecnico-cs"
+                    >repositório</a
+                  >
+                </div>
 
-    <article class="projects">
-      <section>
-
-        <h2>projetos</h2>
-        <div class="project-list">
-          <div class="project">
-            <img src="./assets/images/projetos.png" />
-            <div class="wrapper">
-              <h3>gerenciador de projetos</h3>
-              <p class="project-summary">Projeto foi realizado como teste técnico para uma vaga de Desenvolvedor
-                Frontend
-                Pleno. </p>
-
-              <ul>
-                <li>Tela de listagem com filtro de favorito, ordenação e pesquisa;</li>
-                <li>Tela de edição e criação de projeto;</li>
-                <li>Opção de remoção com modal de confirmação.</li>
-              </ul>
-
-              <div class="action-btn-row">
-                <a target="_blank" href="https://gerenciador-projetos-teste.netlify.app/">acessar</a>
-                <a target="_blank" href="https://github.com/esteves-esta/teste-tecnico-cs">repositório</a>
+                <p>
+                  <strong>Tech stack:</strong>
+                  Vue, Vite, Typescript, Pinia, LocalStorage, VueRouter,
+                  RadixVue
+                </p>
               </div>
+            </div>
 
-              <p>
-                <strong>Tech stack:</strong>
-                Vue, Vite, Typescript, Pinia, LocalStorage, VueRouter, RadixVue
-              </p>
+            <div class="project">
+              <img src="./assets/images/bands.png" />
+              <div class="wrapper">
+                <h3>Women fronted metal bands</h3>
+                <p class="project-summary">
+                  Projeto criado para listar bandas de metal com vocalistas
+                  mulheres.
+                </p>
+                <ul>
+                  <li>API serveless com Netlify Functions;</li>
+                  <li>
+                    Reprodução de uma preview de cada banda usando a API do
+                    serviço de streaming Deezer;
+                  </li>
+                  <li>
+                    Pesquisar, filtrar e ordenar dados, favoritar músicas e
+                    exportar dados como .csv.
+                  </li>
+                </ul>
+
+                <div class="action-btn-row">
+                  <a
+                    target="_blank"
+                    href="https://women-fronted-metal-bands.netlify.app/"
+                    >acessar</a
+                  >
+                  <a
+                    target="_blank"
+                    href="https://github.com/esteves-esta/women-fronted-metal-bands"
+                    a
+                    >repositório</a
+                  >
+                </div>
+
+                <p>
+                  <strong>Tech stack:</strong>
+                  React, Vite, Typescript, SWR, RadixUI, Nivo Charts
+                </p>
+              </div>
+            </div>
+
+            <div class="project">
+              <img src="./assets/images/calendar.png" />
+              <div class="wrapper">
+                <h3>One page calendar</h3>
+                <p class="project-summary">
+                  Projeto inspirado em um artigo da revista BigThink sobre um
+                  modelo de calendário de 1 página.
+                </p>
+                <ul>
+                  <li>
+                    Exibir o calendário do ano desejado em uma visão de grid
+                    como no artigo;
+                  </li>
+                  <li>
+                    Customização do calendário e dados salvos no local storage;
+                  </li>
+                  <li>
+                    Salvar e excluir eventos no calendário e ter a opção de
+                    exportar dados como .csv
+                  </li>
+                </ul>
+
+                <div class="action-btn-row">
+                  <a
+                    target="_blank"
+                    href="https://esteves-esta.github.io/one-page-calendar/"
+                    >acessar</a
+                  >
+                  <a
+                    target="_blank"
+                    href="https://github.com/esteves-esta/one-page-calendar"
+                    a
+                    >repositório</a
+                  >
+                </div>
+
+                <p>
+                  <strong>Tech stack:</strong>
+                  React, Vite, Javascript, RadixUI, React Draggable
+                </p>
+              </div>
+            </div>
+
+            <div class="project">
+              <img src="./assets/images/humans.png" />
+              <div class="wrapper">
+                <h3>Humans of Seoul</h3>
+                <p class="project-summary">
+                  Projeto criado para exibir o RSS Feed do site Humans of Seoul
+                  com somente o texto original coreano visível e a tradução
+                  disponível se desejado.
+                </p>
+                <ul>
+                  <li>Customizações das cores e tipografia;</li>
+                  <li>Espaçamento de palavras e linha;</li>
+                  <li>Alternar a visibilidade da tradução por linha;</li>
+                  <li>
+                    Ao passar o mouse por uma palavra exibir popover com link
+                    para o dicionário Papago;
+                  </li>
+                  <li>
+                    Salvar customizações e palavras selecionadas no Local
+                    Storage.
+                  </li>
+                </ul>
+
+                <div class="action-btn-row">
+                  <a
+                    target="_blank"
+                    href="https://esteves-esta.github.io/humans-of-seoul-feed-format/"
+                    >acessar</a
+                  >
+                  <a
+                    target="_blank"
+                    href="https://github.com/esteves-esta/humans-of-seoul-feed-format"
+                    a
+                    >repositório</a
+                  >
+                </div>
+
+                <p>
+                  <strong>Tech stack:</strong>
+                  React, Vite, Typescript, SWR, RadixUI, Nivo Charts
+                </p>
+              </div>
             </div>
           </div>
+        </section>
 
-          <div class="project">
-            <img src="./assets/images/bands.png" />
-            <div class="wrapper">
-              <h3>Women fronted metal bands</h3>
-              <p  class="project-summary">Projeto criado para listar bandas de metal com vocalistas mulheres.</p>
-              <ul>
-                <li>API serveless com Netlify Functions;</li>
-                <li>Reprodução de uma preview de cada banda usando a API do serviço de streaming Deezer;
-                </li>
-                <li>Pesquisar, filtrar e ordenar dados, favoritar músicas e exportar dados como .csv.</li>
-              </ul>
+        <footer-all-rights-reserved />
+      </article>
+    </main>
+    <scroll-to-top />
 
-              <div class="action-btn-row">
-                <a target="_blank" href="https://women-fronted-metal-bands.netlify.app/">acessar</a>
-                <a target="_blank" href="https://github.com/esteves-esta/women-fronted-metal-bands" a>repositório</a>
-              </div>
-
-              <p>
-                <strong>Tech stack:</strong>
-                React, Vite, Typescript, SWR, RadixUI, Nivo Charts
-              </p>
-            </div>
-          </div>
-
-          <div class="project">
-            <img src="./assets/images/calendar.png" />
-            <div class="wrapper">
-              <h3>One page calendar</h3>
-              <p  class="project-summary">Projeto inspirado em um artigo da revista BigThink sobre um modelo de calendário de 1 página.</p>
-              <ul>
-                <li>Exibir o calendário do ano desejado em uma visão de grid como no artigo;</li>
-                <li>Customização do calendário e dados salvos no local storage;
-                </li>
-                <li>Salvar e excluir eventos no calendário e ter a opção de exportar dados como .csv</li>
-              </ul>
-
-              <div class="action-btn-row">
-                <a target="_blank" href="https://esteves-esta.github.io/one-page-calendar/">acessar</a>
-                <a target="_blank" href="https://github.com/esteves-esta/one-page-calendar" a>repositório</a>
-              </div>
-
-              <p>
-                <strong>Tech stack:</strong>
-                React, Vite, Javascript, RadixUI, React Draggable
-              </p>
-            </div>
-          </div>
-
-          <div class="project">
-            <img src="./assets/images/humans.png" />
-            <div class="wrapper">
-              <h3>Humans of Seoul</h3>
-              <p  class="project-summary">Projeto criado para exibir o RSS Feed do site Humans of Seoul com somente o texto original coreano
-                visível e a
-                tradução disponível se desejado.</p>
-              <ul>
-                <li>Customizações das cores e tipografia;</li>
-                <li>Espaçamento de palavras e linha;</li>
-                <li>Alternar a visibilidade da tradução por linha;</li>
-                <li>Ao passar o mouse por uma palavra exibir popover com link para o dicionário Papago;</li>
-                <li>Salvar customizações e palavras selecionadas no Local Storage.</li>
-              </ul>
-
-              <div class="action-btn-row">
-                <a target="_blank" href="https://esteves-esta.github.io/humans-of-seoul-feed-format/">acessar</a>
-                <a target="_blank" href="https://github.com/esteves-esta/humans-of-seoul-feed-format" a>repositório</a>
-              </div>
-
-              <p>
-                <strong>Tech stack:</strong>
-                React, Vite, Typescript, SWR, RadixUI, Nivo Charts
-              </p>
-            </div>
-          </div>
-
-        </div>
-      </section>
-      <footer-all-rights-reserved />
-    </article>
-
-  </main>
-  <scroll-to-top />
-
-  <script src="assets/js/Sparks.js"></script>
-  <script src="assets/js/TimeTravel.js"></script>
-  <script src="assets/js/Footer.js"></script>
-  <script src="assets/js/ScrollToTop.js"></script>
-  <script src="assets/js/main.js"></script>
-</body>
-
+    <script src="assets/js/Sparks.js"></script>
+    <script src="assets/js/TimeTravel.js"></script>
+    <script src="assets/js/Footer.js"></script>
+    <script src="assets/js/ScrollToTop.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
 </html>
