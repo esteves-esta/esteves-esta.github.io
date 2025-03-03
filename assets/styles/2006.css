@@ -57,7 +57,7 @@ h5 {
   grid-column: 1 / -1;
   grid-row: 1 / 12;
   border-radius: var(--radius);
-  box-shadow: rgba(0, 0, 0, 0.267) -5px 5px 3px -1px;
+  box-shadow: rgba(0, 0, 0, 0.267) 3px -2px 4px 8px;
   display: flex;
   flex-direction: column;
 }
