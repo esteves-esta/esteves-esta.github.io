@@ -48,13 +48,8 @@
       <div class="container">
         <header>
           <h1>portifólio</h1>
-          <p>
-            (on constrution)
-            <span class="emoji">👀</span>
-          </p>
         </header>
-
-        <section>
+        <section id="about">
           <p>
             Desenvolvedora frontend a <span id="anos-trabalho"></span> anos.
           </p>
@@ -68,36 +63,340 @@
 
         <div class="blog">
           <div class="posts">
-            <h3>projetos recentes:</h3>
+            <h3 id="categoria" class="show">projetos recentes:</h3>
+            <button onclick="closeProject()" id="voltar">
+              <h3>
+                ver todos os projetos
+              </h3>
+            </button>
 
-            <article data-timestamp="02/02/2025">
-              <h2>gerenciador de projetos</h2>
+            <article
+              id="project"
+              data-timestamp="02/02/2025"
+            >
+              <button onclick="openProject('project')"><h2>gerenciador de projetos</h2></button>
               <p>
                 Projeto foi realizado como teste técnico para uma vaga de
                 Desenvolvedor Frontend Pleno.
               </p>
+
+              <div class="description">
+                <img src="./assets/images/projetos.png" />
+
+                
+                  <h3>Objetivos</h3>
+                  <p>
+                    Projeto foi realizado como teste técnico para uma vaga de
+                    Desenvolvedor Frontend Pleno. A empresa forneceu o protótipo
+                    e as funcionalidades necessárias para a aplicação.
+                  </p>
+                
+
+                
+                  <h3>Funcionalidades</h3>
+                  <ul>
+                    <li>
+                      Tela de listagem com filtro de favorito, ordenação e
+                      pesquisa.
+                    </li>
+                    <ul>
+                      <li>
+                        Pesquisa com histórico das últimas 5 buscas recentes
+                      </li>
+                      <li>
+                        Highligh no texto dos resultados que correspondam à
+                        busca
+                      </li>
+                    </ul>
+                    <li>Tela de edição e criação de projeto.</li>
+                    <ul>
+                      <li>Validação de campos</li>
+                      <li>Campos obrigatórios</li>
+                    </ul>
+                    <li>Opção de remoção com modal de confirmação.</li>
+                  </ul>
+                
+
+                
+                  <h3>Tech Stack</h3>
+                  <ul>
+                    <li>Vite</li>
+                    <li>Vue</li>
+                    <li>Typescript</li>
+                    <li>RadixVue</li>
+                    <li>Pinia</li>
+                    <li>LocalStorage</li>
+                    <li>VueRouter</li>
+                    <li>LucideVue (ícones)</li>
+                    <li>DateFns</li>
+                  </ul>
+                
+
+                <div class="action_btn">
+                  <a
+                    target="_blank"
+                    href="https://gerenciador-projetos-teste.netlify.app/"
+                    >acessar</a
+                  >
+                  <a
+                    target="_blank"
+                    href="https://github.com/esteves-esta/teste-tecnico-cs"
+                    >repositório</a
+                  >
+                </div>
+              </div>
             </article>
-            <article data-timestamp="04/08/2024">
-              <h2>women fronted metal bands</h2>
+
+            <article
+              id="metal"
+              data-timestamp="04/08/2024"
+            >
+              <button onclick="openProject('metal')"><h2>women fronted metal bands</h2></button>
               <p>
                 Projeto criado para listar bandas de metal com vocalistas
                 mulheres.
               </p>
+              <div class="description">
+                <img src="./assets/images/bands.png" />
+
+                
+                  <h3>Objetivos</h3>
+                  <p>
+                    Este projeto surgiu no dia que percebi que todas as bandas
+                    de metal que conhecia só tinham homems como vocalistas.
+                    Comecei a juntar uma lista com bandas com vocalistas
+                    mulheres e achei que seria interessante criar uma aplicação
+                    com os dados que estava reunindo.
+                  </p>
+
+                  <p>
+                    O projeto foi realizado em React pois na epóca estava
+                    estudando react com o curso “Joy of React” de Josh Comeau.
+                    Já tinha trabalhado com React anteriormente ao curso porém
+                    através desse curso sanei várias dúvidas e aprendi as
+                    novidades da tecnologia. Dessa forma resolvi praticar oque
+                    fui aprendendo de novo neste projeto.
+                  </p>
+                
+
+                
+                  <h3>Funcionalidades</h3>
+                  <ul>
+                    <li>Pesquisa aberta e filtros específicos;</li>
+                    <li>API serveless com Netlify Functions;</li>
+                    <li>
+                      Reprodução de preview de uma música de cada banda usando a
+                      API do serviço de streaming Deezer;
+                    </li>
+                    <li>
+                      Caso a banda não tenha perfil no Deezer há o link official
+                      da banda;
+                    </li>
+                    <li>
+                      Gráficos resumindo as informações obtidas pelos dados;
+                    </li>
+                    <li>Visão grid e tabela dos dados;</li>
+                    <li>
+                      Favoritar músicas poder exportar lista de favoritos como
+                      .csv;
+                    </li>
+                    <li>Exportar a lista de bandas como .csv;</li>
+                  </ul>
+                
+                
+                  <h3>Tech Stack</h3>
+                  <ul>
+                    <li>Vite</li>
+                    <li>React</li>
+                    <li>Typescript</li>
+                    <li>SWR - React Hooks para Data Fetching</li>
+                    <li>RadixUI</li>
+                    <li>Nivo Charts</li>
+                    <li>Styled components</li>
+                  </ul>
+                
+
+                <div class="action_btn">
+                  <a
+                    target="_blank"
+                    href="https://women-fronted-metal-bands.netlify.app/"
+                    >acessar</a
+                  >
+                  <a
+                    target="_blank"
+                    href="https://github.com/esteves-esta/women-fronted-metal-bands"
+                    a
+                    >repositório</a
+                  >
+                </div>
+              </div>
             </article>
-            <article data-timestamp="23/11/2024">
-              <h2>one page calendar</h2>
+
+            <article
+              id="calendar"
+              data-timestamp="23/11/2024"
+            >
+              <button onclick="openProject('calendar')"><h2>one page calendar</h2></button>
               <p>
                 Projeto inspirado em um artigo da revista BigThink sobre um
                 modelo de calendário de 1 página.
               </p>
+              <div class="description">
+                <img src="./assets/images/calendar.png" />
+                
+                  <h3>Objetivo</h3>
+
+                  <p>
+                    Tenho há alguns anos interesse por calendários,
+                    principalmente a visualização do calendário em uma única
+                    página. Algo bem específico, eu sei XD. Antigamente eu
+                    criava um calendário anual de forma manual e com colagens ,
+                    e recentemente começei a realizar esse processo de criação
+                    no figma.
+                  </p>
+
+                  <p>
+                    Após ler
+                    <a
+                      target="_blank"
+                      href="https://bigthink.com/starts-with-a-bang/one-page-calendar/"
+                      >este artigo</a
+                    >
+                    artigo do BigThink sobre um calendário de uma página que
+                    pode ser usado por vários anos, basta mudar a tabela do mês
+                    para cada ano. Achei a ideia super interessante a ideia e
+                    achei e quando estava praticando React durante o curso "Joy
+                    of React" achei que um dos projeto poderia ser um site
+                    baseado na ideia do one page calendar.
+                  </p>
+                
+                
+                  <h3>Funcionalidades</h3>
+
+                  <ul>
+                    <li>
+                      Exibir o calendário do ano desejado em uma visão de grid
+                      como no artigo;
+                    </li>
+                    <li>
+                      Customização do calendário e dados salvos no local
+                      storage;
+                    </li>
+                    <li>
+                      Salvar e excluir eventos no calendário e ter a opção de
+                      exportar dados como .csv
+                    </li>
+                  </ul>
+                
+
+                
+                  <h3>Tech Stack</h3>
+                  <ul>
+                    <li>Vite</li>
+                    <li>React</li>
+                    <li>Javascript</li>
+                    <li>RadixUI</li>
+                    <li>React Draggable</li>
+                  </ul>
+                
+
+                <div class="action_btn">
+                  <a
+                    target="_blank"
+                    href="https://esteves-esta.github.io/one-page-calendar/"
+                    >acessar</a
+                  >
+                  <a
+                    target="_blank"
+                    href="https://github.com/esteves-esta/one-page-calendar"
+                    a
+                    >repositório</a
+                  >
+                </div>
+              </div>
             </article>
-            <article data-timestamp="12/12/2024">
-              <h2>humans of seoul</h2>
+
+            <article
+              id="humans"
+              data-timestamp="12/12/2024"
+            >
+              <button onclick="openProject('humans')"><h2>humans of seoul</h2></button>
               <p>
                 Projeto criado para exibir o RSS Feed do site Humans of Seoul
                 com somente o texto original coreano visível e a tradução
                 disponível se desejado.
               </p>
+
+              <div class="description">
+                <img src="./assets/images/humans.png" />
+                
+                  <h3>Objetivos</h3>
+                  <p>
+                    Tenho interesse em várias linguas e recentemente tenho
+                    começado a aprender coreano. Por isso para praticar o idioma
+                    comecei a procurar contéudo online em coreano e com tradução
+                    e encontrei o site "Humans of Seoul". Este projeto é baseado
+                    no projeto "Humans of Nova York", projeto que realiza
+                    pequenas entrevistas com pessoas da cidade.
+                  </p>
+
+                  <p>
+                    No site do projeto está disponibilizado as entrevistas em
+                    coreano e logo abaixo a tradução em inglês. Como o site
+                    possui um feed RSS pensei que poderia formata-lo para ler
+                    somente o original coreano para praticar minha leitura no
+                    idioma e assim só vializar a tradução depois para confirmar
+                    meu entendimento.
+                  </p>
+                
+                
+                  <h3>Funcionalidades</h3>
+                  <ul>
+                    <li>Customizações das cores e tipografia;</li>
+                    <ul>
+                      <li>Mudança de tema;</li>
+                      <li>Tamanho, espessura e tipo de tipografia;</li>
+                    </ul>
+                    <li>Espaçamento de palavras e linha;</li>
+                    <li>Alternar a visibilidade da tradução por linha;</li>
+                    <li>
+                      Ao passar o mouse por uma palavra exibir popover com link
+                      para o dicionário Papago;
+                    </li>
+                    <li>
+                      Salvar customizações e palavras selecionadas no Local
+                      Storage.
+                    </li>
+                  </ul>
+                
+
+                
+                  <h3>Tech Stack</h3>
+                  <ul>
+                    <li>Vite</li>
+                    <li>React</li>
+                    <li>Typescript</li>
+                    <li>FRANC - Natural language detection</li>
+                    <li>SWR - React Hooks para Data Fetching</li>
+                    <li>RadixUI</li>
+                    <li>Lucide React</li>
+                  </ul>
+                
+
+                <div class="action_btn">
+                  <a
+                    target="_blank"
+                    href="https://esteves-esta.github.io/humans-of-seoul-feed-format/"
+                    >acessar</a
+                  >
+                  <a
+                    target="_blank"
+                    href="https://github.com/esteves-esta/humans-of-seoul-feed-format"
+                    a
+                    >repositório</a
+                  >
+                </div>
+              </div>
             </article>
           </div>
 
@@ -142,6 +441,10 @@
           <div>
             <p>credits</p>
             <small>
+              gallery: 
+              <a target="_blank" href="https://ribo.zone/free/snippets/">ribo.zone</a>
+            </small><br />
+            <small>
               fonts: <br />
               - google fonts<br />
               - old pc fonts
@@ -158,24 +461,80 @@
         </footer>
       </div>
 
-      <aside class="photo-gall">
-        <div>
-          <h3>photo gallery</h3>
+      <aside  class="photo_gallery" id="gallery">
+        <div class="content">
+          <button onclick="openGallery()">
+            <h3>photo gallery</h3>
+          </button>
+
+          <button class="img_btn" popovertarget="photo1">
+            <img src="assets/images/digi_cam/DSCN6850.jpg" />
+          </button>
+           <button class="img_btn" popovertarget="photo2">
+             <img src="assets/images/digi_cam/DSCN8463_EDITED.jpg" />
+            </button>
+            <button class="img_btn" popovertarget="photo3">
+              <img src="assets/images/digi_cam/DSCN7452 - cortado e editado.jpg" />
+            </button>
+            <button class="img_btn" popovertarget="photo4">
+              <img src="assets/images/digi_cam/DSCN7538.jpg" />
+            </button>
+            <button class="img_btn" popovertarget="photo5">
+              <img src="assets/images/digi_cam/DSCN8142.jpg" />
+            </button>
+            <button class="img_btn" popovertarget="photo6">
+              <img src="assets/images/digi_cam/IMG_0351.jpg" />
+            </button>
+            <button class="img_btn" popovertarget="photo7">
+              <img src="assets/images/digi_cam/IMG_0321.jpg" />
+            </button>
+
+          <div class="popovers">
+            <figure popover id="photo1">
+              <img src="assets/images/digi_cam/DSCN6850.jpg" />
+              <figcaption>uma rosa no meio da cidade</figcaption>
+            </figure>
+
+             <figure popover id="photo2">
+             <img src="assets/images/digi_cam/DSCN8463_EDITED.jpg" />
+               <figcaption>depois de uma grande chuva</figcaption>
+            </figure>
+            <figure popover id="photo3">
+              <img src="assets/images/digi_cam/DSCN7452 - cortado e editado.jpg" />
+                <figcaption>bem-te-vi</figcaption>
+            </figure>
+            <figure popover id="photo4">
+              <img src="assets/images/digi_cam/DSCN7538.jpg" />
+                <figcaption>gato no topo do mundo XD</figcaption>
+            </figure>
+            <figure popover id="photo5">
+              <img src="assets/images/digi_cam/DSCN8142.jpg" />
+                <figcaption>avião</figcaption>
+            </figure>
+            <figure popover id="photo6">
+              <img src="assets/images/digi_cam/IMG_0351.jpg" />
+                <figcaption>uma nuvem cinematica =D</figcaption>
+            </figure>
+            <figure popover id="photo7">
+              <img src="assets/images/digi_cam/IMG_0321.jpg" />
+                <figcaption>céu pronto pra chuva</figcaption>
+            </figure>
+           
         </div>
       </aside>
-      <aside class="postit">
-        <div>
+      <aside class="postit" id="postit1" >
+        <button onclick="openPostIt(this)">
           <h3>latest status</h3>
           <p>beginning new work soon =D</p>
           <h3>page last updated</h3>
           <p>03/03/25</p>
-        </div>
+        </button>
       </aside>
-      <aside class="postit2">
-        <div>
+      <aside class="postit" id="postit2">
+        <button onclick="openPostIt(this)">
           <h3>last played</h3>
           <p>chelsea wolfe - cellar door</p>
-        </div>
+        </button>
       </aside>
     </main>
 
@@ -183,5 +542,51 @@
     <script src="assets/js/TimeTravel.js"></script>
     <script src="assets/js/Footer.js"></script>
     <script src="assets/js/main.js"></script>
+
+    <script lang="js">
+
+      function closeProject(){
+        const articles = document.getElementsByTagName('article');
+        for (let index = 0; index < articles.length; index++) {
+          const element = articles[index];
+          element.setAttribute('class', '') 
+        }
+
+        const voltar = document.getElementById('voltar');
+        toogleClasses(voltar, 'show');
+        
+        const categoria = document.getElementById('categoria');
+        toogleClasses(categoria, 'show');
+      }
+
+      function openProject(projectName){
+        const project = document.getElementById(projectName)
+        toogleClasses(project, 'open')
+
+        const voltar = document.getElementById('voltar');
+        toogleClasses(voltar, 'show');
+        
+        const categoria = document.getElementById('categoria');
+        toogleClasses(categoria, 'show');
+      }
+
+      function openGallery(){
+        const gallery = document.getElementById('gallery')
+        toogleClasses(gallery, 'open', 'photo_gallery')
+      }
+
+      function openPostIt(postit){
+        toogleClasses(postit, 'open', 'postit');
+      }
+
+      function toogleClasses(element, newClass, oldClass){
+         const classes = element.getAttribute('class')
+        if(classes && classes.includes(newClass)) {
+          element.setAttribute('class', oldClass || '')
+        } else {
+          element.setAttribute('class', `${oldClass ||  ''} ${newClass}`)
+        }
+      }
+    </script>
   </body>
 </html>
